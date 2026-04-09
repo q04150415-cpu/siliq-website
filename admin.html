@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILIQ 後台管理系統</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d4a3e;
+            --accent: #5b8a72;
+            --accent-dark: #3d6b55;
+            --bg: #f3f7f5;
+            --card: #ffffff;
+            --border: #d4dfd8;
+            --text: #2a3632;
+            --text-light: #556b60;
+            --danger: #d44a3c;
+            --success: #3d8a5c;
+            --sidebar-w: 260px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* --- Login Screen --- */
+        .login-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1e3530, #2d4a3e);
+        }
+
+        .login-box {
+            background: var(--card);
+            padding: 48px 40px;
+            border-radius: 16px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .login-box img {
+            height: 50px;
+            margin: 0 auto 8px;
+        }
+
+        .login-box h1 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .login-box .login-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 32px;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            margin-bottom: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .login-box input:focus {
+            border-color: var(--accent);
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 14px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.3s;
+        }
+
+        .login-box button:hover {
+            background: var(--accent-dark);
+        }
+
+        .login-error {
+            color: var(--danger);
+            font-size: 0.85rem;
+            margin-top: 12px;
+            display: none;
+        }
+
+        /* --- Admin Layout --- */
+        .admin-layout {
+            display: none;
+            min-height: 100vh;
+        }
+
+        .admin-layout.active {
+            display: flex;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-w);
+            background: var(--primary);
+            color: #fff;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            z-index: 100;
+        }
+
+        .sidebar-header {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .sidebar-header img {
+            height: 32px;
+            filter: brightness(2);
+        }
+
+        .sidebar-header span {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 16px 12px;
+            overflow-y: auto;
+        }
+
+        .sidebar-nav button {
+            width: 100%;
+            text-align: left;
+            padding: 12px 16px;
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            font-family: inherit;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .sidebar-nav button:hover {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .sidebar-nav button.active {
+            background: var(--accent);
+            color: #fff;
+        }
+
+        .sidebar-nav button svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .sidebar-footer {
+            padding: 16px 12px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .sidebar-footer button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: rgba(255,255,255,0.7);
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .sidebar-footer button:hover {
+            background: var(--danger);
+            color: #fff;
+        }
+
+        /* Main Content */
+        .admin-main {
+            flex: 1;
+            margin-left: var(--sidebar-w);
+            padding: 32px;
+        }
+
+        .admin-topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+
+        .admin-topbar h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .topbar-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-save {
+            padding: 10px 28px;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .btn-save:hover {
+            background: var(--accent-dark);
+        }
+
+        .btn-preview {
+            padding: 10px 28px;
+            background: var(--card);
+            color: var(--text);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .btn-preview:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Panels */
+        .panel {
+            display: none;
+        }
+
+        .panel.active {
+            display: block;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 28px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+            color: var(--text);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .form-row-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* Repeater (for lists) */
+        .repeater-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .repeater-item .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .repeater-item .item-header span {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--primary);
+        }
+
+        .btn-remove {
+            background: none;
+            border: none;
+            color: var(--danger);
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-family: inherit;
+            padding: 4px 12px;
+            border-radius: 6px;
+            transition: all 0.2s;
+        }
+
+        .btn-remove:hover {
+            background: rgba(231,76,60,0.1);
+        }
+
+        .btn-add {
+            width: 100%;
+            padding: 12px;
+            background: none;
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            color: var(--text-light);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .btn-add:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Image upload */
+        .image-upload {
+            position: relative;
+            border: 2px dashed var(--border);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: var(--bg);
+        }
+
+        .image-upload:hover {
+            border-color: var(--accent);
+        }
+
+        .image-upload input[type="file"] {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .image-upload .upload-text {
+            color: var(--text-light);
+            font-size: 0.85rem;
+        }
+
+        .image-upload .upload-text svg {
+            display: block;
+            margin: 0 auto 8px;
+            width: 32px;
+            height: 32px;
+            color: var(--text-light);
+        }
+
+        .image-preview {
+            margin-top: 12px;
+        }
+
+        .image-preview img {
+            max-width: 200px;
+            max-height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.9rem;
+            z-index: 9999;
+            transform: translateX(120%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast.success { background: var(--success); }
+        .toast.error { background: var(--danger); }
+
+        /* Info banner */
+        .info-banner {
+            background: #e8f4fd;
+            border: 1px solid #b8d9f0;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+            color: #2a6496;
+            line-height: 1.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+            .admin-main {
+                margin-left: 0;
+                padding: 16px;
+            }
+            .form-row, .form-row-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Login Screen -->
+<div class="login-screen" id="loginScreen">
+    <div class="login-box">
+        <img src="assets/logo.jpg" alt="SILIQ">
+        <h1>後台管理系統</h1>
+        <p class="login-subtitle">請輸入帳號密碼登入</p>
+        <input type="text" id="loginUser" placeholder="帳號" value="">
+        <input type="password" id="loginPass" placeholder="密碼" value="">
+        <button onclick="handleLogin()">登入</button>
+        <p class="login-error" id="loginError">帳號或密碼錯誤</p>
+    </div>
+</div>
+
+<!-- Admin Layout -->
+<div class="admin-layout" id="adminLayout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <img src="assets/logo.jpg" alt="SILIQ">
+            <span>後台管理</span>
+        </div>
+        <nav class="sidebar-nav">
+            <button class="active" data-panel="hero" onclick="switchPanel('hero', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                首頁橫幅
+            </button>
+            <button data-panel="about" onclick="switchPanel('about', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                關於我們
+            </button>
+            <button data-panel="services" onclick="switchPanel('services', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                服務項目
+            </button>
+            <button data-panel="portfolio" onclick="switchPanel('portfolio', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                作品案例
+            </button>
+            <button data-panel="stats" onclick="switchPanel('stats', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                實績數據
+            </button>
+            <button data-panel="testimonials" onclick="switchPanel('testimonials', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                客戶好評
+            </button>
+            <button data-panel="contact" onclick="switchPanel('contact', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                聯絡資訊
+            </button>
+            <button data-panel="settings" onclick="switchPanel('settings', this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                帳號設定
+            </button>
+        </nav>
+        <div class="sidebar-footer">
+            <button onclick="handleLogout()">登出</button>
+        </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="admin-main">
+        <div class="admin-topbar">
+            <h2 id="panelTitle">首頁橫幅</h2>
+            <div class="topbar-actions">
+                <button class="btn-preview" onclick="window.open('index.html','_blank')">預覽網站</button>
+                <button class="btn-save" onclick="saveAll()">儲存變更</button>
+            </div>
+        </div>
+
+        <!-- Hero Panel -->
+        <div class="panel active" id="panel-hero">
+            <div class="card">
+                <h3>Hero 橫幅設定</h3>
+                <div class="form-group">
+                    <label>標題強調文字（金色字）</label>
+                    <input type="text" id="hero-titleAccent" placeholder="例：品牌行銷">
+                </div>
+                <div class="form-group">
+                    <label>標題後綴</label>
+                    <input type="text" id="hero-titleSuffix" placeholder="例：的領航者">
+                </div>
+                <div class="form-group">
+                    <label>副標題描述</label>
+                    <textarea id="hero-subtitle" rows="3"></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>主要按鈕文字</label>
+                        <input type="text" id="hero-ctaPrimary">
+                    </div>
+                    <div class="form-group">
+                        <label>次要按鈕文字</label>
+                        <input type="text" id="hero-ctaSecondary">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Panel -->
+        <div class="panel" id="panel-about">
+            <div class="card">
+                <h3>關於我們</h3>
+                <div class="form-group">
+                    <label>區塊標題</label>
+                    <input type="text" id="about-title">
+                </div>
+                <div class="form-group">
+                    <label>第一段描述</label>
+                    <textarea id="about-p1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>第二段描述</label>
+                    <textarea id="about-p2" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="card">
+                <h3>特色項目</h3>
+                <div id="about-features-list"></div>
+            </div>
+        </div>
+
+        <!-- Services Panel -->
+        <div class="panel" id="panel-services">
+            <div class="card">
+                <h3>服務項目管理</h3>
+                <div id="services-list"></div>
+                <button class="btn-add" onclick="addService()">+ 新增服務項目</button>
+            </div>
+        </div>
+
+        <!-- Portfolio Panel -->
+        <div class="panel" id="panel-portfolio">
+            <div class="info-banner">
+                作品圖片請放在 <strong>assets/portfolio/</strong> 資料夾中，檔名填入下方「圖片路徑」欄位（例：assets/portfolio/project1.jpg）。若留空則顯示預設色塊。
+            </div>
+            <div class="card">
+                <h3>作品案例管理</h3>
+                <div id="portfolio-list"></div>
+                <button class="btn-add" onclick="addPortfolio()">+ 新增作品</button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="panel" id="panel-stats">
+            <div class="card">
+                <h3>實績數據</h3>
+                <div id="stats-list"></div>
+                <button class="btn-add" onclick="addStat()">+ 新增數據</button>
+            </div>
+        </div>
+
+        <!-- Testimonials Panel -->
+        <div class="panel" id="panel-testimonials">
+            <div class="card">
+                <h3>客戶好評管理</h3>
+                <div id="testimonials-list"></div>
+                <button class="btn-add" onclick="addTestimonial()">+ 新增評價</button>
+            </div>
+        </div>
+
+        <!-- Contact Panel -->
+        <div class="panel" id="panel-contact">
+            <div class="card">
+                <h3>聯絡資訊</h3>
+                <div class="form-group">
+                    <label>電子信箱</label>
+                    <input type="email" id="contact-email">
+                </div>
+                <div class="form-group">
+                    <label>公司地址</label>
+                    <input type="text" id="contact-address">
+                </div>
+            </div>
+            <div class="card">
+                <h3>社群連結</h3>
+                <div class="form-group">
+                    <label>Facebook 網址</label>
+                    <input type="url" id="contact-facebook" placeholder="https://facebook.com/...">
+                </div>
+                <div class="form-group">
+                    <label>Instagram 網址</label>
+                    <input type="url" id="contact-instagram" placeholder="https://instagram.com/...">
+                </div>
+                <div class="form-group">
+                    <label>LINE 連結</label>
+                    <input type="url" id="contact-line" placeholder="https://line.me/...">
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="panel" id="panel-settings">
+            <div class="card">
+                <h3>修改登入密碼</h3>
+                <div class="form-group">
+                    <label>新密碼</label>
+                    <input type="password" id="new-password" placeholder="輸入新密碼">
+                </div>
+                <div class="form-group">
+                    <label>確認新密碼</label>
+                    <input type="password" id="confirm-password" placeholder="再次輸入新密碼">
+                </div>
+                <button class="btn-save" onclick="changePassword()" style="margin-top:8px;">更新密碼</button>
+            </div>
+            <div class="card">
+                <h3>匯出 / 匯入資料</h3>
+                <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;">
+                    可將網站內容匯出為 JSON 檔案備份，或從備份檔匯入還原。
+                </p>
+                <div style="display:flex;gap:12px;">
+                    <button class="btn-preview" onclick="exportData()">匯出 JSON</button>
+                    <label class="btn-preview" style="cursor:pointer;display:inline-flex;align-items:center;">
+                        匯入 JSON
+                        <input type="file" accept=".json" onchange="importData(event)" style="display:none;">
+                    </label>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* =============================================
+   SILIQ Admin System
+   ============================================= */
+
+// Default credentials (stored in localStorage)
+const DEFAULT_USER = 'admin';
+const DEFAULT_PASS = 'siliq2025';
+
+let contentData = {};
+
+// --- Auth ---
+function handleLogin() {
+    const user = document.getElementById('loginUser').value;
+    const pass = document.getElementById('loginPass').value;
+    const storedUser = localStorage.getItem('siliq_admin_user') || DEFAULT_USER;
+    const storedPass = localStorage.getItem('siliq_admin_pass') || DEFAULT_PASS;
+
+    if (user === storedUser && pass === storedPass) {
+        localStorage.setItem('siliq_logged_in', 'true');
+        document.getElementById('loginScreen').style.display = 'none';
+        document.getElementById('adminLayout').classList.add('active');
+        loadData();
+    } else {
+        document.getElementById('loginError').style.display = 'block';
+    }
+}
+
+function handleLogout() {
+    localStorage.removeItem('siliq_logged_in');
+    location.reload();
+}
+
+function changePassword() {
+    const newPass = document.getElementById('new-password').value;
+    const confirmPass = document.getElementById('confirm-password').value;
+    if (!newPass || newPass.length < 4) {
+        showToast('密碼至少需要 4 個字元', 'error');
+        return;
+    }
+    if (newPass !== confirmPass) {
+        showToast('兩次密碼不一致', 'error');
+        return;
+    }
+    localStorage.setItem('siliq_admin_pass', newPass);
+    showToast('密碼更新成功！', 'success');
+    document.getElementById('new-password').value = '';
+    document.getElementById('confirm-password').value = '';
+}
+
+// Check if already logged in
+if (localStorage.getItem('siliq_logged_in') === 'true') {
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('adminLayout').classList.add('active');
+    document.addEventListener('DOMContentLoaded', loadData);
+}
+
+// --- Panel Navigation ---
+function switchPanel(panel, btn) {
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.sidebar-nav button').forEach(b => b.classList.remove('active'));
+    document.getElementById(`panel-${panel}`).classList.add('active');
+    btn.classList.add('active');
+
+    const titles = {
+        hero: '首頁橫幅', about: '關於我們', services: '服務項目',
+        portfolio: '作品案例', stats: '實績數據', testimonials: '客戶好評',
+        contact: '聯絡資訊', settings: '帳號設定'
+    };
+    document.getElementById('panelTitle').textContent = titles[panel] || panel;
+}
+
+// --- Data Management ---
+async function loadData() {
+    // Try localStorage first, then fetch from JSON file
+    const stored = localStorage.getItem('siliq_content');
+    if (stored) {
+        contentData = JSON.parse(stored);
+    } else {
+        try {
+            const res = await fetch('data/content.json');
+            contentData = await res.json();
+            localStorage.setItem('siliq_content', JSON.stringify(contentData));
+        } catch (e) {
+            console.error('Failed to load content.json', e);
+            showToast('無法載入資料', 'error');
+            return;
+        }
+    }
+    populateAll();
+}
+
+function populateAll() {
+    const d = contentData;
+
+    // Hero
+    document.getElementById('hero-titleAccent').value = d.hero?.titleAccent || '';
+    document.getElementById('hero-titleSuffix').value = d.hero?.titleSuffix || '';
+    document.getElementById('hero-subtitle').value = d.hero?.subtitle || '';
+    document.getElementById('hero-ctaPrimary').value = d.hero?.ctaPrimary || '';
+    document.getElementById('hero-ctaSecondary').value = d.hero?.ctaSecondary || '';
+
+    // About
+    document.getElementById('about-title').value = d.about?.title || '';
+    document.getElementById('about-p1').value = d.about?.paragraphs?.[0] || '';
+    document.getElementById('about-p2').value = d.about?.paragraphs?.[1] || '';
+    renderAboutFeatures();
+
+    // Services
+    renderServices();
+
+    // Portfolio
+    renderPortfolio();
+
+    // Stats
+    renderStats();
+
+    // Testimonials
+    renderTestimonials();
+
+    // Contact
+    document.getElementById('contact-email').value = d.contact?.email || '';
+    document.getElementById('contact-address').value = d.contact?.address || '';
+    document.getElementById('contact-facebook').value = d.contact?.socials?.facebook || '';
+    document.getElementById('contact-instagram').value = d.contact?.socials?.instagram || '';
+    document.getElementById('contact-line').value = d.contact?.socials?.line || '';
+}
+
+function collectAll() {
+    contentData.hero = {
+        titleAccent: document.getElementById('hero-titleAccent').value,
+        titleSuffix: document.getElementById('hero-titleSuffix').value,
+        subtitle: document.getElementById('hero-subtitle').value,
+        ctaPrimary: document.getElementById('hero-ctaPrimary').value,
+        ctaSecondary: document.getElementById('hero-ctaSecondary').value
+    };
+
+    contentData.about = {
+        title: document.getElementById('about-title').value,
+        paragraphs: [
+            document.getElementById('about-p1').value,
+            document.getElementById('about-p2').value
+        ],
+        features: collectRepeater('about-features', ['title', 'desc'])
+    };
+
+    contentData.services = collectRepeater('service', ['title', 'desc', 'icon', 'tag1', 'tag2', 'tag3']).map(s => ({
+        icon: s.icon,
+        title: s.title,
+        desc: s.desc,
+        tags: [s.tag1, s.tag2, s.tag3].filter(Boolean)
+    }));
+
+    contentData.portfolio = collectRepeater('portfolio', ['category', 'categoryName', 'title', 'desc', 'image', 'color']);
+
+    contentData.stats = collectRepeater('stat', ['number', 'suffix', 'label']).map(s => ({
+        ...s, number: parseInt(s.number) || 0
+    }));
+
+    contentData.testimonials = collectRepeater('testimonial', ['text', 'name', 'title', 'avatar']);
+
+    contentData.contact = {
+        email: document.getElementById('contact-email').value,
+        address: document.getElementById('contact-address').value,
+        socials: {
+            facebook: document.getElementById('contact-facebook').value,
+            instagram: document.getElementById('contact-instagram').value,
+            line: document.getElementById('contact-line').value
+        }
+    };
+}
+
+function collectRepeater(prefix, fields) {
+    const items = [];
+    let i = 0;
+    while (document.getElementById(`${prefix}-${i}-${fields[0]}`)) {
+        const item = {};
+        fields.forEach(f => {
+            item[f] = document.getElementById(`${prefix}-${i}-${f}`)?.value || '';
+        });
+        items.push(item);
+        i++;
+    }
+    return items;
+}
+
+function saveAll() {
+    collectAll();
+    localStorage.setItem('siliq_content', JSON.stringify(contentData));
+    showToast('儲存成功！重新整理前台即可看到更新。', 'success');
+}
+
+// --- Render Repeaters ---
+function renderAboutFeatures() {
+    const container = document.getElementById('about-features-list');
+    container.innerHTML = '';
+    (contentData.about?.features || []).forEach((f, i) => {
+        container.innerHTML += `
+            <div class="repeater-item">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>特色標題</label>
+                        <input type="text" id="about-features-${i}-title" value="${esc(f.title)}">
+                    </div>
+                    <div class="form-group">
+                        <label>特色說明</label>
+                        <input type="text" id="about-features-${i}-desc" value="${esc(f.desc)}">
+                    </div>
+                </div>
+            </div>`;
+    });
+}
+
+function renderServices() {
+    const container = document.getElementById('services-list');
+    container.innerHTML = '';
+    (contentData.services || []).forEach((s, i) => {
+        container.innerHTML += `
+            <div class="repeater-item">
+                <div class="item-header">
+                    <span>${s.title || '新服務'}</span>
+                    <button class="btn-remove" onclick="removeItem('services', ${i})">刪除</button>
+                </div>
+                <div class="form-group">
+                    <label>服務名稱</label>
+                    <input type="text" id="service-${i}-title" value="${esc(s.title)}">
+                </div>
+                <div class="form-group">
+                    <label>服務描述</label>
+                    <textarea id="service-${i}-desc" rows="3">${esc(s.desc)}</textarea>
+                </div>
+                <div class="form-group">
+                    <label>圖示類型</label>
+                    <select id="service-${i}-icon">
+                        <option value="video" ${s.icon==='video'?'selected':''}>影片</option>
+                        <option value="image" ${s.icon==='image'?'selected':''}>圖片</option>
+                        <option value="globe" ${s.icon==='globe'?'selected':''}>全球</option>
+                        <option value="chat" ${s.icon==='chat'?'selected':''}>對話</option>
+                        <option value="ads" ${s.icon==='ads'?'selected':''}>廣告</option>
+                        <option value="book" ${s.icon==='book'?'selected':''}>書本</option>
+                    </select>
+                </div>
+                <div class="form-row-3">
+                    <div class="form-group">
+                        <label>標籤 1</label>
+                        <input type="text" id="service-${i}-tag1" value="${esc(s.tags?.[0] || '')}">
+                    </div>
+                    <div class="form-group">
+                        <label>標籤 2</label>
+                        <input type="text" id="service-${i}-tag2" value="${esc(s.tags?.[1] || '')}">
+                    </div>
+                    <div class="form-group">
+                        <label>標籤 3</label>
+                        <input type="text" id="service-${i}-tag3" value="${esc(s.tags?.[2] || '')}">
+                    </div>
+                </div>
+            </div>`;
+    });
+}
+
+function renderPortfolio() {
+    const container = document.getElementById('portfolio-list');
+    container.innerHTML = '';
+    (contentData.portfolio || []).forEach((p, i) => {
+        container.innerHTML += `
+            <div class="repeater-item">
+                <div class="item-header">
+                    <span>${p.title || '新作品'}</span>
+                    <button class="btn-remove" onclick="removeItem('portfolio', ${i})">刪除</button>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>作品標題</label>
+                        <input type="text" id="portfolio-${i}-title" value="${esc(p.title)}">
+                    </div>
+                    <div class="form-group">
+                        <label>分類</label>
+                        <select id="portfolio-${i}-category">
+                            <option value="video" ${p.category==='video'?'selected':''}>影片製作</option>
+                            <option value="design" ${p.category==='design'?'selected':''}>平面設計</option>
+                            <option value="marketing" ${p.category==='marketing'?'selected':''}>行銷策略</option>
+                            <option value="social" ${p.category==='social'?'selected':''}>社群經營</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>分類顯示名稱</label>
+                        <input type="text" id="portfolio-${i}-categoryName" value="${esc(p.categoryName)}">
+                    </div>
+                    <div class="form-group">
+                        <label>簡短描述</label>
+                        <input type="text" id="portfolio-${i}-desc" value="${esc(p.desc)}">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>圖片路徑（例：assets/portfolio/p1.jpg）</label>
+                        <input type="text" id="portfolio-${i}-image" value="${esc(p.image)}">
+                    </div>
+                    <div class="form-group">
+                        <label>背景色（無圖片時顯示）</label>
+                        <input type="color" id="portfolio-${i}-color" value="${p.color || '#5b8a72'}" style="height:44px;">
+                    </div>
+                </div>
+            </div>`;
+    });
+}
+
+function renderStats() {
+    const container = document.getElementById('stats-list');
+    container.innerHTML = '';
+    (contentData.stats || []).forEach((s, i) => {
+        container.innerHTML += `
+            <div class="repeater-item">
+                <div class="item-header">
+                    <span>${s.label || '新數據'}</span>
+                    <button class="btn-remove" onclick="removeItem('stats', ${i})">刪除</button>
+                </div>
+                <div class="form-row-3">
+                    <div class="form-group">
+                        <label>數字</label>
+                        <input type="number" id="stat-${i}-number" value="${s.number || 0}">
+                    </div>
+                    <div class="form-group">
+                        <label>後綴（+, %, 萬+ 等）</label>
+                        <input type="text" id="stat-${i}-suffix" value="${esc(s.suffix)}">
+                    </div>
+                    <div class="form-group">
+                        <label>標籤說明</label>
+                        <input type="text" id="stat-${i}-label" value="${esc(s.label)}">
+                    </div>
+                </div>
+            </div>`;
+    });
+}
+
+function renderTestimonials() {
+    const container = document.getElementById('testimonials-list');
+    container.innerHTML = '';
+    (contentData.testimonials || []).forEach((t, i) => {
+        container.innerHTML += `
+            <div class="repeater-item">
+                <div class="item-header">
+                    <span>${t.name || '新評價'}</span>
+                    <button class="btn-remove" onclick="removeItem('testimonials', ${i})">刪除</button>
+                </div>
+                <div class="form-group">
+                    <label>評價內容</label>
+                    <textarea id="testimonial-${i}-text" rows="3">${esc(t.text)}</textarea>
+                </div>
+                <div class="form-row-3">
+                    <div class="form-group">
+                        <label>客戶姓名</label>
+                        <input type="text" id="testimonial-${i}-name" value="${esc(t.name)}">
+                    </div>
+                    <div class="form-group">
+                        <label>客戶職稱</label>
+                        <input type="text" id="testimonial-${i}-title" value="${esc(t.title)}">
+                    </div>
+                    <div class="form-group">
+                        <label>頭像字母</label>
+                        <input type="text" id="testimonial-${i}-avatar" value="${esc(t.avatar)}" maxlength="1">
+                    </div>
+                </div>
+            </div>`;
+    });
+}
+
+// --- Add / Remove ---
+function addService() {
+    collectAll();
+    contentData.services.push({ icon: 'video', title: '', desc: '', tags: ['', '', ''] });
+    renderServices();
+}
+
+function addPortfolio() {
+    collectAll();
+    contentData.portfolio.push({ category: 'video', categoryName: '影片製作', title: '', desc: '', image: '', color: '#5b8a72' });
+    renderPortfolio();
+}
+
+function addStat() {
+    collectAll();
+    contentData.stats.push({ number: 0, suffix: '+', label: '' });
+    renderStats();
+}
+
+function addTestimonial() {
+    collectAll();
+    contentData.testimonials.push({ text: '', name: '', title: '', avatar: '' });
+    renderTestimonials();
+}
+
+function removeItem(section, index) {
+    collectAll();
+    contentData[section].splice(index, 1);
+    switch (section) {
+        case 'services': renderServices(); break;
+        case 'portfolio': renderPortfolio(); break;
+        case 'stats': renderStats(); break;
+        case 'testimonials': renderTestimonials(); break;
+    }
+}
+
+// --- Export / Import ---
+function exportData() {
+    collectAll();
+    const blob = new Blob([JSON.stringify(contentData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `siliq-backup-${new Date().toISOString().slice(0,10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    showToast('資料匯出成功！', 'success');
+}
+
+function importData(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+        try {
+            contentData = JSON.parse(ev.target.result);
+            localStorage.setItem('siliq_content', JSON.stringify(contentData));
+            populateAll();
+            showToast('資料匯入成功！', 'success');
+        } catch (err) {
+            showToast('JSON 格式錯誤，匯入失敗', 'error');
+        }
+    };
+    reader.readAsText(file);
+}
+
+// --- Utilities ---
+function esc(str) {
+    if (!str) return '';
+    return String(str).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+function showToast(msg, type) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.className = `toast ${type} show`;
+    setTimeout(() => toast.classList.remove('show'), 3000);
+}
+</script>
+</body>
+</html>

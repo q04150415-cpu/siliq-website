@@ -1,0 +1,233 @@
+{
+  "hero": {
+    "titleAccent": "品牌行銷",
+    "titleSuffix": "的領航者",
+    "subtitle": "從策略規劃到創意執行，SILIQ 為你的品牌打造全方位行銷解決方案，讓你的品牌在市場中脫穎而出。",
+    "ctaPrimary": "免費諮詢",
+    "ctaSecondary": "了解服務"
+  },
+  "about": {
+    "title": "我們是你的品牌成長夥伴",
+    "paragraphs": [
+      "希利克鳥有限公司（SILIQ 行銷）致力於為企業與品牌提供全方位的行銷解決方案。我們相信，每個品牌都有獨特的故事，而我們的使命就是幫助你將這些故事傳遞給對的人。",
+      "從品牌策略規劃、視覺設計、影片製作到數位廣告投放，我們以數據驅動的方法論和創意思維，為客戶打造能真正帶來商業成果的行銷方案。"
+    ],
+    "features": [
+      { "title": "策略導向", "desc": "以商業目標為核心制定行銷策略" },
+      { "title": "數據驅動", "desc": "用數據分析優化每一個行銷環節" },
+      { "title": "創意執行", "desc": "將策略轉化為引人注目的創意內容" }
+    ]
+  },
+  "services": [
+    {
+      "icon": "video",
+      "title": "影片製作",
+      "desc": "從企業形象影片、產品宣傳到社群短影音，我們打造有溫度、有記憶點的影像內容，為品牌說好每一個故事。",
+      "tags": ["企業形象", "產品影片", "短影音"]
+    },
+    {
+      "icon": "image",
+      "title": "平面設計",
+      "desc": "品牌識別、海報、社群素材、包裝設計，以精準的視覺語言傳達品牌精神，讓每一個畫面都為品牌加分。",
+      "tags": ["品牌識別", "視覺設計", "包裝設計"]
+    },
+    {
+      "icon": "globe",
+      "title": "品牌行銷策略",
+      "desc": "深入了解你的品牌定位與目標市場，制定從品牌建構到市場推廣的完整策略藍圖，讓每一步都走得精準。",
+      "tags": ["品牌定位", "市場分析", "策略規劃"]
+    },
+    {
+      "icon": "chat",
+      "title": "社群經營",
+      "desc": "跨平台社群內容規劃與經營管理，從內容企劃、素材製作到社群互動，打造品牌與粉絲之間的深度連結。",
+      "tags": ["內容企劃", "社群管理", "粉絲互動"]
+    },
+    {
+      "icon": "ads",
+      "title": "廣告投放",
+      "desc": "精準的數位廣告投放策略，涵蓋 Google Ads、Meta 廣告等主流平台，以數據優化為核心，極大化每一分廣告預算的效益。",
+      "tags": ["Google Ads", "Meta廣告", "數據優化"]
+    },
+    {
+      "icon": "book",
+      "title": "商業模式顧問",
+      "desc": "以豐富的產業經驗，協助企業梳理商業模式、優化營收結構，從商業本質出發找到品牌的持續成長動能。",
+      "tags": ["商業分析", "營收優化", "成長策略"]
+    }
+  ],
+  "portfolio": [
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "妙元素食坊",
+      "desc": "餐飲品牌短影音內容企劃與製作",
+      "image": "assets/portfolio/01-food.jpg",
+      "views": "21.6 萬",
+      "color": "#5b8a72",
+      "video": "https://drive.google.com/file/d/18UoMkciR63rsLQEKUKUvtsy2qs26JuSr/preview",
+      "videoType": "gdrive"
+    },
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "希希醫師",
+      "desc": "醫美品牌短影音內容企劃與流量操作",
+      "image": "assets/portfolio/02-medical.jpg",
+      "views": "4.1 萬",
+      "color": "#667eea",
+      "video": "https://drive.google.com/file/d/1lAbARJclVUIcwcM0n0pkIXo_UyOQrK34/preview",
+      "videoType": "gdrive"
+    },
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "摩瑪建材研究所",
+      "desc": "建材品牌短影音行銷與產品推廣",
+      "image": "assets/portfolio/03-building.jpg",
+      "views": "9.9 萬",
+      "color": "#f5576c",
+      "video": "https://drive.google.com/file/d/10_1bwP1N6eMGPm5gJdjgqN-2P4G3wHXj/preview",
+      "videoType": "gdrive"
+    },
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "國道警察為啥都開BMW",
+      "desc": "汽車領域爆款短影音內容策劃",
+      "image": "assets/portfolio/04-auto.jpg",
+      "views": "85.8 萬",
+      "color": "#4facfe",
+      "video": "https://www.instagram.com/p/DWiyVldlKm3/embed/",
+      "videoType": "ig"
+    },
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "老娘教你很系列",
+      "desc": "命理品牌爆款短影音內容操盤",
+      "image": "assets/portfolio/05-fortune.jpg",
+      "views": "262 萬",
+      "color": "#a18cd1",
+      "video": "https://www.instagram.com/p/DULI4_pknG3/embed/",
+      "videoType": "ig"
+    },
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "低預算改裝系列",
+      "desc": "機車改裝品牌短影音內容製作",
+      "image": "assets/portfolio/06-motorcycle.jpg",
+      "views": "205 萬",
+      "color": "#fcb69f",
+      "video": "https://www.instagram.com/p/C7lkz4Oy0xS/embed/",
+      "videoType": "ig"
+    },
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "雞塊健康嗎",
+      "desc": "健康知識型短影音內容策劃與製作",
+      "image": "assets/portfolio/07-health.jpg",
+      "views": "152 萬",
+      "color": "#00b894",
+      "video": "https://drive.google.com/file/d/1CQWCb3aF2UhQxy_eq3O9HnAsMEhFZdYd/preview",
+      "videoType": "gdrive"
+    },
+    {
+      "category": "marketing",
+      "categoryName": "行銷策略",
+      "title": "全聯預購 DM 行銷",
+      "desc": "通路行銷策略規劃與推廣執行",
+      "image": "assets/portfolio/08-pxmart.jpg",
+      "views": "26.3 萬",
+      "color": "#e17055",
+      "video": "https://drive.google.com/file/d/1V-UQLl7A6LAs865gVAPqrwx3bdOiaFMp/preview",
+      "videoType": "gdrive"
+    },
+    {
+      "category": "marketing",
+      "categoryName": "行銷策略",
+      "title": "711 明星商品上架",
+      "desc": "超商通路新品上架行銷策略操作",
+      "image": "assets/portfolio/09-711.jpg",
+      "views": "5.6 萬",
+      "color": "#0984e3",
+      "video": "https://drive.google.com/file/d/1wgey6B6RP3fGM-EBjn-D7hK5_5lBq6Lt/preview",
+      "videoType": "gdrive"
+    },
+    {
+      "category": "video",
+      "categoryName": "短影音製作",
+      "title": "公司 IP 故事情感系列",
+      "desc": "品牌 IP 故事情感類型短影音企劃與製作",
+      "image": "assets/portfolio/13-ip-story.jpg",
+      "views": "13 萬",
+      "color": "#e17055",
+      "video": "https://drive.google.com/file/d/13AobHesZBlUuMhbabQsrTDt4ne3OHgpW/preview",
+      "videoType": "gdrive"
+    },
+    {
+      "category": "social",
+      "categoryName": "社群經營",
+      "title": "Reel 瀏覽成長 1476%",
+      "desc": "短影音內容策略帶動品牌曝光爆發性成長",
+      "image": "assets/portfolio/10-social-growth.jpg",
+      "views": "300 萬+",
+      "color": "#e84393"
+    },
+    {
+      "category": "social",
+      "categoryName": "社群經營",
+      "title": "單月觸及 229 萬",
+      "desc": "98% 非粉絲觸及，單月新增 2,648 粉絲",
+      "image": "assets/portfolio/11-social-stats.jpg",
+      "views": "229 萬",
+      "color": "#6c5ce7"
+    },
+    {
+      "category": "social",
+      "categoryName": "社群經營",
+      "title": "14 天瀏覽 220.9 萬",
+      "desc": "社群洞察數據實證，內容策略精準命中受眾",
+      "image": "assets/portfolio/12-social-insight.jpg",
+      "views": "220.9 萬",
+      "color": "#2d3436"
+    }
+  ],
+  "stats": [
+    { "number": 150, "suffix": "+", "label": "服務品牌數" },
+    { "number": 500, "suffix": "+", "label": "完成專案數" },
+    { "number": 2000, "suffix": "萬+", "label": "累計觸及人數" },
+    { "number": 98, "suffix": "%", "label": "客戶滿意度" }
+  ],
+  "testimonials": [
+    {
+      "text": "本來對短影音行銷半信半疑，沒想到 SILIQ 團隊操作後，影片直接破百萬觀看，帶來的客人比我們投傳統廣告多好幾倍，真的很會抓流量！",
+      "name": "孫老師",
+      "title": "命理老師",
+      "avatar": "孫"
+    },
+    {
+      "text": "我們建材產業很難做社群，但 SILIQ 拍出來的影片讓專業知識變得好懂又好看，連客戶都主動傳影片來問產品，效果遠超預期！",
+      "name": "詹老闆",
+      "title": "建材公司負責人",
+      "avatar": "詹"
+    },
+    {
+      "text": "SILIQ 幫我們拍的短影音讓產品直接在社群上爆紅，訂單量翻了好幾倍！而且整個合作過程很順暢，從腳本到成品都很用心，大推！",
+      "name": "王老闆",
+      "title": "食品公司負責人",
+      "avatar": "王"
+    }
+  ],
+  "contact": {
+    "email": "siliq369.service@gmail.com",
+    "address": "台中市潭子區雅豐街110巷42號2樓",
+    "socials": {
+      "facebook": "https://www.facebook.com/siliq369",
+      "instagram": "https://www.instagram.com/lillian0415/",
+      "line": "https://line.me/R/ti/p/@311imzhl"
+    }
+  }
+}

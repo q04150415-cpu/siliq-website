@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行銷知識庫 | SILIQ 行銷</title>
+    <meta name="description" content="SILIQ 行銷知識庫 - 自媒體經營、短影音製作、廣告投放策略、品牌行銷等專業知識文章，幫助你掌握最新行銷趨勢。">
+    <meta name="keywords" content="行銷知識,自媒體經營,短影音教學,廣告投放,品牌行銷,SEO,社群經營">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://siliq.netlify.app/blog/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://siliq.netlify.app/blog/">
+    <meta property="og:title" content="行銷知識庫 | SILIQ 行銷">
+    <meta property="og:description" content="自媒體經營、短影音製作、廣告投放策略等專業行銷知識文章">
+    <meta property="og:image" content="https://siliq.netlify.app/assets/logo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="../" class="logo">
+                <img src="../assets/logo.png" alt="SILIQ Logo">
+            </a>
+            <nav class="nav" id="nav">
+                <a href="../#about" class="nav-link">關於我們</a>
+                <a href="../#services" class="nav-link">服務項目</a>
+                <a href="./" class="nav-link active">知識庫</a>
+                <a href="../#portfolio" class="nav-link">作品案例</a>
+                <a href="../#contact" class="nav-link nav-cta">聯絡我們</a>
+            </nav>
+            <button class="hamburger" id="hamburger" aria-label="開啟選單">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <section class="blog-hero">
+        <div class="container">
+            <h1>行銷知識庫</h1>
+            <p>自媒體經營、短影音製作、廣告投放、品牌策略<br>最新行銷知識，幫你少走彎路</p>
+        </div>
+    </section>
+
+    <section class="blog-list-section">
+        <div class="container">
+            <div class="blog-filters">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="自媒體經營">自媒體經營</button>
+                <button class="filter-btn" data-filter="短影音製作">短影音製作</button>
+                <button class="filter-btn" data-filter="廣告投放">廣告投放</button>
+                <button class="filter-btn" data-filter="品牌行銷">品牌行銷</button>
+                <button class="filter-btn" data-filter="社群經營">社群經營</button>
+                <button class="filter-btn" data-filter="行銷趨勢">行銷趨勢</button>
+            </div>
+            <div class="blog-grid" id="blogGrid">
+                <!-- 文章卡片由 articles.json 動態載入 -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="../assets/logo.png" alt="SILIQ Logo" class="footer-logo">
+                    <p>希利克鳥有限公司<br>品牌行銷的領航者</p>
+                </div>
+                <div class="footer-links">
+                    <h4>快速連結</h4>
+                    <a href="../#about">關於我們</a>
+                    <a href="../#services">服務項目</a>
+                    <a href="./">知識庫</a>
+                    <a href="../#contact">聯絡我們</a>
+                </div>
+                <div class="footer-links">
+                    <h4>服務項目</h4>
+                    <a href="../#services">短影音製作</a>
+                    <a href="../#services">平面設計</a>
+                    <a href="../#services">品牌行銷策略</a>
+                    <a href="../#services">社群經營</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>聯絡資訊</h4>
+                    <p>siliq369.service@gmail.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 希利克鳥有限公司 SILIQ 行銷. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/blog.js"></script>
+</body>
+</html>
