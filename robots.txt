@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://siliq.netlify.app/sitemap.xml
+Sitemap: https://siliq2378.com/sitemap.xml
