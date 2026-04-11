@@ -497,11 +497,11 @@ function animateCounters() {
 // --- Video Lightbox ---
 function initLightbox() {
     const lightbox = document.getElementById('lightbox');
+    if (!lightbox) return;
+
     const lightboxVideo = document.getElementById('lightboxVideo');
     const lightboxClose = document.getElementById('lightboxClose');
     const backdrop = lightbox.querySelector('.lightbox-backdrop');
-
-    if (!lightbox) return;
 
     function openLightbox(videoUrl, videoType) {
         if (videoType === 'ig') {
