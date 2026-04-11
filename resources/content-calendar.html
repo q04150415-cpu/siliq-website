@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>社群內容月曆模板 | SILIQ 行銷 免費資源</title>
+    <meta name="description" content="30 天社群內容排程模板，包含貼文類型建議與最佳發布時間。">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary:#2d4a3e; --accent:#5b8a72; --text:#2a3632; --text-light:#556b60; --bg:#fbfcfb; --border:#d4dfd8; }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family:'Noto Sans TC',sans-serif; color:var(--text); background:var(--bg); line-height:1.8; }
+        .container { max-width:900px; margin:0 auto; padding:40px 24px 80px; }
+        .resource-header { text-align:center; padding:60px 0 40px; background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%); color:#fff; }
+        .resource-header h1 { font-size:2rem; font-weight:800; margin-bottom:8px; }
+        .resource-header p { font-size:1rem; opacity:0.8; }
+        .resource-header .brand { font-size:0.85rem; opacity:0.6; margin-top:12px; }
+        .section-title { font-size:1.3rem; font-weight:700; color:var(--primary); margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid rgba(91,138,114,0.2); }
+        .post-types { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin:20px 0 32px; }
+        .post-type { background:#fff; border:1px solid var(--border); border-radius:10px; padding:20px; }
+        .post-type-tag { display:inline-block; padding:3px 10px; border-radius:12px; font-size:0.75rem; font-weight:600; margin-bottom:8px; }
+        .tag-edu { background:#e8f5e9; color:#2e7d32; }
+        .tag-engage { background:#e3f2fd; color:#1565c0; }
+        .tag-promo { background:#fff3e0; color:#e65100; }
+        .tag-brand { background:#f3e5f5; color:#7b1fa2; }
+        .tag-trending { background:#fce4ec; color:#c62828; }
+        .tag-ugc { background:#e0f7fa; color:#00838f; }
+        .tag-behind { background:#f1f8e9; color:#558b2f; }
+        .post-type h4 { font-size:1rem; margin-bottom:4px; }
+        .post-type p { font-size:0.85rem; color:var(--text-light); }
+        .calendar-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:0.88rem; }
+        .calendar-table th { background:var(--primary); color:#fff; padding:10px 12px; text-align:left; font-weight:600; }
+        .calendar-table td { padding:10px 12px; border-bottom:1px solid #eef3f0; vertical-align:top; }
+        .calendar-table tr:hover { background:#f8faf9; }
+        .day-num { font-weight:700; color:var(--accent); }
+        .time-badge { display:inline-block; padding:2px 8px; background:#f0f7f3; border-radius:4px; font-size:0.78rem; color:var(--accent); font-weight:500; }
+        .tip-box { background:#f0f7f3; border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 8px 8px 0; margin:16px 0; font-size:0.9rem; color:var(--text-light); }
+        .time-guide { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin:20px 0; }
+        .time-slot { background:#fff; border:1px solid var(--border); border-radius:8px; padding:16px; text-align:center; }
+        .time-slot .time { font-size:1.2rem; font-weight:700; color:var(--accent); }
+        .time-slot .desc { font-size:0.82rem; color:var(--text-light); margin-top:4px; }
+        .print-btn { display:block; margin:32px auto 0; padding:12px 32px; background:var(--accent); color:#fff; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; font-family:'Noto Sans TC',sans-serif; }
+        .print-btn:hover { background:var(--primary); }
+        .cta-bottom { text-align:center; margin-top:40px; padding:32px; background:#f0f7f3; border-radius:12px; }
+        .cta-bottom h3 { margin-bottom:8px; }
+        .cta-bottom p { color:var(--text-light); margin-bottom:16px; font-size:0.9rem; }
+        .cta-bottom a { display:inline-block; padding:10px 28px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
+        @media print { .print-btn,.cta-bottom{display:none;} .resource-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
+        @media (max-width:600px) { .resource-header h1{font-size:1.5rem;} .calendar-table{font-size:0.8rem;} .calendar-table th,.calendar-table td{padding:8px;} }
+    </style>
+</head>
+<body>
+    <div class="resource-header">
+        <h1>社群內容月曆模板</h1>
+        <p>30 天內容排程框架，讓你的社群經營更有節奏</p>
+        <div class="brand">SILIQ 行銷 | siliq2378.com</div>
+    </div>
+    <div class="container">
+
+        <h2 class="section-title">7 種貼文類型</h2>
+        <div class="post-types">
+            <div class="post-type"><span class="post-type-tag tag-edu">教學</span><h4>知識教學</h4><p>分享專業知識、教學步驟、產業 know-how</p></div>
+            <div class="post-type"><span class="post-type-tag tag-engage">互動</span><h4>互動問答</h4><p>投票、提問、猜謎、二選一</p></div>
+            <div class="post-type"><span class="post-type-tag tag-promo">促銷</span><h4>產品推廣</h4><p>新品上市、限時優惠、客戶見證</p></div>
+            <div class="post-type"><span class="post-type-tag tag-brand">品牌</span><h4>品牌故事</h4><p>創業歷程、品牌理念、團隊介紹</p></div>
+            <div class="post-type"><span class="post-type-tag tag-trending">趨勢</span><h4>時事趨勢</h4><p>蹭熱點、節日行銷、產業新聞</p></div>
+            <div class="post-type"><span class="post-type-tag tag-ugc">口碑</span><h4>客戶見證</h4><p>客戶好評、使用前後對比、案例分享</p></div>
+            <div class="post-type"><span class="post-type-tag tag-behind">幕後</span><h4>幕後花絮</h4><p>工作日常、製作過程、團隊生活</p></div>
+        </div>
+
+        <h2 class="section-title">最佳發布時間</h2>
+        <div class="time-guide">
+            <div class="time-slot"><div class="time">07:30-09:00</div><div class="desc">通勤時段<br>適合輕鬆內容</div></div>
+            <div class="time-slot"><div class="time">12:00-13:00</div><div class="desc">午休時段<br>適合知識型內容</div></div>
+            <div class="time-slot"><div class="time">18:00-19:00</div><div class="desc">下班時段<br>適合互動型內容</div></div>
+            <div class="time-slot"><div class="time">21:00-22:00</div><div class="desc">睡前時段<br>適合影音內容</div></div>
+        </div>
+        <div class="tip-box">以上為一般建議，實際最佳時間請參考你的 Instagram/Facebook 後台洞察報告中的「粉絲活躍時間」。</div>
+
+        <h2 class="section-title">30 天內容排程表</h2>
+        <table class="calendar-table">
+            <tr><th>日</th><th>類型</th><th>內容主題建議</th><th>發布時間</th></tr>
+            <tr><td><span class="day-num">1</span> 一</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>本月目標宣告 / 月初問候</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">2</span> 二</td><td><span class="post-type-tag tag-edu">教學</span></td><td>產業小知識 #1</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">3</span> 三</td><td><span class="post-type-tag tag-engage">互動</span></td><td>二選一投票 / 你比較喜歡 A 還是 B？</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">4</span> 四</td><td><span class="post-type-tag tag-behind">幕後</span></td><td>工作日常 / 辦公室一角</td><td><span class="time-badge">21:00</span></td></tr>
+            <tr><td><span class="day-num">5</span> 五</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>產品/服務介紹 #1</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">6</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>Reels 短影音 — 蹭本週熱門話題</td><td><span class="time-badge">21:00</span></td></tr>
+            <tr><td><span class="day-num">7</span> 日</td><td><span class="post-type-tag tag-engage">互動</span></td><td>週日提問：你這週最大的收穫是？</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">8</span> 一</td><td><span class="post-type-tag tag-edu">教學</span></td><td>教學懶人包（輪播圖）</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">9</span> 二</td><td><span class="post-type-tag tag-ugc">口碑</span></td><td>客戶好評分享 #1</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">10</span> 三</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>團隊成員介紹 / 創辦人故事</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">11</span> 四</td><td><span class="post-type-tag tag-edu">教學</span></td><td>產業小知識 #2（Reels）</td><td><span class="time-badge">21:00</span></td></tr>
+            <tr><td><span class="day-num">12</span> 五</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>限時優惠 / 本週特惠</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">13</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>迷因 / 搞笑梗圖（結合產業）</td><td><span class="time-badge">21:00</span></td></tr>
+            <tr><td><span class="day-num">14</span> 日</td><td><span class="post-type-tag tag-behind">幕後</span></td><td>製作過程大公開</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">15</span> 一</td><td><span class="post-type-tag tag-engage">互動</span></td><td>月中 check-in / 半月回顧</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">16</span> 二</td><td><span class="post-type-tag tag-edu">教學</span></td><td>常見問題解答（Q&A）</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">17</span> 三</td><td><span class="post-type-tag tag-ugc">口碑</span></td><td>客戶見證 #2 / 成果對比</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">18</span> 四</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>品牌理念 / 為什麼做這件事</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">19</span> 五</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>產品/服務介紹 #2</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">20</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>Reels 短影音 — 產業熱門話題</td><td><span class="time-badge">21:00</span></td></tr>
+            <tr><td><span class="day-num">21</span> 日</td><td><span class="post-type-tag tag-engage">互動</span></td><td>「你知道嗎？」冷知識分享</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">22</span> 一</td><td><span class="post-type-tag tag-edu">教學</span></td><td>步驟教學（Step by step）</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">23</span> 二</td><td><span class="post-type-tag tag-behind">幕後</span></td><td>一日工作 Vlog / 幕後花絮</td><td><span class="time-badge">21:00</span></td></tr>
+            <tr><td><span class="day-num">24</span> 三</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>客戶案例分享（前後對比）</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">25</span> 四</td><td><span class="post-type-tag tag-edu">教學</span></td><td>產業小知識 #3</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">26</span> 五</td><td><span class="post-type-tag tag-engage">互動</span></td><td>粉絲 Q&A / 限動問答箱</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">27</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>Reels 短影音 — 本月爆款模仿</td><td><span class="time-badge">21:00</span></td></tr>
+            <tr><td><span class="day-num">28</span> 日</td><td><span class="post-type-tag tag-ugc">口碑</span></td><td>客戶好評精選 #3</td><td><span class="time-badge">12:00</span></td></tr>
+            <tr><td><span class="day-num">29</span> 一</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>本月回顧 / 感謝粉絲</td><td><span class="time-badge">18:00</span></td></tr>
+            <tr><td><span class="day-num">30</span> 二</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>下月預告 / 月底衝刺優惠</td><td><span class="time-badge">12:00</span></td></tr>
+        </table>
+
+        <div class="tip-box">
+            <strong>互動率提升技巧：</strong><br>
+            1. 每篇貼文結尾加上一個問題，邀請粉絲留言<br>
+            2. 留言回覆要在 1 小時內完成，越快回覆演算法越加分<br>
+            3. 善用限時動態的投票、問答、倒數功能增加互動<br>
+            4. 發布後 30 分鐘內主動去互動其他帳號的貼文<br>
+            5. 每週至少發 2-3 支 Reels，目前演算法最偏好短影音
+        </div>
+
+        <button class="print-btn" onclick="window.print()">列印 / 儲存為 PDF</button>
+
+        <div class="cta-bottom">
+            <h3>需要專人幫你經營社群？</h3>
+            <p>SILIQ 行銷提供全託管式社群經營服務，讓專業團隊幫你操盤</p>
+            <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener">免費諮詢</a>
+        </div>
+    </div>
+</body>
+</html>
