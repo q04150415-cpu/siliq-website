@@ -18,7 +18,7 @@
     function renderArticles(articles) {
         grid.innerHTML = articles.map(a => `
             <a href="./${a.slug}/" class="blog-card" data-category="${a.category}">
-                ${a.cover ? `<img src="${a.slug}/cover.jpg" alt="${a.title}" class="blog-card-cover" loading="lazy">` : ''}
+                ${a.cover ? `<img src="${a.cover.startsWith('http') ? a.cover : a.slug + '/cover.jpg'}" alt="${a.title}" class="blog-card-cover" loading="lazy">` : ''}
                 <div class="blog-card-body">
                     <span class="blog-card-tag">${a.category}</span>
                     <h3 class="blog-card-title">${a.title}</h3>
