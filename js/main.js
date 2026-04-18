@@ -49,26 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.animate-up').forEach(el => observer.observe(el));
 
-    // --- Hero Stats Counter ---
-    const heroStats = document.querySelectorAll('.hero-stat-num');
-    if (heroStats.length) {
-        setTimeout(() => {
-            heroStats.forEach(counter => {
-                const target = parseInt(counter.dataset.count);
-                const duration = 2000;
-                const startTime = performance.now();
-                function update(currentTime) {
-                    const elapsed = currentTime - startTime;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    counter.textContent = Math.floor(eased * target).toLocaleString();
-                    if (progress < 1) requestAnimationFrame(update);
-                    else counter.textContent = target.toLocaleString();
-                }
-                requestAnimationFrame(update);
-            });
-        }, 800);
-    }
 
     // --- Active Nav Link on Scroll ---
     const sections = document.querySelectorAll('section[id]');
@@ -210,7 +190,7 @@ async function loadContent() {
         if (subtitle) subtitle.textContent = h.subtitle || '';
 
         const btnPrimary = document.querySelector('.hero-buttons .btn-primary');
-        const btnOutline = document.querySelector('.hero-buttons .btn-outline-light');
+        const btnOutline = document.querySelector('.hero-buttons .btn-outline');
         if (btnPrimary) btnPrimary.textContent = h.ctaPrimary || '';
         if (btnOutline) btnOutline.textContent = h.ctaSecondary || '';
     }
