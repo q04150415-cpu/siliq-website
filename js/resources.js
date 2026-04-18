@@ -18,21 +18,15 @@
         'marketing-healthcheck': '行銷健檢表 — 自我檢測'
     };
 
-    function isHealthcheck() {
-        return resourceInput.value === 'marketing-healthcheck';
-    }
-
     // Disable hidden fields so they don't block form validation
     function toggleFields(showHealthcheck) {
         if (showHealthcheck) {
             fieldsDefault.style.display = 'none';
             fieldsHealthcheck.style.display = 'block';
-            // Disable hidden inputs so browser skips validation
             document.getElementById('dlName').disabled = true;
             document.getElementById('dlEmail').disabled = true;
             document.getElementById('dlInstagram').disabled = false;
             document.getElementById('dlIndustry').disabled = false;
-            // Set required on visible fields
             document.getElementById('dlInstagram').required = true;
             document.getElementById('dlIndustry').required = true;
             document.getElementById('dlName').required = false;
@@ -65,7 +59,7 @@
             successEl.style.display = 'none';
 
             if (resource === 'marketing-healthcheck') {
-                modalDesc.textContent = '留下你的 IG 帳號與行業，即可免費領取';
+                modalDesc.textContent = '留下你的 IG 帳號與行業，即可開始檢測';
                 toggleFields(true);
             } else {
                 modalDesc.textContent = '留下你的 Email，我們會將資源寄送給你';
@@ -109,21 +103,32 @@
 
             document.getElementById('dlInstagram').value = '';
             document.getElementById('dlIndustry').selectedIndex = 0;
-        } else {
-            var name = document.getElementById('dlName').value.trim();
-            var email = document.getElementById('dlEmail').value.trim();
-            if (!name || !email) return;
 
-            leadData = {
-                name: name,
-                email: email,
-                resource: resource,
-                date: new Date().toISOString()
-            };
+            // Store lead then redirect directly to healthcheck page
+            var leads = JSON.parse(localStorage.getItem('siliq_leads') || '[]');
+            leads.push(leadData);
+            localStorage.setItem('siliq_leads', JSON.stringify(leads));
 
-            document.getElementById('dlName').value = '';
-            document.getElementById('dlEmail').value = '';
+            // Close modal and redirect
+            closeModal();
+            window.open('/resources/marketing-healthcheck.html', '_blank');
+            return;
         }
+
+        // Other resources: default flow
+        var name = document.getElementById('dlName').value.trim();
+        var email = document.getElementById('dlEmail').value.trim();
+        if (!name || !email) return;
+
+        leadData = {
+            name: name,
+            email: email,
+            resource: resource,
+            date: new Date().toISOString()
+        };
+
+        document.getElementById('dlName').value = '';
+        document.getElementById('dlEmail').value = '';
 
         // Store lead info
         var leads = JSON.parse(localStorage.getItem('siliq_leads') || '[]');

@@ -590,9 +590,10 @@
             </div>
 
             <div class="cta-bottom">
-                <h3>想知道具體怎麼改善？</h3>
-                <p>SILIQ 提供免費諮詢，針對你的弱項量身打造改善策略</p>
-                <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener">預約免費諮詢</a>
+                <h3>不確定從哪裡開始改善？</h3>
+                <p>SILIQ 行銷團隊提供<strong>免費 1 對 1 諮詢</strong>，根據你的健檢結果，量身打造行銷改善策略。<br>不管你是剛起步還是想突破瓶頸，我們都能幫你找到方向。</p>
+                <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener" id="ctaBtn">立即預約免費諮詢</a>
+                <div style="margin-top:12px;font-size:0.8rem;color:var(--text-lighter);">加入 LINE 官方帳號，傳送「行銷健檢」即可預約</div>
             </div>
 
             <div class="share-section">
@@ -728,6 +729,23 @@
                     '<div class="suggestion-text"><strong>' + cat.name + '（' + cat.checked + '/' + cat.total + '）</strong><span>' + text + '</span></div>' +
                     '</div>';
             });
+
+            // Dynamic CTA based on score
+            var ctaBtn = document.getElementById('ctaBtn');
+            var ctaBottom = resultSection.querySelector('.cta-bottom');
+            if (checked < 20) {
+                ctaBottom.querySelector('h3').textContent = '你的行銷需要專業協助！';
+                ctaBottom.querySelector('p').innerHTML = '得分偏低不用擔心，<strong>每個成功品牌都是從零開始的</strong>。<br>SILIQ 行銷提供免費 1 對 1 諮詢，幫你從最關鍵的環節開始補強。';
+                ctaBtn.textContent = '馬上預約免費諮詢';
+                ctaBottom.style.background = 'linear-gradient(135deg, #fff5f5, #fef0f0)';
+                ctaBottom.style.border = '2px solid #e74c3c';
+            } else if (checked < 30) {
+                ctaBottom.querySelector('h3').textContent = '有基礎了，讓專家幫你加速成長';
+                ctaBtn.textContent = '預約免費策略諮詢';
+            } else if (checked < 40) {
+                ctaBottom.querySelector('h3').textContent = '再進一步就是高手，讓我們幫你突破瓶頸';
+                ctaBtn.textContent = '預約免費諮詢';
+            }
 
             resultSection.classList.add('visible');
             resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
