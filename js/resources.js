@@ -18,36 +18,58 @@
         'marketing-healthcheck': '行銷健檢表 — 自我檢測'
     };
 
-    var currentResource = '';
+    function isHealthcheck() {
+        return resourceInput.value === 'marketing-healthcheck';
+    }
+
+    // Disable hidden fields so they don't block form validation
+    function toggleFields(showHealthcheck) {
+        if (showHealthcheck) {
+            fieldsDefault.style.display = 'none';
+            fieldsHealthcheck.style.display = 'block';
+            // Disable hidden inputs so browser skips validation
+            document.getElementById('dlName').disabled = true;
+            document.getElementById('dlEmail').disabled = true;
+            document.getElementById('dlInstagram').disabled = false;
+            document.getElementById('dlIndustry').disabled = false;
+            // Set required on visible fields
+            document.getElementById('dlInstagram').required = true;
+            document.getElementById('dlIndustry').required = true;
+            document.getElementById('dlName').required = false;
+            document.getElementById('dlEmail').required = false;
+        } else {
+            fieldsDefault.style.display = 'block';
+            fieldsHealthcheck.style.display = 'none';
+            document.getElementById('dlName').disabled = false;
+            document.getElementById('dlEmail').disabled = false;
+            document.getElementById('dlInstagram').disabled = true;
+            document.getElementById('dlIndustry').disabled = true;
+            document.getElementById('dlName').required = true;
+            document.getElementById('dlEmail').required = true;
+            document.getElementById('dlInstagram').required = false;
+            document.getElementById('dlIndustry').required = false;
+        }
+    }
+
+    // Init: disable healthcheck fields on load
+    document.getElementById('dlInstagram').disabled = true;
+    document.getElementById('dlIndustry').disabled = true;
 
     // Open modal
     document.querySelectorAll('.resource-download-btn').forEach(function(btn) {
         btn.addEventListener('click', function() {
             var resource = this.dataset.resource;
-            currentResource = resource;
             resourceInput.value = resource;
             modalTitle.textContent = '下載：' + (resourceNames[resource] || '免費資源');
             form.style.display = 'block';
             successEl.style.display = 'none';
 
-            // Switch form fields based on resource type
             if (resource === 'marketing-healthcheck') {
-                fieldsDefault.style.display = 'none';
-                fieldsHealthcheck.style.display = 'block';
                 modalDesc.textContent = '留下你的 IG 帳號與行業，即可免費領取';
-                // Set required
-                document.getElementById('dlInstagram').required = true;
-                document.getElementById('dlIndustry').required = true;
-                document.getElementById('dlName').required = false;
-                document.getElementById('dlEmail').required = false;
+                toggleFields(true);
             } else {
-                fieldsDefault.style.display = 'block';
-                fieldsHealthcheck.style.display = 'none';
                 modalDesc.textContent = '留下你的 Email，我們會將資源寄送給你';
-                document.getElementById('dlInstagram').required = false;
-                document.getElementById('dlIndustry').required = false;
-                document.getElementById('dlName').required = true;
-                document.getElementById('dlEmail').required = true;
+                toggleFields(false);
             }
 
             modal.classList.add('active');
@@ -85,7 +107,6 @@
                 date: new Date().toISOString()
             };
 
-            // Reset healthcheck fields
             document.getElementById('dlInstagram').value = '';
             document.getElementById('dlIndustry').selectedIndex = 0;
         } else {
@@ -100,7 +121,6 @@
                 date: new Date().toISOString()
             };
 
-            // Reset default fields
             document.getElementById('dlName').value = '';
             document.getElementById('dlEmail').value = '';
         }
@@ -114,7 +134,7 @@
         form.style.display = 'none';
         successEl.style.display = 'block';
 
-        // Set download link to HTML resource page
+        // Set download link
         var downloadBtn = document.getElementById('actualDownload');
         downloadBtn.href = '/resources/' + resource + '.html';
         downloadBtn.target = '_blank';
