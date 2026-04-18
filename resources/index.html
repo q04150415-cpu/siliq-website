@@ -50,6 +50,26 @@
     <section class="resources-section">
         <div class="container">
             <div class="resources-grid">
+                <!-- Resource 0: 行銷健檢表 (Featured) -->
+                <div class="resource-card featured">
+                    <div class="resource-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M9 11l3 3L22 4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <span class="resource-tag tag-new">互動健檢</span>
+                    <h3>行銷健檢表 — 自我檢測</h3>
+                    <p>50 題互動式自我檢測，涵蓋品牌、社群、內容、廣告、數據五大面向，即時產出你的行銷診斷報告與改善建議。</p>
+                    <ul class="resource-includes">
+                        <li>50 題全方位行銷體檢</li>
+                        <li>5 大面向分數雷達圖</li>
+                        <li>即時診斷報告</li>
+                        <li>客製化改善建議</li>
+                    </ul>
+                    <button class="btn btn-primary resource-download-btn" data-resource="marketing-healthcheck">免費領取</button>
+                </div>
+
                 <!-- Resource 1 -->
                 <div class="resource-card">
                     <div class="resource-icon">
@@ -129,14 +149,42 @@
                 </svg>
             </div>
             <h3 id="modalTitle">免費下載資源</h3>
-            <p>留下你的 Email，我們會將資源寄送給你</p>
+            <p id="modalDesc">留下你的 Email，我們會將資源寄送給你</p>
             <form class="download-form" id="downloadForm">
                 <input type="hidden" id="resourceName" name="resource">
-                <div class="download-form-group">
-                    <input type="text" id="dlName" name="name" placeholder="你的姓名" required>
+                <!-- Default fields: name + email -->
+                <div class="form-fields-default" id="fieldsDefault">
+                    <div class="download-form-group">
+                        <input type="text" id="dlName" name="name" placeholder="你的姓名">
+                    </div>
+                    <div class="download-form-group">
+                        <input type="email" id="dlEmail" name="email" placeholder="你的 Email">
+                    </div>
                 </div>
-                <div class="download-form-group">
-                    <input type="email" id="dlEmail" name="email" placeholder="你的 Email" required>
+                <!-- Healthcheck fields: IG + industry -->
+                <div class="form-fields-healthcheck" id="fieldsHealthcheck" style="display:none;">
+                    <div class="download-form-group">
+                        <input type="text" id="dlInstagram" name="instagram" placeholder="你的 IG 帳號（例如：@siliq_marketing）">
+                    </div>
+                    <div class="download-form-group">
+                        <select id="dlIndustry" name="industry">
+                            <option value="" disabled selected>請選擇你的行業</option>
+                            <option value="餐飲美食">餐飲美食</option>
+                            <option value="美容保養">美容保養</option>
+                            <option value="服飾配件">服飾配件</option>
+                            <option value="健身運動">健身運動</option>
+                            <option value="教育培訓">教育培訓</option>
+                            <option value="電商零售">電商零售</option>
+                            <option value="旅遊觀光">旅遊觀光</option>
+                            <option value="科技軟體">科技軟體</option>
+                            <option value="房地產">房地產</option>
+                            <option value="醫療健康">醫療健康</option>
+                            <option value="金融保險">金融保險</option>
+                            <option value="設計創意">設計創意</option>
+                            <option value="自媒體/KOL">自媒體 / KOL</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-full">立即取得</button>
                 <p class="download-privacy">我們重視你的隱私，不會發送垃圾郵件</p>

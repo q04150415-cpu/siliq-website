@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行銷健檢表 — 自我檢測你的行銷體質 | SILIQ 行銷</title>
+    <meta name="description" content="免費行銷自檢工具，50 題快速診斷你的品牌行銷、社群經營、內容策略、廣告投放與數據分析現況，獲得專屬改善建議。">
+    <meta name="robots" content="noindex">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2d4a3e;
+            --primary-dark: #1e3530;
+            --accent: #5b8a72;
+            --accent-light: #8bb5a0;
+            --accent-subtle: rgba(91, 138, 114, 0.10);
+            --gold: #b8a47c;
+            --gold-subtle: rgba(184, 164, 124, 0.12);
+            --text: #2a3632;
+            --text-light: #556b60;
+            --text-lighter: #8a9e92;
+            --bg: #fbfcfb;
+            --bg-light: #f3f7f5;
+            --border: #d4dfd8;
+            --red: #e74c3c;
+            --orange: #f39c12;
+            --green: #27ae60;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Noto Sans TC', sans-serif; color: var(--text); background: var(--bg); line-height: 1.8; }
+
+        /* Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--accent) 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 24px 48px;
+        }
+        .page-header h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .page-header p {
+            font-size: 1.05rem;
+            opacity: 0.8;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .page-header .brand {
+            font-size: 0.82rem;
+            opacity: 0.5;
+            margin-top: 16px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 32px 20px 80px;
+        }
+
+        /* Intro */
+        .intro {
+            text-align: center;
+            padding: 28px 0 8px;
+            font-size: 0.92rem;
+            color: var(--text-light);
+        }
+
+        /* Progress Bar */
+        .progress-wrapper {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            z-index: 100;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+        .progress-bar {
+            height: 6px;
+            background: #e8eeeb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 3px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+        .progress-text {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--text-lighter);
+            margin-top: 6px;
+        }
+
+        /* Section */
+        .check-section {
+            margin-bottom: 32px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .section-num {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .section-header h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .section-header .section-count {
+            margin-left: auto;
+            font-size: 0.78rem;
+            color: var(--text-lighter);
+            white-space: nowrap;
+        }
+
+        /* Check Items */
+        .check-list {
+            list-style: none;
+        }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            user-select: none;
+        }
+        .check-item:hover {
+            border-color: var(--accent-light);
+            background: var(--accent-subtle);
+        }
+        .check-item.checked {
+            border-color: var(--accent);
+            background: rgba(91, 138, 114, 0.06);
+        }
+        .check-item.checked .custom-checkbox {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+        .check-item.checked .custom-checkbox::after {
+            opacity: 1;
+        }
+        .custom-checkbox {
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--border);
+            border-radius: 6px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        .custom-checkbox::after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 2px;
+            width: 6px;
+            height: 11px;
+            border: solid #fff;
+            border-width: 0 2.5px 2.5px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        .check-content strong {
+            display: block;
+            font-size: 0.92rem;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+        .check-content span {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        /* Tip */
+        .section-tip {
+            background: var(--bg-light);
+            border-left: 4px solid var(--accent);
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Result Section */
+        .result-section {
+            display: none;
+            margin-top: 40px;
+            animation: slideUp 0.5s ease;
+        }
+        .result-section.visible {
+            display: block;
+        }
+        .result-card {
+            background: #fff;
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+        .result-score {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+        .result-score span {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-lighter);
+        }
+        .result-label {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 12px 0 4px;
+            color: var(--primary);
+        }
+        .result-desc {
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 24px;
+        }
+
+        /* Category Scores */
+        .category-scores {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 24px 0;
+        }
+        .cat-score {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 16px 12px;
+            text-align: center;
+        }
+        .cat-score-bar {
+            height: 4px;
+            background: #e8eeeb;
+            border-radius: 2px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .cat-score-fill {
+            height: 100%;
+            border-radius: 2px;
+            transition: width 0.6s ease;
+        }
+        .cat-score-fill.low { background: var(--red); }
+        .cat-score-fill.mid { background: var(--orange); }
+        .cat-score-fill.high { background: var(--green); }
+        .cat-name {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+        .cat-num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        /* Suggestions */
+        .suggestions {
+            margin-top: 24px;
+            text-align: left;
+        }
+        .suggestions h3 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        .suggestion-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid #eef3f0;
+        }
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+        .suggestion-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.75rem;
+            color: #fff;
+            font-weight: 700;
+        }
+        .suggestion-icon.urgent { background: var(--red); }
+        .suggestion-icon.improve { background: var(--orange); }
+        .suggestion-icon.good { background: var(--green); }
+        .suggestion-text strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+        .suggestion-text span {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: 'Noto Sans TC', sans-serif;
+            margin-top: 32px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(91, 138, 114, 0.3);
+        }
+
+        /* CTA */
+        .cta-bottom {
+            text-align: center;
+            margin-top: 32px;
+            padding: 32px;
+            background: var(--bg-light);
+            border-radius: 12px;
+        }
+        .cta-bottom h3 {
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+        .cta-bottom p {
+            color: var(--text-light);
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+        .cta-bottom a {
+            display: inline-block;
+            padding: 12px 32px;
+            background: var(--accent);
+            color: #fff;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .cta-bottom a:hover {
+            background: var(--primary);
+        }
+
+        /* Share */
+        .share-section {
+            text-align: center;
+            margin-top: 24px;
+        }
+        .share-section p {
+            font-size: 0.85rem;
+            color: var(--text-lighter);
+            margin-bottom: 8px;
+        }
+        .share-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-decoration: none;
+            cursor: pointer;
+            background: #fff;
+            font-family: 'Noto Sans TC', sans-serif;
+            transition: all 0.2s;
+        }
+        .share-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Animations */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Print */
+        @media print {
+            .submit-btn, .cta-bottom, .progress-wrapper, .share-section { display: none; }
+            .result-section { display: block !important; }
+            .page-header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .page-header h1 { font-size: 1.6rem; }
+            .page-header { padding: 48px 20px 36px; }
+            .container { padding: 24px 16px 60px; }
+            .result-score { font-size: 3rem; }
+            .category-scores { grid-template-columns: repeat(2, 1fr); }
+            .check-item { padding: 12px; gap: 10px; }
+            .result-card { padding: 24px 16px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+        <h1>行銷健檢表</h1>
+        <p>50 題快速自檢，找出你的行銷盲點與成長機會</p>
+        <div class="brand">SILIQ 行銷 | siliq2378.com</div>
+    </div>
+
+    <div class="container">
+        <p class="intro">逐項檢視你目前的行銷狀況，勾選「已做到」的項目。<br>完成後查看專屬診斷報告與改善建議。</p>
+
+        <div class="progress-wrapper">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text">
+                <span>已完成 <strong id="checkedCount">0</strong>/50</span>
+                <span id="progressPct">0%</span>
+            </div>
+        </div>
+
+        <!-- 一、品牌基礎 -->
+        <div class="check-section" data-category="brand">
+            <div class="section-header">
+                <div class="section-num">1</div>
+                <h2>品牌基礎</h2>
+                <span class="section-count">0/10</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>目標客群明確</strong><span>能用一句話描述理想客戶的樣貌與痛點</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>品牌核心價值清晰</strong><span>品牌代表什麼？與競品的核心差異是什麼？</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>品牌故事完整</strong><span>有一個能引起受眾共鳴的創業 / 品牌故事</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>視覺識別統一</strong><span>Logo、品牌色、字體有明確規範且跨平台一致</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>品牌語調一致</strong><span>所有平台的文案風格統一（專業 / 親切 / 幽默）</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>USP（獨特賣點）明確</strong><span>客戶選你而不選競品的關鍵理由是什麼？</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>品牌定位語</strong><span>有一句精準的品牌 Slogan 或定位聲明</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>競品分析</strong><span>了解前 3 大競品的優劣勢與行銷手法</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>品牌接觸點一致</strong><span>名片、官網、社群、包裝的品牌體驗一致</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>客戶見證 / 社會證明</strong><span>有收集並展示客戶好評、合作案例</span></div></li>
+            </ul>
+            <div class="section-tip">品牌基礎是一切行銷的根基。如果這區得分偏低，建議優先補強，才能讓後續的行銷投入事半功倍。</div>
+        </div>
+
+        <!-- 二、社群經營 -->
+        <div class="check-section" data-category="social">
+            <div class="section-header">
+                <div class="section-num">2</div>
+                <h2>社群經營</h2>
+                <span class="section-count">0/10</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>選對主力平台</strong><span>有出現在目標客群最活躍的 1-2 個平台</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>發文頻率穩定</strong><span>每週至少發布 3-5 篇社群內容</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容類型多元</strong><span>教學、幕後花絮、互動、促銷等類型輪流發布</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>短影音 / Reels 經營</strong><span>有定期發布 Reels、TikTok 或 Shorts 內容</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>限時動態活躍</strong><span>每天有更新 Stories，保持品牌存在感</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>互動回覆即時</strong><span>24 小時內回覆留言與私訊</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>Hashtag 策略有效</strong><span>使用與品牌 / 受眾相關的標籤組合</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>每篇有 CTA</strong><span>每篇貼文都有引導行動（留言、點連結、分享）</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>社群數據定期檢視</strong><span>有追蹤觸及率、互動率、粉絲成長數據</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>跨平台導流</strong><span>有策略地將流量從其他平台導向主力社群</span></div></li>
+            </ul>
+            <div class="section-tip">社群的價值不在粉絲數量，而在互動品質。100 個會留言的粉絲 > 10,000 個沈默的追蹤者。</div>
+        </div>
+
+        <!-- 三、內容策略 -->
+        <div class="check-section" data-category="content">
+            <div class="section-header">
+                <div class="section-num">3</div>
+                <h2>內容策略</h2>
+                <span class="section-count">0/10</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容日曆排程</strong><span>有每月 / 每週的內容規劃表</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容主題明確</strong><span>有 3-5 個固定的內容主軸 / 系列</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>SEO 基礎優化</strong><span>網站有做標題、描述、關鍵字的基礎 SEO</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>長篇內容經營</strong><span>有定期發布部落格、知識庫等深度內容</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容再製策略</strong><span>一篇內容會改編為不同格式（文字→影片→圖卡）</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>UGC 用戶生成內容</strong><span>有鼓勵客戶分享使用心得或標記品牌</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>名單收集機制</strong><span>有在收集潛在客戶的聯絡方式（Email / LINE）</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容漏斗完整</strong><span>內容涵蓋認知→考慮→決策各階段</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>爆款內容模式</strong><span>了解自己哪類內容表現最好，並持續放大</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容價值導向</strong><span>內容以提供價值為主，而非純推銷</span></div></li>
+            </ul>
+            <div class="section-tip">好的內容策略讓每篇內容都有目的：吸引新客、培養信任、或推動轉換。三者缺一不可。</div>
+        </div>
+
+        <!-- 四、廣告與轉換 -->
+        <div class="check-section" data-category="ads">
+            <div class="section-header">
+                <div class="section-num">4</div>
+                <h2>廣告與轉換</h2>
+                <span class="section-count">0/10</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>有投放數位廣告</strong><span>有在 Meta、Google 或其他平台投放廣告</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>受眾設定精準</strong><span>廣告受眾有根據數據設定，而非亂槍打鳥</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>素材定期更新</strong><span>廣告素材至少每 2-4 週更換一次</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>A/B 測試</strong><span>有對文案、圖片、受眾進行測試比較</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>轉換追蹤設定</strong><span>有安裝 Pixel 或轉換 API 追蹤成效</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>ROAS 追蹤</strong><span>有追蹤廣告投資報酬率，並持續優化</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>Landing Page 優化</strong><span>廣告到達頁有針對轉換進行設計</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>再行銷策略</strong><span>有對曾互動的受眾進行再行銷投放</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>漏斗分層投放</strong><span>有區分冷受眾、暖受眾、熱受眾的投放策略</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>預算分配合理</strong><span>廣告預算有根據成效數據動態調整</span></div></li>
+            </ul>
+            <div class="section-tip">廣告是放大器，不是救世主。品牌基礎不穩、內容品質差，再多預算也換不到好成效。</div>
+        </div>
+
+        <!-- 五、數據與優化 -->
+        <div class="check-section" data-category="data">
+            <div class="section-header">
+                <div class="section-num">5</div>
+                <h2>數據與優化</h2>
+                <span class="section-count">0/10</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>GA / 網站分析</strong><span>網站有安裝 Google Analytics 並定期查看</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>社群 Insights 定期分析</strong><span>每週查看社群平台的數據洞察報告</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>轉換漏斗追蹤</strong><span>知道從曝光到成交各階段的轉換率</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>客戶來源歸因</strong><span>了解客戶從哪個管道認識你、如何決策</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>月度成效報表</strong><span>每月整理行銷成效報告，追蹤 KPI</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>數據驅動決策</strong><span>行銷策略調整是根據數據而非直覺</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>競品數據監測</strong><span>有定期觀察競品的行銷動態與表現</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容表現排名</strong><span>知道哪些內容效果最好，並能複製成功</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>客戶回饋收集</strong><span>有系統性地收集客戶意見與滿意度</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>定期策略檢討</strong><span>至少每季調整一次行銷策略方向</span></div></li>
+            </ul>
+            <div class="section-tip">沒有追蹤就沒有優化。養成看數據的習慣，是從「憑感覺做行銷」邁向「科學化行銷」的關鍵。</div>
+        </div>
+
+        <!-- Submit -->
+        <button class="submit-btn" id="showResult">查看我的診斷報告</button>
+
+        <!-- Result -->
+        <div class="result-section" id="resultSection">
+            <div class="result-card">
+                <div class="result-score" id="totalScore">0<span> / 50</span></div>
+                <div class="result-label" id="resultLabel">—</div>
+                <div class="result-desc" id="resultDesc">—</div>
+
+                <div class="category-scores" id="categoryScores"></div>
+
+                <div class="suggestions" id="suggestions">
+                    <h3>你的行銷改善建議</h3>
+                    <div id="suggestionList"></div>
+                </div>
+            </div>
+
+            <div class="cta-bottom">
+                <h3>想知道具體怎麼改善？</h3>
+                <p>SILIQ 提供免費諮詢，針對你的弱項量身打造改善策略</p>
+                <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener">預約免費諮詢</a>
+            </div>
+
+            <div class="share-section">
+                <p>覺得這份健檢表有幫助？分享給需要的朋友</p>
+                <button class="share-btn" id="copyLink">複製連結分享</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+        var items = document.querySelectorAll('.check-item');
+        var total = items.length;
+        var progressFill = document.getElementById('progressFill');
+        var checkedCount = document.getElementById('checkedCount');
+        var progressPct = document.getElementById('progressPct');
+
+        // Toggle check
+        items.forEach(function(item) {
+            item.addEventListener('click', function() {
+                this.classList.toggle('checked');
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            var checked = document.querySelectorAll('.check-item.checked').length;
+            var pct = Math.round((checked / total) * 100);
+            progressFill.style.width = pct + '%';
+            checkedCount.textContent = checked;
+            progressPct.textContent = pct + '%';
+
+            // Update section counts
+            document.querySelectorAll('.check-section').forEach(function(section) {
+                var sectionChecked = section.querySelectorAll('.check-item.checked').length;
+                var sectionTotal = section.querySelectorAll('.check-item').length;
+                section.querySelector('.section-count').textContent = sectionChecked + '/' + sectionTotal;
+            });
+        }
+
+        // Show result
+        document.getElementById('showResult').addEventListener('click', function() {
+            var checked = document.querySelectorAll('.check-item.checked').length;
+            var resultSection = document.getElementById('resultSection');
+            var totalScoreEl = document.getElementById('totalScore');
+            var resultLabel = document.getElementById('resultLabel');
+            var resultDesc = document.getElementById('resultDesc');
+
+            totalScoreEl.innerHTML = checked + '<span> / 50</span>';
+
+            var label, desc;
+            if (checked >= 40) {
+                label = '行銷資優生！';
+                desc = '你的行銷體質非常健康，基礎紮實且執行到位。持續保持，並關注最新趨勢來維持競爭優勢。';
+            } else if (checked >= 30) {
+                label = '表現不錯，有進步空間';
+                desc = '你已經建立了不錯的行銷基礎，但某些面向還有提升的機會。針對弱項加強，能讓成效更上一層樓。';
+            } else if (checked >= 20) {
+                label = '基礎及格，需要補強';
+                desc = '你有一些行銷基礎，但還有很多改善空間。建議從得分最低的類別開始，逐步建立完整的行銷體系。';
+            } else if (checked >= 10) {
+                label = '行銷起步階段';
+                desc = '你的行銷還在初期，建議先從品牌基礎和社群經營著手，一步步打穩地基再擴展其他面向。';
+            } else {
+                label = '急需專業協助！';
+                desc = '你的行銷幾乎還沒開始佈局。不用擔心，每個品牌都是從零開始的，讓我們幫你制定一個完整的起步計畫。';
+            }
+
+            resultLabel.textContent = label;
+            resultDesc.textContent = desc;
+
+            // Category scores
+            var categories = [
+                { key: 'brand', name: '品牌基礎' },
+                { key: 'social', name: '社群經營' },
+                { key: 'content', name: '內容策略' },
+                { key: 'ads', name: '廣告轉換' },
+                { key: 'data', name: '數據優化' }
+            ];
+
+            var catScoresEl = document.getElementById('categoryScores');
+            var suggestionList = document.getElementById('suggestionList');
+            catScoresEl.innerHTML = '';
+            suggestionList.innerHTML = '';
+
+            var catResults = [];
+
+            categories.forEach(function(cat) {
+                var section = document.querySelector('[data-category="' + cat.key + '"]');
+                var sectionChecked = section.querySelectorAll('.check-item.checked').length;
+                var sectionTotal = section.querySelectorAll('.check-item').length;
+                var pct = Math.round((sectionChecked / sectionTotal) * 100);
+                var level = pct >= 70 ? 'high' : (pct >= 40 ? 'mid' : 'low');
+
+                catResults.push({ name: cat.name, checked: sectionChecked, total: sectionTotal, pct: pct, level: level });
+
+                catScoresEl.innerHTML += '<div class="cat-score">' +
+                    '<div class="cat-score-bar"><div class="cat-score-fill ' + level + '" style="width:' + pct + '%"></div></div>' +
+                    '<div class="cat-name">' + cat.name + '</div>' +
+                    '<div class="cat-num">' + sectionChecked + '/' + sectionTotal + '</div>' +
+                    '</div>';
+            });
+
+            // Sort by score ascending for suggestions
+            catResults.sort(function(a, b) { return a.pct - b.pct; });
+
+            var suggestions = {
+                '品牌基礎': { urgent: '建議立即進行品牌定位工作坊，釐清核心價值與目標客群', improve: '視覺識別和品牌語調可以再統一，建議制作品牌規範手冊', good: '品牌基礎穩固，可以開始思考品牌升級或跨市場擴展' },
+                '社群經營': { urgent: '先選定 1 個主力平台全力經營，建立穩定的發文節奏', improve: '加強互動與 Reels 經營，善用限時動態提升黏著度', good: '社群表現亮眼！可嘗試更多創意互動或跨帳號合作' },
+                '內容策略': { urgent: '先建立內容日曆，規劃 3 個核心主題系列開始產出', improve: '加強內容再製與 SEO 優化，讓好內容發揮更大效益', good: '內容策略完整，可進一步優化內容漏斗提升轉換率' },
+                '廣告轉換': { urgent: '建議從小預算開始測試 Meta 廣告，先安裝好追蹤像素', improve: '優化受眾設定與素材，導入 A/B 測試提升 ROAS', good: '廣告投放成熟！可嘗試漏斗分層投放策略進一步提效' },
+                '數據優化': { urgent: '先安裝 GA 和社群 Insights，養成每週看數據的習慣', improve: '建立月度報表制度，用數據驅動行銷決策', good: '數據意識強！建議建立更完整的歸因模型與預測分析' }
+            };
+
+            catResults.forEach(function(cat) {
+                var iconClass, iconText, text;
+                if (cat.pct < 40) {
+                    iconClass = 'urgent';
+                    iconText = '!';
+                    text = suggestions[cat.name].urgent;
+                } else if (cat.pct < 70) {
+                    iconClass = 'improve';
+                    iconText = '↑';
+                    text = suggestions[cat.name].improve;
+                } else {
+                    iconClass = 'good';
+                    iconText = '✓';
+                    text = suggestions[cat.name].good;
+                }
+
+                suggestionList.innerHTML += '<div class="suggestion-item">' +
+                    '<div class="suggestion-icon ' + iconClass + '">' + iconText + '</div>' +
+                    '<div class="suggestion-text"><strong>' + cat.name + '（' + cat.checked + '/' + cat.total + '）</strong><span>' + text + '</span></div>' +
+                    '</div>';
+            });
+
+            resultSection.classList.add('visible');
+            resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+
+        // Copy link
+        document.getElementById('copyLink').addEventListener('click', function() {
+            var url = window.location.origin + '/resources/marketing-healthcheck.html';
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url);
+            } else {
+                var input = document.createElement('input');
+                input.value = url;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+            }
+            this.textContent = '已複製！';
+            var btn = this;
+            setTimeout(function() { btn.textContent = '複製連結分享'; }, 2000);
+        });
+    })();
+    </script>
+</body>
+</html>
