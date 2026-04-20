@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SILIQ行銷 — 短影音製作與行銷</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__logo">
+        <span class="nav__logo-text">SILIQ</span>
+        <span class="nav__logo-dot"></span>
+        <span class="nav__logo-sub">行銷</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#services">服務項目</a></li>
+        <li><a href="#portfolio">作品集</a></li>
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#contact" class="nav__cta">免費諮詢</a></li>
+      </ul>
+      <button class="nav__burger" id="navBurger" aria-label="選單">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu__links">
+      <li><a href="#services">服務項目</a></li>
+      <li><a href="#portfolio">作品集</a></li>
+      <li><a href="#about">關於我們</a></li>
+      <li><a href="#contact" class="nav__cta">免費諮詢</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero" id="hero">
+    <div class="hero__video-wrap">
+      <video class="hero__video" autoplay muted loop playsinline>
+        <source src="assets/showreel.mp4" type="video/mp4">
+      </video>
+      <div class="hero__video-overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__rec">
+        <span class="hero__rec-dot"></span>
+        <span class="hero__rec-text">REC</span>
+      </div>
+
+      <h1 class="hero__title reveal">
+        <span class="hero__title-line">讓品牌</span>
+        <span class="hero__title-line hero__title-line--accent">被看見</span>
+      </h1>
+
+      <p class="hero__subtitle reveal reveal--delay-1">
+        短影音策略 × 創意製作 × 精準投放<br>
+        一站式打造你的流量引擎
+      </p>
+
+      <div class="hero__actions reveal reveal--delay-2">
+        <a href="#contact" class="btn btn--glow">
+          <span>開始你的增長計畫</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="#portfolio" class="btn btn--ghost">觀看作品</a>
+      </div>
+
+      <div class="hero__stats reveal reveal--delay-3">
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-target="500">0</span><span class="hero__stat-suffix">+</span>
+          <span class="hero__stat-label">影片製作</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-target="150">0</span><span class="hero__stat-suffix">M</span>
+          <span class="hero__stat-label">總觀看數</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num" data-target="98">0</span><span class="hero__stat-suffix">%</span>
+          <span class="hero__stat-label">客戶續約率</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>SCROLL</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES SECTION ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">WHAT WE DO</span>
+        <h2 class="section-title">服務項目</h2>
+        <p class="section-desc">從策略到落地，我們用短影音為品牌注入增長動能</p>
+      </div>
+
+      <div class="services__grid">
+        <div class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="24" cy="24" r="20"/>
+              <path d="M24 4a20 20 0 0 1 0 40"/>
+              <circle cx="24" cy="24" r="8"/>
+              <line x1="24" y1="4" x2="24" y2="16"/>
+              <line x1="24" y1="32" x2="24" y2="44"/>
+            </svg>
+          </div>
+          <div class="service-card__number">01</div>
+          <h3 class="service-card__title">行銷策略</h3>
+          <p class="service-card__desc">
+            深度剖析品牌定位與受眾畫像，量身打造短影音內容策略，
+            讓每支影片都精準命中目標用戶。
+          </p>
+          <ul class="service-card__tags">
+            <li>受眾分析</li>
+            <li>內容企劃</li>
+            <li>競品研究</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal--delay-1">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="6" y="10" width="36" height="24" rx="3"/>
+              <circle cx="24" cy="22" r="7"/>
+              <path d="M6 38h36"/>
+              <circle cx="24" cy="38" r="2"/>
+            </svg>
+          </div>
+          <div class="service-card__number">02</div>
+          <h3 class="service-card__title">短影音製作</h3>
+          <p class="service-card__desc">
+            從腳本撰寫、專業拍攝到後期剪輯，一條龍產出高品質短影音，
+            在 TikTok、Reels、Shorts 全平台制霸。
+          </p>
+          <ul class="service-card__tags">
+            <li>腳本撰寫</li>
+            <li>專業拍攝</li>
+            <li>後期剪輯</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal--delay-2">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 38l10-14 8 8 8-12 10 18"/>
+              <circle cx="38" cy="14" r="5"/>
+              <path d="M38 12v4M36 14h4"/>
+            </svg>
+          </div>
+          <div class="service-card__number">03</div>
+          <h3 class="service-card__title">廣告投放</h3>
+          <p class="service-card__desc">
+            數據驅動的精準投放策略，最大化每分預算的 ROAS，
+            讓你的內容觸及真正會轉化的受眾。
+          </p>
+          <ul class="service-card__tags">
+            <li>Meta Ads</li>
+            <li>TikTok Ads</li>
+            <li>數據優化</li>
+          </ul>
+        </div>
+
+        <div class="service-card reveal reveal--delay-3">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M24 4l4 8 8 1-6 6 2 8-8-4-8 4 2-8-6-6 8-1z"/>
+              <circle cx="24" cy="36" r="8"/>
+              <path d="M20 36h8M24 32v8"/>
+            </svg>
+          </div>
+          <div class="service-card__number">04</div>
+          <h3 class="service-card__title">策略顧問</h3>
+          <p class="service-card__desc">
+            為你的團隊提供短影音行銷顧問服務，從帳號經營到內容方向，
+            全方位陪跑品牌增長。
+          </p>
+          <ul class="service-card__tags">
+            <li>帳號診斷</li>
+            <li>團隊培訓</li>
+            <li>月度陪跑</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PORTFOLIO SECTION ========== -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">OUR WORK</span>
+        <h2 class="section-title">作品集</h2>
+        <p class="section-desc">每一支影片，都是品牌與觀眾的深度對話</p>
+      </div>
+
+      <div class="portfolio__filters reveal">
+        <button class="portfolio__filter active" data-filter="all">全部</button>
+        <button class="portfolio__filter" data-filter="tiktok">TikTok</button>
+        <button class="portfolio__filter" data-filter="reels">Reels</button>
+        <button class="portfolio__filter" data-filter="shorts">Shorts</button>
+      </div>
+
+      <div class="portfolio__grid">
+        <div class="portfolio__item reveal" data-category="tiktok">
+          <div class="portfolio__thumb">
+            <div class="portfolio__thumb-placeholder" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+              <svg viewBox="0 0 48 48" fill="white" opacity="0.3"><polygon points="18,12 38,24 18,36"/></svg>
+            </div>
+            <div class="portfolio__overlay">
+              <span class="portfolio__play">▶</span>
+            </div>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__platform">TikTok</span>
+            <h4>美妝品牌 — 產品開箱系列</h4>
+            <div class="portfolio__metrics">
+              <span>👁 2.3M</span>
+              <span>❤ 180K</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio__item reveal reveal--delay-1" data-category="reels">
+          <div class="portfolio__thumb">
+            <div class="portfolio__thumb-placeholder" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+              <svg viewBox="0 0 48 48" fill="white" opacity="0.3"><polygon points="18,12 38,24 18,36"/></svg>
+            </div>
+            <div class="portfolio__overlay">
+              <span class="portfolio__play">▶</span>
+            </div>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__platform">Reels</span>
+            <h4>餐飲集團 — 品牌形象短片</h4>
+            <div class="portfolio__metrics">
+              <span>👁 1.8M</span>
+              <span>❤ 95K</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio__item reveal reveal--delay-2" data-category="shorts">
+          <div class="portfolio__thumb">
+            <div class="portfolio__thumb-placeholder" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+              <svg viewBox="0 0 48 48" fill="white" opacity="0.3"><polygon points="18,12 38,24 18,36"/></svg>
+            </div>
+            <div class="portfolio__overlay">
+              <span class="portfolio__play">▶</span>
+            </div>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__platform">Shorts</span>
+            <h4>科技新創 — 產品功能展示</h4>
+            <div class="portfolio__metrics">
+              <span>👁 3.1M</span>
+              <span>❤ 210K</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio__item reveal reveal--delay-1" data-category="tiktok">
+          <div class="portfolio__thumb">
+            <div class="portfolio__thumb-placeholder" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+              <svg viewBox="0 0 48 48" fill="white" opacity="0.3"><polygon points="18,12 38,24 18,36"/></svg>
+            </div>
+            <div class="portfolio__overlay">
+              <span class="portfolio__play">▶</span>
+            </div>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__platform">TikTok</span>
+            <h4>時尚品牌 — KOL 聯名企劃</h4>
+            <div class="portfolio__metrics">
+              <span>👁 5.6M</span>
+              <span>❤ 420K</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio__item reveal reveal--delay-2" data-category="reels">
+          <div class="portfolio__thumb">
+            <div class="portfolio__thumb-placeholder" style="background: linear-gradient(135deg, #fbc2eb, #a6c1ee);">
+              <svg viewBox="0 0 48 48" fill="white" opacity="0.3"><polygon points="18,12 38,24 18,36"/></svg>
+            </div>
+            <div class="portfolio__overlay">
+              <span class="portfolio__play">▶</span>
+            </div>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__platform">Reels</span>
+            <h4>健身品牌 — 挑戰賽活動</h4>
+            <div class="portfolio__metrics">
+              <span>👁 4.2M</span>
+              <span>❤ 310K</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio__item reveal reveal--delay-3" data-category="shorts">
+          <div class="portfolio__thumb">
+            <div class="portfolio__thumb-placeholder" style="background: linear-gradient(135deg, #fddb92, #d1fdff);">
+              <svg viewBox="0 0 48 48" fill="white" opacity="0.3"><polygon points="18,12 38,24 18,36"/></svg>
+            </div>
+            <div class="portfolio__overlay">
+              <span class="portfolio__play">▶</span>
+            </div>
+          </div>
+          <div class="portfolio__info">
+            <span class="portfolio__platform">Shorts</span>
+            <h4>教育平台 — 知識型短影音</h4>
+            <div class="portfolio__metrics">
+              <span>👁 1.5M</span>
+              <span>❤ 88K</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__header">
+        <div class="section-header reveal">
+          <span class="section-tag">WHO WE ARE</span>
+          <h2 class="section-title">關於我們</h2>
+        </div>
+      </div>
+
+      <div class="about__story reveal">
+        <div class="about__story-text">
+          <h3 class="about__headline">
+            我們是一群<br>
+            <span class="text-accent">對影像瘋狂的人</span>
+          </h3>
+          <p>
+            SILIQ行銷誕生於短影音浪潮之中。我們深信，在注意力稀缺的時代，
+            唯有極致的創意與精準的策略，才能讓品牌在滑動的拇指間被記住。
+          </p>
+          <p>
+            從第一支影片到第五百支，我們始終堅持——每一幀畫面都要有意義，
+            每一個故事都要能觸動人心。
+          </p>
+        </div>
+        <div class="about__story-visual">
+          <div class="about__frame">
+            <div class="about__frame-inner">
+              <div class="about__frame-placeholder">
+                <span>SILIQ</span>
+              </div>
+            </div>
+            <div class="about__frame-rec">
+              <span class="about__frame-rec-dot"></span>
+              REC 00:00:42
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__team">
+        <h3 class="about__team-title reveal">核心團隊</h3>
+        <div class="about__team-grid">
+          <div class="team-card reveal">
+            <div class="team-card__photo">
+              <div class="team-card__placeholder">SL</div>
+            </div>
+            <h4 class="team-card__name">創辦人</h4>
+            <span class="team-card__role">CEO & 策略總監</span>
+          </div>
+          <div class="team-card reveal reveal--delay-1">
+            <div class="team-card__photo">
+              <div class="team-card__placeholder">KW</div>
+            </div>
+            <h4 class="team-card__name">創意總監</h4>
+            <span class="team-card__role">Creative Director</span>
+          </div>
+          <div class="team-card reveal reveal--delay-2">
+            <div class="team-card__photo">
+              <div class="team-card__placeholder">YC</div>
+            </div>
+            <h4 class="team-card__name">製作總監</h4>
+            <span class="team-card__role">Production Lead</span>
+          </div>
+          <div class="team-card reveal reveal--delay-3">
+            <div class="team-card__photo">
+              <div class="team-card__placeholder">ML</div>
+            </div>
+            <h4 class="team-card__name">投放總監</h4>
+            <span class="team-card__role">Media Director</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="contact__info reveal">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">立即開啟你的<br><span class="text-accent">短影音增長</span></h2>
+          <p class="contact__desc">
+            填寫表單或直接聯繫我們，讓我們為你的品牌量身打造短影音行銷方案。
+          </p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <span class="contact__detail-label">Email</span>
+              <span>hello@siliq.tw</span>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-label">Phone</span>
+              <span>+886 2 1234 5678</span>
+            </div>
+            <div class="contact__detail">
+              <span class="contact__detail-label">Location</span>
+              <span>台北市信義區</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact__form reveal reveal--delay-1" id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" required placeholder=" ">
+            <label for="name">你的姓名</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" required placeholder=" ">
+            <label for="email">電子郵件</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="company" placeholder=" ">
+            <label for="company">公司名稱</label>
+          </div>
+          <div class="form-group">
+            <select id="service" required>
+              <option value="" disabled selected>請選擇需要的服務</option>
+              <option value="strategy">行銷策略</option>
+              <option value="production">短影音製作</option>
+              <option value="ads">廣告投放</option>
+              <option value="consulting">策略顧問</option>
+              <option value="all">全方位合作</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea id="message" rows="4" required placeholder=" "></textarea>
+            <label for="message">專案描述</label>
+          </div>
+          <button type="submit" class="btn btn--glow btn--full">
+            <span>送出諮詢</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="nav__logo-text">SILIQ</span>
+          <span class="nav__logo-dot"></span>
+          <span class="nav__logo-sub">行銷</span>
+          <p class="footer__tagline">讓品牌被看見</p>
+        </div>
+        <div class="footer__links">
+          <a href="#services">服務項目</a>
+          <a href="#portfolio">作品集</a>
+          <a href="#about">關於我們</a>
+          <a href="#contact">聯絡我們</a>
+        </div>
+        <div class="footer__copy">
+          &copy; 2026 SILIQ行銷. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
