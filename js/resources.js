@@ -13,8 +13,8 @@
 
     var resourceNames = {
         'brand-checklist': '品牌行銷健檢表',
-        'content-calendar': '社群內容月曆模板',
-        'video-script': '短影音腳本公式',
+        'content-calendar': '社群內容規劃自檢',
+        'video-script': '短影音腳本技巧自檢',
         'marketing-healthcheck': '行銷健檢表 — 自我檢測'
     };
 
@@ -58,7 +58,7 @@
             form.style.display = 'block';
             successEl.style.display = 'none';
 
-            if (resource === 'marketing-healthcheck') {
+            if (resource === 'marketing-healthcheck' || resource === 'brand-checklist' || resource === 'content-calendar' || resource === 'video-script') {
                 modalDesc.textContent = '留下你的 IG 帳號與行業，即可開始檢測';
                 toggleFields(true);
             } else {
@@ -89,7 +89,7 @@
         var resource = resourceInput.value;
         var leadData;
 
-        if (resource === 'marketing-healthcheck') {
+        if (resource === 'marketing-healthcheck' || resource === 'brand-checklist' || resource === 'content-calendar' || resource === 'video-script') {
             var instagram = document.getElementById('dlInstagram').value.trim();
             var industry = document.getElementById('dlIndustry').value;
             if (!instagram || !industry) return;
@@ -104,14 +104,14 @@
             document.getElementById('dlInstagram').value = '';
             document.getElementById('dlIndustry').selectedIndex = 0;
 
-            // Store lead then redirect directly to healthcheck page
+            // Store lead then redirect directly to resource page
             var leads = JSON.parse(localStorage.getItem('siliq_leads') || '[]');
             leads.push(leadData);
             localStorage.setItem('siliq_leads', JSON.stringify(leads));
 
             // Close modal and redirect
             closeModal();
-            window.open('/resources/marketing-healthcheck.html', '_blank');
+            window.open('/resources/' + resource + '.html', '_blank');
             return;
         }
 

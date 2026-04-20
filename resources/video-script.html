@@ -3,186 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>短影音腳本公式 | SILIQ 行銷 免費資源</title>
-    <meta name="description" content="5 套經過驗證的爆款短影音腳本公式，附帶案例拆解，讓你快速掌握高流量短影音創作。">
+    <title>短影音腳本技巧自檢 | SILIQ 行銷</title>
+    <meta name="description" content="25 題短影音腳本技巧自檢，涵蓋開頭 Hook、腳本結構、拍攝剪輯、CTA 設計四大面向，即時產出你的短影音能力診斷。">
     <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary:#2d4a3e; --accent:#5b8a72; --text:#2a3632; --text-light:#556b60; --bg:#fbfcfb; --border:#d4dfd8; }
+        :root {
+            --primary: #2d4a3e; --primary-dark: #1e3530;
+            --accent: #5b8a72; --accent-light: #8bb5a0;
+            --accent-subtle: rgba(91,138,114,0.10);
+            --text: #2a3632; --text-light: #556b60; --text-lighter: #8a9e92;
+            --bg: #fbfcfb; --bg-light: #f3f7f5; --border: #d4dfd8;
+            --red: #e74c3c; --orange: #f39c12; --green: #27ae60;
+        }
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Noto Sans TC',sans-serif; color:var(--text); background:var(--bg); line-height:1.8; }
-        .container { max-width:800px; margin:0 auto; padding:40px 24px 80px; }
-        .resource-header { text-align:center; padding:60px 0 40px; background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%); color:#fff; }
-        .resource-header h1 { font-size:2rem; font-weight:800; margin-bottom:8px; }
-        .resource-header p { font-size:1rem; opacity:0.8; }
-        .resource-header .brand { font-size:0.85rem; opacity:0.6; margin-top:12px; }
-        .section-title { font-size:1.3rem; font-weight:700; color:var(--primary); margin:40px 0 16px; padding-bottom:8px; border-bottom:2px solid rgba(91,138,114,0.2); }
-        .formula-card { background:#fff; border:1px solid var(--border); border-radius:12px; padding:28px; margin:20px 0; }
-        .formula-num { display:inline-block; width:32px; height:32px; background:var(--accent); color:#fff; border-radius:50%; text-align:center; line-height:32px; font-weight:700; font-size:0.9rem; margin-right:8px; }
-        .formula-card h3 { font-size:1.15rem; display:inline; vertical-align:middle; }
-        .formula-desc { margin-top:12px; font-size:0.92rem; color:var(--text-light); }
-        .formula-structure { background:#f8faf9; border-radius:8px; padding:20px; margin:16px 0; }
-        .formula-structure h4 { font-size:0.9rem; color:var(--accent); margin-bottom:8px; font-weight:600; }
-        .formula-step { display:flex; align-items:flex-start; gap:10px; margin:8px 0; font-size:0.9rem; }
-        .step-label { background:var(--accent); color:#fff; padding:2px 10px; border-radius:4px; font-size:0.78rem; font-weight:600; white-space:nowrap; margin-top:2px; }
-        .example-box { background:#fff8f0; border:1px solid #f0d9b5; border-radius:8px; padding:16px 20px; margin:12px 0; }
-        .example-box h4 { font-size:0.85rem; color:#c67a00; margin-bottom:6px; }
-        .example-box p { font-size:0.88rem; color:var(--text-light); }
-        .tip-box { background:#f0f7f3; border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 8px 8px 0; margin:16px 0; font-size:0.9rem; color:var(--text-light); }
-        .hook-list { list-style:none; margin:16px 0; }
-        .hook-list li { padding:10px 16px; background:#fff; border:1px solid var(--border); border-radius:8px; margin:8px 0; font-size:0.9rem; }
-        .hook-list li strong { color:var(--accent); }
-        .cta-guide { background:#fff; border:2px solid var(--accent); border-radius:12px; padding:24px; margin:20px 0; }
-        .cta-guide h3 { color:var(--primary); margin-bottom:12px; }
-        .cta-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; }
-        .cta-item { padding:12px; background:#f8faf9; border-radius:8px; text-align:center; font-size:0.88rem; }
-        .cta-item strong { display:block; color:var(--accent); margin-bottom:4px; }
-        .print-btn { display:block; margin:32px auto 0; padding:12px 32px; background:var(--accent); color:#fff; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; font-family:'Noto Sans TC',sans-serif; }
-        .print-btn:hover { background:var(--primary); }
-        .cta-bottom { text-align:center; margin-top:40px; padding:32px; background:#f0f7f3; border-radius:12px; }
-        .cta-bottom h3 { margin-bottom:8px; }
+        .page-header { background:linear-gradient(135deg,var(--primary-dark) 0%,var(--accent) 100%); color:#fff; text-align:center; padding:60px 24px 48px; }
+        .page-header h1 { font-size:2.2rem; font-weight:900; margin-bottom:8px; letter-spacing:-0.5px; }
+        .page-header p { font-size:1.05rem; opacity:0.8; max-width:480px; margin:0 auto; }
+        .page-header .brand { font-size:0.82rem; opacity:0.5; margin-top:16px; }
+        .container { max-width:760px; margin:0 auto; padding:32px 20px 80px; }
+        .intro { text-align:center; padding:28px 0 8px; font-size:0.92rem; color:var(--text-light); }
+        .progress-wrapper { position:sticky; top:0; background:#fff; z-index:100; padding:12px 0; border-bottom:1px solid var(--border); margin-bottom:24px; }
+        .progress-bar { height:6px; background:#e8eeeb; border-radius:3px; overflow:hidden; }
+        .progress-fill { height:100%; background:linear-gradient(90deg,var(--accent),var(--accent-light)); border-radius:3px; transition:width 0.4s ease; width:0%; }
+        .progress-text { display:flex; justify-content:space-between; font-size:0.78rem; color:var(--text-lighter); margin-top:6px; }
+        .check-section { margin-bottom:32px; }
+        .section-header { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+        .section-num { width:36px; height:36px; background:var(--accent); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; flex-shrink:0; }
+        .section-header h2 { font-size:1.2rem; font-weight:700; color:var(--primary); }
+        .section-header .section-count { margin-left:auto; font-size:0.78rem; color:var(--text-lighter); white-space:nowrap; }
+        .check-list { list-style:none; }
+        .check-item { display:flex; align-items:flex-start; gap:14px; padding:14px 16px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; cursor:pointer; transition:all 0.2s ease; user-select:none; }
+        .check-item:hover { border-color:var(--accent-light); background:var(--accent-subtle); }
+        .check-item.checked { border-color:var(--accent); background:rgba(91,138,114,0.06); }
+        .check-item.checked .custom-checkbox { background:var(--accent); border-color:var(--accent); }
+        .check-item.checked .custom-checkbox::after { opacity:1; }
+        .custom-checkbox { width:22px; height:22px; border:2px solid var(--border); border-radius:6px; flex-shrink:0; margin-top:2px; position:relative; transition:all 0.2s ease; }
+        .custom-checkbox::after { content:''; position:absolute; left:6px; top:2px; width:6px; height:11px; border:solid #fff; border-width:0 2.5px 2.5px 0; transform:rotate(45deg); opacity:0; transition:opacity 0.2s ease; }
+        .check-content strong { display:block; font-size:0.92rem; color:var(--text); margin-bottom:2px; }
+        .check-content span { font-size:0.82rem; color:var(--text-light); }
+        .section-tip { background:var(--bg-light); border-left:4px solid var(--accent); padding:14px 18px; border-radius:0 8px 8px 0; margin-top:12px; font-size:0.85rem; color:var(--text-light); }
+        .result-section { display:none; margin-top:40px; animation:slideUp 0.5s ease; }
+        .result-section.visible { display:block; }
+        .result-card { background:#fff; border:2px solid var(--accent); border-radius:16px; padding:32px; text-align:center; }
+        .result-score { font-family:'Montserrat',sans-serif; font-size:4rem; font-weight:800; color:var(--accent); line-height:1; }
+        .result-score span { font-size:1.2rem; font-weight:600; color:var(--text-lighter); }
+        .result-label { font-size:1.3rem; font-weight:700; margin:12px 0 4px; color:var(--primary); }
+        .result-desc { font-size:0.92rem; color:var(--text-light); margin-bottom:24px; }
+        .category-scores { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:24px 0; }
+        .cat-score { background:var(--bg-light); border-radius:10px; padding:16px 12px; text-align:center; }
+        .cat-score-bar { height:4px; background:#e8eeeb; border-radius:2px; margin-bottom:10px; overflow:hidden; }
+        .cat-score-fill { height:100%; border-radius:2px; transition:width 0.6s ease; }
+        .cat-score-fill.low { background:var(--red); }
+        .cat-score-fill.mid { background:var(--orange); }
+        .cat-score-fill.high { background:var(--green); }
+        .cat-name { font-size:0.8rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+        .cat-num { font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:700; color:var(--accent); }
+        .suggestions { margin-top:24px; text-align:left; }
+        .suggestions h3 { font-size:1.1rem; margin-bottom:12px; color:var(--primary); }
+        .suggestion-item { display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid #eef3f0; }
+        .suggestion-item:last-child { border-bottom:none; }
+        .suggestion-icon { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; color:#fff; font-weight:700; }
+        .suggestion-icon.urgent { background:var(--red); }
+        .suggestion-icon.improve { background:var(--orange); }
+        .suggestion-icon.good { background:var(--green); }
+        .suggestion-text strong { display:block; font-size:0.9rem; }
+        .suggestion-text span { font-size:0.82rem; color:var(--text-light); }
+        .submit-btn { display:block; width:100%; padding:16px; background:linear-gradient(135deg,var(--accent),var(--primary)); color:#fff; border:none; border-radius:12px; font-size:1.1rem; font-weight:700; cursor:pointer; font-family:'Noto Sans TC',sans-serif; margin-top:32px; transition:transform 0.2s,box-shadow 0.2s; }
+        .submit-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(91,138,114,0.3); }
+        .cta-bottom { text-align:center; margin-top:32px; padding:32px; background:var(--bg-light); border-radius:12px; }
+        .cta-bottom h3 { margin-bottom:8px; color:var(--primary); }
         .cta-bottom p { color:var(--text-light); margin-bottom:16px; font-size:0.9rem; }
-        .cta-bottom a { display:inline-block; padding:10px 28px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
-        @media print { .print-btn,.cta-bottom{display:none;} .resource-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
-        @media (max-width:600px) { .resource-header h1{font-size:1.5rem;} .cta-grid{grid-template-columns:1fr;} }
+        .cta-bottom a { display:inline-block; padding:12px 32px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; transition:background 0.2s; }
+        .cta-bottom a:hover { background:var(--primary); }
+        .share-section { text-align:center; margin-top:24px; }
+        .share-section p { font-size:0.85rem; color:var(--text-lighter); margin-bottom:8px; }
+        .share-btn { display:inline-block; padding:8px 20px; border:1px solid var(--border); border-radius:8px; font-size:0.85rem; color:var(--text-light); cursor:pointer; background:#fff; font-family:'Noto Sans TC',sans-serif; transition:all 0.2s; }
+        .share-btn:hover { border-color:var(--accent); color:var(--accent); }
+        @keyframes slideUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+        @media print { .submit-btn,.cta-bottom,.progress-wrapper,.share-section{display:none;} .result-section{display:block!important;} .page-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
+        @media (max-width:600px) { .page-header h1{font-size:1.6rem;} .page-header{padding:48px 20px 36px;} .container{padding:24px 16px 60px;} .result-score{font-size:3rem;} .category-scores{grid-template-columns:repeat(2,1fr);} .check-item{padding:12px;gap:10px;} .result-card{padding:24px 16px;} }
     </style>
 </head>
 <body>
-    <div class="resource-header">
-        <h1>短影音腳本公式</h1>
-        <p>5 套經過驗證的爆款公式 + 案例拆解</p>
+    <div class="page-header">
+        <h1>短影音腳本技巧自檢</h1>
+        <p>25 題快速檢測，看看你的短影音腳本功力到哪個等級</p>
         <div class="brand">SILIQ 行銷 | siliq2378.com</div>
     </div>
+
     <div class="container">
+        <p class="intro">逐項檢視你在短影音製作上的掌握程度，勾選「已掌握」的項目。<br>完成後查看你的短影音能力診斷報告。</p>
 
-        <div class="tip-box">
-            <strong>重要觀念：</strong>短影音的前 3 秒決定 80% 的成敗。無論用哪套公式，開頭的 Hook（鉤子）都是最關鍵的部分。
-        </div>
-
-        <!-- Formula 1 -->
-        <div class="formula-card">
-            <span class="formula-num">1</span><h3>問題 → 衝突 → 解答</h3>
-            <p class="formula-desc">最經典的萬用公式，適合所有產業。先丟出觀眾的痛點，放大問題嚴重性，再給出解決方案。</p>
-            <div class="formula-structure">
-                <h4>結構</h4>
-                <div class="formula-step"><span class="step-label">0-3秒</span><div>拋出一個觀眾會有共鳴的問題</div></div>
-                <div class="formula-step"><span class="step-label">3-15秒</span><div>描述問題帶來的痛苦或損失</div></div>
-                <div class="formula-step"><span class="step-label">15-45秒</span><div>提供解決方案（你的產品/服務/知識）</div></div>
-                <div class="formula-step"><span class="step-label">最後3秒</span><div>CTA：追蹤學更多 / 留言告訴我 / 分享給朋友</div></div>
-            </div>
-            <div class="example-box">
-                <h4>案例：建材品牌</h4>
-                <p>「裝潢花了 100 萬，結果三年就開始掉漆？很多人不知道，90% 的問題出在這個步驟...（解釋底漆的重要性）...用對材料，一次裝潢用 20 年。」</p>
+        <div class="progress-wrapper">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text">
+                <span>已完成 <strong id="checkedCount">0</strong>/25</span>
+                <span id="progressPct">0%</span>
             </div>
         </div>
 
-        <!-- Formula 2 -->
-        <div class="formula-card">
-            <span class="formula-num">2</span><h3>顛覆認知 → 證據 → 真相</h3>
-            <p class="formula-desc">打破觀眾的既有認知，製造驚訝感。這類內容因為反直覺，特別容易被分享和留言。</p>
-            <div class="formula-structure">
-                <h4>結構</h4>
-                <div class="formula-step"><span class="step-label">0-3秒</span><div>說一句反直覺的話（「X 其實是錯的」）</div></div>
-                <div class="formula-step"><span class="step-label">3-20秒</span><div>用數據/案例/專業知識證明</div></div>
-                <div class="formula-step"><span class="step-label">20-45秒</span><div>揭露真相，給出正確做法</div></div>
-                <div class="formula-step"><span class="step-label">最後3秒</span><div>CTA：你之前也被騙了嗎？留言告訴我</div></div>
+        <!-- 一、開頭 Hook 技巧 -->
+        <div class="check-section" data-category="hook">
+            <div class="section-header">
+                <div class="section-num">1</div>
+                <h2>開頭 Hook 技巧</h2>
+                <span class="section-count">0/7</span>
             </div>
-            <div class="example-box">
-                <h4>案例：健康品牌</h4>
-                <p>「雞塊真的不健康嗎？很多人以為炸的東西一定不好，但其實...（拆解成分和製程）...關鍵不在炸不炸，而在這個東西。」</p>
-            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>3 秒內抓住注意力</strong><span>開頭有強力鉤子，讓觀眾停下滑動</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>會用提問型開場</strong><span>「你知道為什麼 ______ 嗎？」引發好奇心</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>會用警告型開場</strong><span>「千萬不要再 ______ 了！」製造急迫感</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>會用數據型開場</strong><span>「90% 的人都不知道 ______」用數據建立權威</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>會用故事型開場</strong><span>「上次有個客戶 ______」用故事吸引觀眾</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>會用反差型開場</strong><span>「______ 其實是錯的」顛覆認知引發討論</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>開頭搭配視覺衝擊</strong><span>用畫面、文字特效配合口播強化吸引力</span></div></li>
+            </ul>
+            <div class="section-tip">前 3 秒決定 80% 的成敗。一個好的 Hook 能讓完播率提升 2-3 倍。練習各種開場方式，找到最適合你的風格。</div>
         </div>
 
-        <!-- Formula 3 -->
-        <div class="formula-card">
-            <span class="formula-num">3</span><h3>故事 → 轉折 → 啟示</h3>
-            <p class="formula-desc">用故事吸引人看完全程。人類天生愛聽故事，故事型內容的完播率通常最高。</p>
-            <div class="formula-structure">
-                <h4>結構</h4>
-                <div class="formula-step"><span class="step-label">0-3秒</span><div>設定場景（「上個月有個客戶...」）</div></div>
-                <div class="formula-step"><span class="step-label">3-20秒</span><div>鋪陳故事，製造緊張感</div></div>
-                <div class="formula-step"><span class="step-label">20-40秒</span><div>戲劇性轉折</div></div>
-                <div class="formula-step"><span class="step-label">40-60秒</span><div>啟示/學到的教訓 + CTA</div></div>
+        <!-- 二、腳本結構公式 -->
+        <div class="check-section" data-category="structure">
+            <div class="section-header">
+                <div class="section-num">2</div>
+                <h2>腳本結構公式</h2>
+                <span class="section-count">0/6</span>
             </div>
-            <div class="example-box">
-                <h4>案例：行銷公司</h4>
-                <p>「有個客戶找我們的時候，粉絲只有 300 人，覺得社群根本做不起來...（描述過程）...三個月後，單支影片破 200 萬觀看，老闆打電話來說接不完單。」</p>
-            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>掌握「問題→衝突→解答」</strong><span>最經典的萬用公式，先拋痛點再給解方</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>掌握「顛覆認知→證據→真相」</strong><span>打破既有認知，用反直覺內容引發分享</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>掌握「故事→轉折→啟示」</strong><span>用故事吸引人看完，完播率最高的公式</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>掌握「清單型：N 個方法」</strong><span>結構清晰好消化，「3 個方法」降低跳出率</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>掌握「對比型：之前 vs 之後」</strong><span>視覺衝擊力強，適合有明顯效果的內容</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>能根據目標選擇公式</strong><span>不同目的（教學/說故事/推銷）選不同結構</span></div></li>
+            </ul>
+            <div class="section-tip">公式不是限制創意，而是幫你更快產出有效的內容。熟練 5 套公式後，你可以自由組合變化。</div>
         </div>
 
-        <!-- Formula 4 -->
-        <div class="formula-card">
-            <span class="formula-num">4</span><h3>清單型：N 個方法/技巧/原因</h3>
-            <p class="formula-desc">結構清晰、容易消化。觀眾看到「3 個方法」就知道會得到什麼，降低跳出率。</p>
-            <div class="formula-structure">
-                <h4>結構</h4>
-                <div class="formula-step"><span class="step-label">0-3秒</span><div>「做 X 的 3 個方法，第 3 個最有效」</div></div>
-                <div class="formula-step"><span class="step-label">3-15秒</span><div>方法 1（快速帶過）</div></div>
-                <div class="formula-step"><span class="step-label">15-30秒</span><div>方法 2（稍微展開）</div></div>
-                <div class="formula-step"><span class="step-label">30-50秒</span><div>方法 3（重點展開，最有價值的放最後）</div></div>
-                <div class="formula-step"><span class="step-label">最後3秒</span><div>CTA：收藏起來慢慢看</div></div>
+        <!-- 三、拍攝與剪輯 -->
+        <div class="check-section" data-category="production">
+            <div class="section-header">
+                <div class="section-num">3</div>
+                <h2>拍攝與剪輯</h2>
+                <span class="section-count">0/6</span>
             </div>
-            <div class="example-box">
-                <h4>案例：餐飲品牌</h4>
-                <p>「讓餐廳生意翻倍的 3 個秘訣：第一，菜單不要超過 30 道...第二，拍短影音不要只拍食物...第三，這招 90% 的老闆都不知道...」</p>
-            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>節奏快速不拖沓</strong><span>每個畫面控制在 2-5 秒，保持觀眾注意力</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>善用字幕增強理解</strong><span>加上動態字幕，靜音觀看也能理解內容</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>音樂搭配得當</strong><span>使用流行音樂或音效增強情緒和節奏感</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>畫面構圖吸睛</strong><span>人物置中、光線充足、背景乾淨</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>轉場運用自如</strong><span>善用切換、縮放、遮擋等轉場增加動感</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>長度控制得宜</strong><span>根據平台特性控制影片長度（15-60秒為主）</span></div></li>
+            </ul>
+            <div class="section-tip">好的剪輯能讓普通素材變爆款。關鍵是節奏感——觀眾覺得「無聊」之前就要給新的刺激。</div>
         </div>
 
-        <!-- Formula 5 -->
-        <div class="formula-card">
-            <span class="formula-num">5</span><h3>對比型：之前 vs 之後</h3>
-            <p class="formula-desc">視覺衝擊力強，特別適合有明顯效果的產品或服務。</p>
-            <div class="formula-structure">
-                <h4>結構</h4>
-                <div class="formula-step"><span class="step-label">0-3秒</span><div>展示「之前」的糟糕狀態</div></div>
-                <div class="formula-step"><span class="step-label">3-10秒</span><div>描述痛點或問題</div></div>
-                <div class="formula-step"><span class="step-label">10-15秒</span><div>轉場（搭配音效/特效）</div></div>
-                <div class="formula-step"><span class="step-label">15-30秒</span><div>展示「之後」的驚艷效果</div></div>
-                <div class="formula-step"><span class="step-label">最後3秒</span><div>CTA：想知道怎麼做到的？</div></div>
+        <!-- 四、CTA 與轉換設計 -->
+        <div class="check-section" data-category="cta">
+            <div class="section-header">
+                <div class="section-num">4</div>
+                <h2>CTA 與轉換設計</h2>
+                <span class="section-count">0/6</span>
             </div>
-            <div class="example-box">
-                <h4>案例：社群經營</h4>
-                <p>「接手前：月觸及 2000、互動率 0.5%...（畫面轉場）...接手後：月觸及 300 萬、Reel 觀看 229 萬。只做了這 3 件事。」</p>
-            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>每支影片都有 CTA</strong><span>不管是求追蹤、留言、收藏還是分享，都有明確引導</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>CTA 與目標匹配</strong><span>要互動就問問題，要追蹤就預告下集，要轉換就導私訊</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>會用「收藏型 CTA」</strong><span>「先存起來慢慢看」提升收藏率，演算法加分</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>會用「連續劇 CTA」</strong><span>「想知道結果看下一集」提升追蹤率和回訪</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>文案區域有引導</strong><span>影片下方文案補充 CTA 和相關 Hashtag</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>追蹤成效數據</strong><span>定期檢視哪種 CTA 效果最好並持續優化</span></div></li>
+            </ul>
+            <div class="section-tip">沒有 CTA 的影片就像沒有結尾的故事。明確告訴觀眾「看完之後要做什麼」，轉換率可以提升 3-5 倍。</div>
         </div>
 
-        <h2 class="section-title">開頭 Hook 技巧大全</h2>
-        <p style="font-size:0.9rem;color:var(--text-light);margin-bottom:16px;">以下是經過驗證的高效開場方式，直接套用即可：</p>
-        <ul class="hook-list">
-            <li><strong>提問型：</strong>「你知道為什麼 ______ 嗎？」</li>
-            <li><strong>警告型：</strong>「千萬不要再 ______ 了！」</li>
-            <li><strong>數據型：</strong>「90% 的人都不知道 ______」</li>
-            <li><strong>故事型：</strong>「上次有個客戶 ______」</li>
-            <li><strong>反差型：</strong>「______ 其實是錯的」</li>
-            <li><strong>秘密型：</strong>「業界不會告訴你的 ______」</li>
-            <li><strong>挑戰型：</strong>「我敢說你一定不知道 ______」</li>
-            <li><strong>共鳴型：</strong>「如果你也遇過 ______，一定要看完」</li>
-            <li><strong>好奇型：</strong>「這個東西居然可以 ______？」</li>
-            <li><strong>利益型：</strong>「學會這招，讓你 ______」</li>
-        </ul>
+        <button class="submit-btn" id="showResult">查看我的診斷報告</button>
 
-        <h2 class="section-title">CTA 設計指南</h2>
-        <div class="cta-guide">
-            <h3>不同目標用不同 CTA</h3>
-            <div class="cta-grid">
-                <div class="cta-item"><strong>要互動</strong>「留言告訴我你的看法」<br>「你覺得是 A 還是 B？」</div>
-                <div class="cta-item"><strong>要追蹤</strong>「追蹤我看更多 ____」<br>「關注不迷路」</div>
-                <div class="cta-item"><strong>要收藏</strong>「先收藏起來慢慢看」<br>「這個一定要存」</div>
-                <div class="cta-item"><strong>要分享</strong>「tag 你覺得需要的朋友」<br>「分享給正在 ____ 的人」</div>
-                <div class="cta-item"><strong>要轉換</strong>「私訊我了解更多」<br>「連結在自介」</div>
-                <div class="cta-item"><strong>要續看</strong>「想知道結果看下一集」<br>「Part 2 明天發」</div>
+        <div class="result-section" id="resultSection">
+            <div class="result-card">
+                <div class="result-score" id="totalScore">0<span> / 25</span></div>
+                <div class="result-label" id="resultLabel">—</div>
+                <div class="result-desc" id="resultDesc">—</div>
+                <div class="category-scores" id="categoryScores"></div>
+                <div class="suggestions" id="suggestions">
+                    <h3>你的短影音能力提升建議</h3>
+                    <div id="suggestionList"></div>
+                </div>
             </div>
-        </div>
 
-        <button class="print-btn" onclick="window.print()">列印 / 儲存為 PDF</button>
+            <div class="cta-bottom" id="ctaBottom">
+                <h3>想要專業團隊幫你拍爆款短影音？</h3>
+                <p>SILIQ 行銷累計操盤影片觀看數破千萬，提供<strong>免費 1 對 1 諮詢</strong>，幫你打造高流量短影音內容策略。</p>
+                <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener" id="ctaBtn">立即預約免費諮詢</a>
+                <div style="margin-top:12px;font-size:0.8rem;color:var(--text-lighter);">加入 LINE 官方帳號，傳送「短影音諮詢」即可預約</div>
+            </div>
 
-        <div class="cta-bottom">
-            <h3>想要專業團隊幫你拍爆款短影音？</h3>
-            <p>SILIQ 行銷累計操盤影片觀看數破千萬，讓我們幫你打造高流量內容</p>
-            <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener">免費諮詢</a>
+            <div class="share-section">
+                <p>覺得這份自檢有幫助？分享給需要的朋友</p>
+                <button class="share-btn" id="copyLink">複製連結分享</button>
+            </div>
         </div>
     </div>
+
+    <script>
+    (function() {
+        var items = document.querySelectorAll('.check-item');
+        var total = items.length;
+        var progressFill = document.getElementById('progressFill');
+        var checkedCount = document.getElementById('checkedCount');
+        var progressPct = document.getElementById('progressPct');
+
+        items.forEach(function(item) {
+            item.addEventListener('click', function() {
+                this.classList.toggle('checked');
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            var checked = document.querySelectorAll('.check-item.checked').length;
+            var pct = Math.round((checked / total) * 100);
+            progressFill.style.width = pct + '%';
+            checkedCount.textContent = checked;
+            progressPct.textContent = pct + '%';
+            document.querySelectorAll('.check-section').forEach(function(section) {
+                var sc = section.querySelectorAll('.check-item.checked').length;
+                var st = section.querySelectorAll('.check-item').length;
+                section.querySelector('.section-count').textContent = sc + '/' + st;
+            });
+        }
+
+        document.getElementById('showResult').addEventListener('click', function() {
+            var checked = document.querySelectorAll('.check-item.checked').length;
+            var resultSection = document.getElementById('resultSection');
+            document.getElementById('totalScore').innerHTML = checked + '<span> / 25</span>';
+
+            var label, desc;
+            if (checked >= 21) {
+                label = '短影音高手！';
+                desc = '你已經掌握了短影音製作的核心技巧，具備爆款潛力！持續產出並測試不同風格。';
+            } else if (checked >= 15) {
+                label = '有實力，差臨門一腳';
+                desc = '你的基礎不錯，但某些關鍵技巧還需加強。補齊短板，離爆款只差一步。';
+            } else if (checked >= 8) {
+                label = '還在學習階段';
+                desc = '你已經開始接觸短影音製作，但需要更系統化的學習。從模仿爆款結構開始練習。';
+            } else {
+                label = '短影音新手村';
+                desc = '不用擔心，每個爆款創作者都是從零開始的。先從最簡單的「問題→解答」公式開始練習。';
+            }
+
+            document.getElementById('resultLabel').textContent = label;
+            document.getElementById('resultDesc').textContent = desc;
+
+            var categories = [
+                { key:'hook', name:'開頭 Hook 技巧' },
+                { key:'structure', name:'腳本結構公式' },
+                { key:'production', name:'拍攝與剪輯' },
+                { key:'cta', name:'CTA 與轉換設計' }
+            ];
+
+            var catScoresEl = document.getElementById('categoryScores');
+            var suggestionList = document.getElementById('suggestionList');
+            catScoresEl.innerHTML = '';
+            suggestionList.innerHTML = '';
+
+            var catResults = [];
+
+            categories.forEach(function(cat) {
+                var section = document.querySelector('[data-category="' + cat.key + '"]');
+                var sc = section.querySelectorAll('.check-item.checked').length;
+                var st = section.querySelectorAll('.check-item').length;
+                var pct = Math.round((sc / st) * 100);
+                var level = pct >= 70 ? 'high' : (pct >= 40 ? 'mid' : 'low');
+                catResults.push({ name:cat.name, checked:sc, total:st, pct:pct, level:level });
+                catScoresEl.innerHTML += '<div class="cat-score"><div class="cat-score-bar"><div class="cat-score-fill ' + level + '" style="width:' + pct + '%"></div></div><div class="cat-name">' + cat.name + '</div><div class="cat-num">' + sc + '/' + st + '</div></div>';
+            });
+
+            catResults.sort(function(a,b) { return a.pct - b.pct; });
+
+            var suggestions = {
+                '開頭 Hook 技巧': { urgent:'開頭是短影音的生死關——先練習提問型和警告型兩種開場，模仿爆款影片的前 3 秒', improve:'你已有基礎的 Hook 能力，嘗試更多元的開場方式（反差型、數據型）來提升留存率', good:'Hook 技巧純熟！持續測試不同風格的開場，找到完播率最高的類型' },
+                '腳本結構公式': { urgent:'先從最簡單的「問題→解答」公式開始，熟練後再嘗試其他結構', improve:'再多練習 2-3 套公式，讓你能根據不同目的靈活選擇腳本結構', good:'腳本結構功力深厚！可以嘗試混搭不同公式創造獨特風格' },
+                '拍攝與剪輯': { urgent:'先確保字幕和節奏兩個基本功，這是觀眾留下來的最低門檻', improve:'轉場和音樂搭配可以加強，好的剪輯能讓普通素材變成爆款', good:'拍攝剪輯技術到位！可以嘗試更有創意的視覺呈現方式' },
+                'CTA 與轉換設計': { urgent:'每支影片都必須有 CTA，先從最簡單的「追蹤看更多」開始養成習慣', improve:'嘗試不同類型的 CTA（收藏型、連續劇型），找到轉換率最高的方式', good:'CTA 設計到位！持續追蹤數據，優化不同場景下的最佳引導方式' }
+            };
+
+            catResults.forEach(function(cat) {
+                var iconClass, iconText, text;
+                if (cat.pct < 40) { iconClass='urgent'; iconText='!'; text=suggestions[cat.name].urgent; }
+                else if (cat.pct < 70) { iconClass='improve'; iconText='↑'; text=suggestions[cat.name].improve; }
+                else { iconClass='good'; iconText='✓'; text=suggestions[cat.name].good; }
+                suggestionList.innerHTML += '<div class="suggestion-item"><div class="suggestion-icon ' + iconClass + '">' + iconText + '</div><div class="suggestion-text"><strong>' + cat.name + '（' + cat.checked + '/' + cat.total + '）</strong><span>' + text + '</span></div></div>';
+            });
+
+            var ctaBtn = document.getElementById('ctaBtn');
+            var ctaBottom = document.getElementById('ctaBottom');
+            if (checked < 8) {
+                ctaBottom.querySelector('h3').textContent = '讓專業團隊幫你打造爆款短影音！';
+                ctaBottom.querySelector('p').innerHTML = '短影音技巧需要時間累積，<strong>但你不需要自己摸索</strong>。<br>SILIQ 行銷累計操盤觀看數破千萬，讓我們幫你從零開始。';
+                ctaBtn.textContent = '馬上預約免費諮詢';
+                ctaBottom.style.background = 'linear-gradient(135deg,#fff5f5,#fef0f0)';
+                ctaBottom.style.border = '2px solid #e74c3c';
+            } else if (checked < 15) {
+                ctaBottom.querySelector('h3').textContent = '想加速提升短影音功力？';
+                ctaBtn.textContent = '預約免費策略諮詢';
+            } else if (checked < 21) {
+                ctaBottom.querySelector('h3').textContent = '離爆款只差一步，讓我們幫你突破';
+                ctaBtn.textContent = '預約免費諮詢';
+            }
+
+            resultSection.classList.add('visible');
+            resultSection.scrollIntoView({ behavior:'smooth', block:'start' });
+        });
+
+        document.getElementById('copyLink').addEventListener('click', function() {
+            var url = window.location.origin + '/resources/video-script.html';
+            if (navigator.clipboard) { navigator.clipboard.writeText(url); }
+            else { var input = document.createElement('input'); input.value = url; document.body.appendChild(input); input.select(); document.execCommand('copy'); document.body.removeChild(input); }
+            this.textContent = '已複製！';
+            var btn = this;
+            setTimeout(function() { btn.textContent = '複製連結分享'; }, 2000);
+        });
+    })();
+    </script>
 </body>
 </html>

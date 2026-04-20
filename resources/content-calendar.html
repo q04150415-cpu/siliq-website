@@ -3,134 +3,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>社群內容月曆模板 | SILIQ 行銷 免費資源</title>
-    <meta name="description" content="30 天社群內容排程模板，包含貼文類型建議與最佳發布時間。">
+    <title>社群內容規劃自檢 | SILIQ 行銷</title>
+    <meta name="description" content="25 題社群內容規劃自檢，涵蓋內容策略、發布節奏、貼文類型、互動技巧四大面向，即時產出你的社群經營診斷報告。">
     <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary:#2d4a3e; --accent:#5b8a72; --text:#2a3632; --text-light:#556b60; --bg:#fbfcfb; --border:#d4dfd8; }
+        :root {
+            --primary: #2d4a3e; --primary-dark: #1e3530;
+            --accent: #5b8a72; --accent-light: #8bb5a0;
+            --accent-subtle: rgba(91,138,114,0.10);
+            --text: #2a3632; --text-light: #556b60; --text-lighter: #8a9e92;
+            --bg: #fbfcfb; --bg-light: #f3f7f5; --border: #d4dfd8;
+            --red: #e74c3c; --orange: #f39c12; --green: #27ae60;
+        }
         * { margin:0; padding:0; box-sizing:border-box; }
         body { font-family:'Noto Sans TC',sans-serif; color:var(--text); background:var(--bg); line-height:1.8; }
-        .container { max-width:900px; margin:0 auto; padding:40px 24px 80px; }
-        .resource-header { text-align:center; padding:60px 0 40px; background:linear-gradient(135deg,var(--primary) 0%,var(--accent) 100%); color:#fff; }
-        .resource-header h1 { font-size:2rem; font-weight:800; margin-bottom:8px; }
-        .resource-header p { font-size:1rem; opacity:0.8; }
-        .resource-header .brand { font-size:0.85rem; opacity:0.6; margin-top:12px; }
-        .section-title { font-size:1.3rem; font-weight:700; color:var(--primary); margin:36px 0 16px; padding-bottom:8px; border-bottom:2px solid rgba(91,138,114,0.2); }
-        .post-types { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin:20px 0 32px; }
-        .post-type { background:#fff; border:1px solid var(--border); border-radius:10px; padding:20px; }
-        .post-type-tag { display:inline-block; padding:3px 10px; border-radius:12px; font-size:0.75rem; font-weight:600; margin-bottom:8px; }
-        .tag-edu { background:#e8f5e9; color:#2e7d32; }
-        .tag-engage { background:#e3f2fd; color:#1565c0; }
-        .tag-promo { background:#fff3e0; color:#e65100; }
-        .tag-brand { background:#f3e5f5; color:#7b1fa2; }
-        .tag-trending { background:#fce4ec; color:#c62828; }
-        .tag-ugc { background:#e0f7fa; color:#00838f; }
-        .tag-behind { background:#f1f8e9; color:#558b2f; }
-        .post-type h4 { font-size:1rem; margin-bottom:4px; }
-        .post-type p { font-size:0.85rem; color:var(--text-light); }
-        .calendar-table { width:100%; border-collapse:collapse; margin:20px 0; font-size:0.88rem; }
-        .calendar-table th { background:var(--primary); color:#fff; padding:10px 12px; text-align:left; font-weight:600; }
-        .calendar-table td { padding:10px 12px; border-bottom:1px solid #eef3f0; vertical-align:top; }
-        .calendar-table tr:hover { background:#f8faf9; }
-        .day-num { font-weight:700; color:var(--accent); }
-        .time-badge { display:inline-block; padding:2px 8px; background:#f0f7f3; border-radius:4px; font-size:0.78rem; color:var(--accent); font-weight:500; }
-        .tip-box { background:#f0f7f3; border-left:4px solid var(--accent); padding:16px 20px; border-radius:0 8px 8px 0; margin:16px 0; font-size:0.9rem; color:var(--text-light); }
-        .time-guide { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; margin:20px 0; }
-        .time-slot { background:#fff; border:1px solid var(--border); border-radius:8px; padding:16px; text-align:center; }
-        .time-slot .time { font-size:1.2rem; font-weight:700; color:var(--accent); }
-        .time-slot .desc { font-size:0.82rem; color:var(--text-light); margin-top:4px; }
-        .print-btn { display:block; margin:32px auto 0; padding:12px 32px; background:var(--accent); color:#fff; border:none; border-radius:8px; font-size:1rem; font-weight:600; cursor:pointer; font-family:'Noto Sans TC',sans-serif; }
-        .print-btn:hover { background:var(--primary); }
-        .cta-bottom { text-align:center; margin-top:40px; padding:32px; background:#f0f7f3; border-radius:12px; }
-        .cta-bottom h3 { margin-bottom:8px; }
+        .page-header { background:linear-gradient(135deg,var(--primary-dark) 0%,var(--accent) 100%); color:#fff; text-align:center; padding:60px 24px 48px; }
+        .page-header h1 { font-size:2.2rem; font-weight:900; margin-bottom:8px; letter-spacing:-0.5px; }
+        .page-header p { font-size:1.05rem; opacity:0.8; max-width:480px; margin:0 auto; }
+        .page-header .brand { font-size:0.82rem; opacity:0.5; margin-top:16px; }
+        .container { max-width:760px; margin:0 auto; padding:32px 20px 80px; }
+        .intro { text-align:center; padding:28px 0 8px; font-size:0.92rem; color:var(--text-light); }
+        .progress-wrapper { position:sticky; top:0; background:#fff; z-index:100; padding:12px 0; border-bottom:1px solid var(--border); margin-bottom:24px; }
+        .progress-bar { height:6px; background:#e8eeeb; border-radius:3px; overflow:hidden; }
+        .progress-fill { height:100%; background:linear-gradient(90deg,var(--accent),var(--accent-light)); border-radius:3px; transition:width 0.4s ease; width:0%; }
+        .progress-text { display:flex; justify-content:space-between; font-size:0.78rem; color:var(--text-lighter); margin-top:6px; }
+        .check-section { margin-bottom:32px; }
+        .section-header { display:flex; align-items:center; gap:12px; margin-bottom:16px; }
+        .section-num { width:36px; height:36px; background:var(--accent); color:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; flex-shrink:0; }
+        .section-header h2 { font-size:1.2rem; font-weight:700; color:var(--primary); }
+        .section-header .section-count { margin-left:auto; font-size:0.78rem; color:var(--text-lighter); white-space:nowrap; }
+        .check-list { list-style:none; }
+        .check-item { display:flex; align-items:flex-start; gap:14px; padding:14px 16px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; cursor:pointer; transition:all 0.2s ease; user-select:none; }
+        .check-item:hover { border-color:var(--accent-light); background:var(--accent-subtle); }
+        .check-item.checked { border-color:var(--accent); background:rgba(91,138,114,0.06); }
+        .check-item.checked .custom-checkbox { background:var(--accent); border-color:var(--accent); }
+        .check-item.checked .custom-checkbox::after { opacity:1; }
+        .custom-checkbox { width:22px; height:22px; border:2px solid var(--border); border-radius:6px; flex-shrink:0; margin-top:2px; position:relative; transition:all 0.2s ease; }
+        .custom-checkbox::after { content:''; position:absolute; left:6px; top:2px; width:6px; height:11px; border:solid #fff; border-width:0 2.5px 2.5px 0; transform:rotate(45deg); opacity:0; transition:opacity 0.2s ease; }
+        .check-content strong { display:block; font-size:0.92rem; color:var(--text); margin-bottom:2px; }
+        .check-content span { font-size:0.82rem; color:var(--text-light); }
+        .section-tip { background:var(--bg-light); border-left:4px solid var(--accent); padding:14px 18px; border-radius:0 8px 8px 0; margin-top:12px; font-size:0.85rem; color:var(--text-light); }
+        .result-section { display:none; margin-top:40px; animation:slideUp 0.5s ease; }
+        .result-section.visible { display:block; }
+        .result-card { background:#fff; border:2px solid var(--accent); border-radius:16px; padding:32px; text-align:center; }
+        .result-score { font-family:'Montserrat',sans-serif; font-size:4rem; font-weight:800; color:var(--accent); line-height:1; }
+        .result-score span { font-size:1.2rem; font-weight:600; color:var(--text-lighter); }
+        .result-label { font-size:1.3rem; font-weight:700; margin:12px 0 4px; color:var(--primary); }
+        .result-desc { font-size:0.92rem; color:var(--text-light); margin-bottom:24px; }
+        .category-scores { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin:24px 0; }
+        .cat-score { background:var(--bg-light); border-radius:10px; padding:16px 12px; text-align:center; }
+        .cat-score-bar { height:4px; background:#e8eeeb; border-radius:2px; margin-bottom:10px; overflow:hidden; }
+        .cat-score-fill { height:100%; border-radius:2px; transition:width 0.6s ease; }
+        .cat-score-fill.low { background:var(--red); }
+        .cat-score-fill.mid { background:var(--orange); }
+        .cat-score-fill.high { background:var(--green); }
+        .cat-name { font-size:0.8rem; font-weight:600; color:var(--text); margin-bottom:4px; }
+        .cat-num { font-family:'Montserrat',sans-serif; font-size:1.1rem; font-weight:700; color:var(--accent); }
+        .suggestions { margin-top:24px; text-align:left; }
+        .suggestions h3 { font-size:1.1rem; margin-bottom:12px; color:var(--primary); }
+        .suggestion-item { display:flex; gap:12px; align-items:flex-start; padding:12px 0; border-bottom:1px solid #eef3f0; }
+        .suggestion-item:last-child { border-bottom:none; }
+        .suggestion-icon { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:0.75rem; color:#fff; font-weight:700; }
+        .suggestion-icon.urgent { background:var(--red); }
+        .suggestion-icon.improve { background:var(--orange); }
+        .suggestion-icon.good { background:var(--green); }
+        .suggestion-text strong { display:block; font-size:0.9rem; }
+        .suggestion-text span { font-size:0.82rem; color:var(--text-light); }
+        .submit-btn { display:block; width:100%; padding:16px; background:linear-gradient(135deg,var(--accent),var(--primary)); color:#fff; border:none; border-radius:12px; font-size:1.1rem; font-weight:700; cursor:pointer; font-family:'Noto Sans TC',sans-serif; margin-top:32px; transition:transform 0.2s,box-shadow 0.2s; }
+        .submit-btn:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(91,138,114,0.3); }
+        .cta-bottom { text-align:center; margin-top:32px; padding:32px; background:var(--bg-light); border-radius:12px; }
+        .cta-bottom h3 { margin-bottom:8px; color:var(--primary); }
         .cta-bottom p { color:var(--text-light); margin-bottom:16px; font-size:0.9rem; }
-        .cta-bottom a { display:inline-block; padding:10px 28px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; }
-        @media print { .print-btn,.cta-bottom{display:none;} .resource-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
-        @media (max-width:600px) { .resource-header h1{font-size:1.5rem;} .calendar-table{font-size:0.8rem;} .calendar-table th,.calendar-table td{padding:8px;} }
+        .cta-bottom a { display:inline-block; padding:12px 32px; background:var(--accent); color:#fff; border-radius:8px; text-decoration:none; font-weight:600; transition:background 0.2s; }
+        .cta-bottom a:hover { background:var(--primary); }
+        .share-section { text-align:center; margin-top:24px; }
+        .share-section p { font-size:0.85rem; color:var(--text-lighter); margin-bottom:8px; }
+        .share-btn { display:inline-block; padding:8px 20px; border:1px solid var(--border); border-radius:8px; font-size:0.85rem; color:var(--text-light); cursor:pointer; background:#fff; font-family:'Noto Sans TC',sans-serif; transition:all 0.2s; }
+        .share-btn:hover { border-color:var(--accent); color:var(--accent); }
+        @keyframes slideUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+        @media print { .submit-btn,.cta-bottom,.progress-wrapper,.share-section{display:none;} .result-section{display:block!important;} .page-header{-webkit-print-color-adjust:exact;print-color-adjust:exact;} }
+        @media (max-width:600px) { .page-header h1{font-size:1.6rem;} .page-header{padding:48px 20px 36px;} .container{padding:24px 16px 60px;} .result-score{font-size:3rem;} .category-scores{grid-template-columns:repeat(2,1fr);} .check-item{padding:12px;gap:10px;} .result-card{padding:24px 16px;} }
     </style>
 </head>
 <body>
-    <div class="resource-header">
-        <h1>社群內容月曆模板</h1>
-        <p>30 天內容排程框架，讓你的社群經營更有節奏</p>
+    <div class="page-header">
+        <h1>社群內容規劃自檢</h1>
+        <p>25 題快速自檢，檢視你的社群內容規劃是否到位</p>
         <div class="brand">SILIQ 行銷 | siliq2378.com</div>
     </div>
+
     <div class="container">
+        <p class="intro">逐項檢視你目前的社群內容規劃狀況，勾選「已做到」的項目。<br>完成後查看你的社群經營診斷報告。</p>
 
-        <h2 class="section-title">7 種貼文類型</h2>
-        <div class="post-types">
-            <div class="post-type"><span class="post-type-tag tag-edu">教學</span><h4>知識教學</h4><p>分享專業知識、教學步驟、產業 know-how</p></div>
-            <div class="post-type"><span class="post-type-tag tag-engage">互動</span><h4>互動問答</h4><p>投票、提問、猜謎、二選一</p></div>
-            <div class="post-type"><span class="post-type-tag tag-promo">促銷</span><h4>產品推廣</h4><p>新品上市、限時優惠、客戶見證</p></div>
-            <div class="post-type"><span class="post-type-tag tag-brand">品牌</span><h4>品牌故事</h4><p>創業歷程、品牌理念、團隊介紹</p></div>
-            <div class="post-type"><span class="post-type-tag tag-trending">趨勢</span><h4>時事趨勢</h4><p>蹭熱點、節日行銷、產業新聞</p></div>
-            <div class="post-type"><span class="post-type-tag tag-ugc">口碑</span><h4>客戶見證</h4><p>客戶好評、使用前後對比、案例分享</p></div>
-            <div class="post-type"><span class="post-type-tag tag-behind">幕後</span><h4>幕後花絮</h4><p>工作日常、製作過程、團隊生活</p></div>
+        <div class="progress-wrapper">
+            <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+            <div class="progress-text">
+                <span>已完成 <strong id="checkedCount">0</strong>/25</span>
+                <span id="progressPct">0%</span>
+            </div>
         </div>
 
-        <h2 class="section-title">最佳發布時間</h2>
-        <div class="time-guide">
-            <div class="time-slot"><div class="time">07:30-09:00</div><div class="desc">通勤時段<br>適合輕鬆內容</div></div>
-            <div class="time-slot"><div class="time">12:00-13:00</div><div class="desc">午休時段<br>適合知識型內容</div></div>
-            <div class="time-slot"><div class="time">18:00-19:00</div><div class="desc">下班時段<br>適合互動型內容</div></div>
-            <div class="time-slot"><div class="time">21:00-22:00</div><div class="desc">睡前時段<br>適合影音內容</div></div>
-        </div>
-        <div class="tip-box">以上為一般建議，實際最佳時間請參考你的 Instagram/Facebook 後台洞察報告中的「粉絲活躍時間」。</div>
-
-        <h2 class="section-title">30 天內容排程表</h2>
-        <table class="calendar-table">
-            <tr><th>日</th><th>類型</th><th>內容主題建議</th><th>發布時間</th></tr>
-            <tr><td><span class="day-num">1</span> 一</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>本月目標宣告 / 月初問候</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">2</span> 二</td><td><span class="post-type-tag tag-edu">教學</span></td><td>產業小知識 #1</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">3</span> 三</td><td><span class="post-type-tag tag-engage">互動</span></td><td>二選一投票 / 你比較喜歡 A 還是 B？</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">4</span> 四</td><td><span class="post-type-tag tag-behind">幕後</span></td><td>工作日常 / 辦公室一角</td><td><span class="time-badge">21:00</span></td></tr>
-            <tr><td><span class="day-num">5</span> 五</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>產品/服務介紹 #1</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">6</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>Reels 短影音 — 蹭本週熱門話題</td><td><span class="time-badge">21:00</span></td></tr>
-            <tr><td><span class="day-num">7</span> 日</td><td><span class="post-type-tag tag-engage">互動</span></td><td>週日提問：你這週最大的收穫是？</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">8</span> 一</td><td><span class="post-type-tag tag-edu">教學</span></td><td>教學懶人包（輪播圖）</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">9</span> 二</td><td><span class="post-type-tag tag-ugc">口碑</span></td><td>客戶好評分享 #1</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">10</span> 三</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>團隊成員介紹 / 創辦人故事</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">11</span> 四</td><td><span class="post-type-tag tag-edu">教學</span></td><td>產業小知識 #2（Reels）</td><td><span class="time-badge">21:00</span></td></tr>
-            <tr><td><span class="day-num">12</span> 五</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>限時優惠 / 本週特惠</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">13</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>迷因 / 搞笑梗圖（結合產業）</td><td><span class="time-badge">21:00</span></td></tr>
-            <tr><td><span class="day-num">14</span> 日</td><td><span class="post-type-tag tag-behind">幕後</span></td><td>製作過程大公開</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">15</span> 一</td><td><span class="post-type-tag tag-engage">互動</span></td><td>月中 check-in / 半月回顧</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">16</span> 二</td><td><span class="post-type-tag tag-edu">教學</span></td><td>常見問題解答（Q&A）</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">17</span> 三</td><td><span class="post-type-tag tag-ugc">口碑</span></td><td>客戶見證 #2 / 成果對比</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">18</span> 四</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>品牌理念 / 為什麼做這件事</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">19</span> 五</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>產品/服務介紹 #2</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">20</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>Reels 短影音 — 產業熱門話題</td><td><span class="time-badge">21:00</span></td></tr>
-            <tr><td><span class="day-num">21</span> 日</td><td><span class="post-type-tag tag-engage">互動</span></td><td>「你知道嗎？」冷知識分享</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">22</span> 一</td><td><span class="post-type-tag tag-edu">教學</span></td><td>步驟教學（Step by step）</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">23</span> 二</td><td><span class="post-type-tag tag-behind">幕後</span></td><td>一日工作 Vlog / 幕後花絮</td><td><span class="time-badge">21:00</span></td></tr>
-            <tr><td><span class="day-num">24</span> 三</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>客戶案例分享（前後對比）</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">25</span> 四</td><td><span class="post-type-tag tag-edu">教學</span></td><td>產業小知識 #3</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">26</span> 五</td><td><span class="post-type-tag tag-engage">互動</span></td><td>粉絲 Q&A / 限動問答箱</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">27</span> 六</td><td><span class="post-type-tag tag-trending">趨勢</span></td><td>Reels 短影音 — 本月爆款模仿</td><td><span class="time-badge">21:00</span></td></tr>
-            <tr><td><span class="day-num">28</span> 日</td><td><span class="post-type-tag tag-ugc">口碑</span></td><td>客戶好評精選 #3</td><td><span class="time-badge">12:00</span></td></tr>
-            <tr><td><span class="day-num">29</span> 一</td><td><span class="post-type-tag tag-brand">品牌</span></td><td>本月回顧 / 感謝粉絲</td><td><span class="time-badge">18:00</span></td></tr>
-            <tr><td><span class="day-num">30</span> 二</td><td><span class="post-type-tag tag-promo">促銷</span></td><td>下月預告 / 月底衝刺優惠</td><td><span class="time-badge">12:00</span></td></tr>
-        </table>
-
-        <div class="tip-box">
-            <strong>互動率提升技巧：</strong><br>
-            1. 每篇貼文結尾加上一個問題，邀請粉絲留言<br>
-            2. 留言回覆要在 1 小時內完成，越快回覆演算法越加分<br>
-            3. 善用限時動態的投票、問答、倒數功能增加互動<br>
-            4. 發布後 30 分鐘內主動去互動其他帳號的貼文<br>
-            5. 每週至少發 2-3 支 Reels，目前演算法最偏好短影音
+        <!-- 一、內容策略規劃 -->
+        <div class="check-section" data-category="strategy">
+            <div class="section-header">
+                <div class="section-num">1</div>
+                <h2>內容策略規劃</h2>
+                <span class="section-count">0/7</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>有每月內容排程表</strong><span>提前規劃整個月的發文主題與日期</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>設定 3-5 個內容主軸</strong><span>有固定的主題系列，如教學、幕後、客戶故事等</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>配合節日與熱點</strong><span>提前標記重要節日、產業活動，安排相關內容</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>內容比例均衡</strong><span>教育:互動:促銷 維持合理比例（建議 4:3:3）</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>素材提前準備</strong><span>文案、圖片、影片在發布前至少 3 天完成</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>月底回顧與調整</strong><span>每月底檢視成效，調整下月策略</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>靈活空間保留</strong><span>排程留 20% 空間應對臨時熱點或靈感</span></div></li>
+            </ul>
+            <div class="section-tip">沒有計劃就等於計劃失敗。內容日曆是社群經營的導航系統，讓你不再每天煩惱「今天發什麼」。</div>
         </div>
 
-        <button class="print-btn" onclick="window.print()">列印 / 儲存為 PDF</button>
+        <!-- 二、貼文類型多元化 -->
+        <div class="check-section" data-category="types">
+            <div class="section-header">
+                <div class="section-num">2</div>
+                <h2>貼文類型多元化</h2>
+                <span class="section-count">0/7</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>知識教學類內容</strong><span>分享專業知識、教學步驟、產業 know-how</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>互動問答類內容</strong><span>投票、提問、猜謎、二選一等互動形式</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>產品推廣類內容</strong><span>新品上市、限時優惠、服務介紹</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>品牌故事類內容</strong><span>創業歷程、品牌理念、團隊介紹</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>時事趨勢類內容</strong><span>蹭熱點、節日行銷、產業新聞評論</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>客戶見證類內容</strong><span>客戶好評、使用前後對比、合作案例</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>幕後花絮類內容</strong><span>工作日常、製作過程、團隊生活</span></div></li>
+            </ul>
+            <div class="section-tip">內容多元化能觸及不同類型的受眾。單一類型容易讓粉絲疲勞，7 種類型輪流發布效果最好。</div>
+        </div>
 
-        <div class="cta-bottom">
-            <h3>需要專人幫你經營社群？</h3>
-            <p>SILIQ 行銷提供全託管式社群經營服務，讓專業團隊幫你操盤</p>
-            <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener">免費諮詢</a>
+        <!-- 三、發布節奏與時機 -->
+        <div class="check-section" data-category="timing">
+            <div class="section-header">
+                <div class="section-num">3</div>
+                <h2>發布節奏與時機</h2>
+                <span class="section-count">0/6</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>每週發文 3-5 次</strong><span>維持穩定的發文頻率，不斷更也不洗版</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>掌握最佳發布時間</strong><span>根據後台數據選擇粉絲最活躍的時段發布</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>每週至少 2-3 支 Reels</strong><span>短影音是目前演算法最偏好的內容形式</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>每天更新限時動態</strong><span>Stories 保持品牌在粉絲眼前的存在感</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>善用排程工具</strong><span>使用預約發布工具確保準時上線</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>週末也有內容</strong><span>週末互動率通常更高，不要只在平日發文</span></div></li>
+            </ul>
+            <div class="section-tip">發文時間參考：通勤 07:30-09:00、午休 12:00-13:00、下班 18:00-19:00、睡前 21:00-22:00。實際請以後台洞察為準。</div>
+        </div>
+
+        <!-- 四、互動與成長策略 -->
+        <div class="check-section" data-category="engagement">
+            <div class="section-header">
+                <div class="section-num">4</div>
+                <h2>互動與成長策略</h2>
+                <span class="section-count">0/5</span>
+            </div>
+            <ul class="check-list">
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>每篇貼文都有 CTA</strong><span>引導粉絲留言、點連結、分享或收藏</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>1 小時內回覆留言</strong><span>越快回覆，演算法越加分，互動率越高</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>主動互動其他帳號</strong><span>發布後 30 分鐘內去互動相關帳號的貼文</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>善用互動貼紙</strong><span>限時動態使用投票、問答、倒數等互動功能</span></div></li>
+                <li class="check-item"><div class="custom-checkbox"></div><div class="check-content"><strong>追蹤互動數據</strong><span>每週查看觸及率、互動率，找出最佳內容模式</span></div></li>
+            </ul>
+            <div class="section-tip">互動率比粉絲數更重要。演算法會優先推送高互動內容，養成互動習慣是社群成長的加速器。</div>
+        </div>
+
+        <button class="submit-btn" id="showResult">查看我的診斷報告</button>
+
+        <div class="result-section" id="resultSection">
+            <div class="result-card">
+                <div class="result-score" id="totalScore">0<span> / 25</span></div>
+                <div class="result-label" id="resultLabel">—</div>
+                <div class="result-desc" id="resultDesc">—</div>
+                <div class="category-scores" id="categoryScores"></div>
+                <div class="suggestions" id="suggestions">
+                    <h3>你的社群經營改善建議</h3>
+                    <div id="suggestionList"></div>
+                </div>
+            </div>
+
+            <div class="cta-bottom" id="ctaBottom">
+                <h3>需要專人幫你經營社群？</h3>
+                <p>SILIQ 行銷提供<strong>全託管式社群經營服務</strong>，從內容規劃到數據優化，讓專業團隊幫你操盤。</p>
+                <a href="https://line.me/R/ti/p/@311imzhl" target="_blank" rel="noopener" id="ctaBtn">立即預約免費諮詢</a>
+                <div style="margin-top:12px;font-size:0.8rem;color:var(--text-lighter);">加入 LINE 官方帳號，傳送「社群健檢」即可預約</div>
+            </div>
+
+            <div class="share-section">
+                <p>覺得這份檢測有幫助？分享給需要的朋友</p>
+                <button class="share-btn" id="copyLink">複製連結分享</button>
+            </div>
         </div>
     </div>
+
+    <script>
+    (function() {
+        var items = document.querySelectorAll('.check-item');
+        var total = items.length;
+        var progressFill = document.getElementById('progressFill');
+        var checkedCount = document.getElementById('checkedCount');
+        var progressPct = document.getElementById('progressPct');
+
+        items.forEach(function(item) {
+            item.addEventListener('click', function() {
+                this.classList.toggle('checked');
+                updateProgress();
+            });
+        });
+
+        function updateProgress() {
+            var checked = document.querySelectorAll('.check-item.checked').length;
+            var pct = Math.round((checked / total) * 100);
+            progressFill.style.width = pct + '%';
+            checkedCount.textContent = checked;
+            progressPct.textContent = pct + '%';
+            document.querySelectorAll('.check-section').forEach(function(section) {
+                var sc = section.querySelectorAll('.check-item.checked').length;
+                var st = section.querySelectorAll('.check-item').length;
+                section.querySelector('.section-count').textContent = sc + '/' + st;
+            });
+        }
+
+        document.getElementById('showResult').addEventListener('click', function() {
+            var checked = document.querySelectorAll('.check-item.checked').length;
+            var resultSection = document.getElementById('resultSection');
+            document.getElementById('totalScore').innerHTML = checked + '<span> / 25</span>';
+
+            var label, desc;
+            if (checked >= 21) {
+                label = '社群經營達人！';
+                desc = '你的社群內容規劃非常完善，執行力到位！持續保持並嘗試更多創新內容形式。';
+            } else if (checked >= 15) {
+                label = '有基礎，值得再精進';
+                desc = '你的社群經營有一定水準，但某些環節還能加強。補齊弱項，互動率會有明顯提升。';
+            } else if (checked >= 8) {
+                label = '需要更系統化的規劃';
+                desc = '你有在經營社群，但缺乏系統性。建立內容日曆和發文 SOP 會讓效率大幅提升。';
+            } else {
+                label = '社群經營剛起步';
+                desc = '不用擔心，每個帳號都是從零開始的。從建立內容日曆和固定發文頻率開始，一步步來。';
+            }
+
+            document.getElementById('resultLabel').textContent = label;
+            document.getElementById('resultDesc').textContent = desc;
+
+            var categories = [
+                { key:'strategy', name:'內容策略規劃' },
+                { key:'types', name:'貼文類型多元化' },
+                { key:'timing', name:'發布節奏與時機' },
+                { key:'engagement', name:'互動與成長策略' }
+            ];
+
+            var catScoresEl = document.getElementById('categoryScores');
+            var suggestionList = document.getElementById('suggestionList');
+            catScoresEl.innerHTML = '';
+            suggestionList.innerHTML = '';
+
+            var catResults = [];
+
+            categories.forEach(function(cat) {
+                var section = document.querySelector('[data-category="' + cat.key + '"]');
+                var sc = section.querySelectorAll('.check-item.checked').length;
+                var st = section.querySelectorAll('.check-item').length;
+                var pct = Math.round((sc / st) * 100);
+                var level = pct >= 70 ? 'high' : (pct >= 40 ? 'mid' : 'low');
+                catResults.push({ name:cat.name, checked:sc, total:st, pct:pct, level:level });
+                catScoresEl.innerHTML += '<div class="cat-score"><div class="cat-score-bar"><div class="cat-score-fill ' + level + '" style="width:' + pct + '%"></div></div><div class="cat-name">' + cat.name + '</div><div class="cat-num">' + sc + '/' + st + '</div></div>';
+            });
+
+            catResults.sort(function(a,b) { return a.pct - b.pct; });
+
+            var suggestions = {
+                '內容策略規劃': { urgent:'建議先建立一份簡單的月度內容日曆，從固定 3 個主題開始', improve:'素材準備流程和月底回顧可以再加強，讓規劃更有數據依據', good:'內容策略規劃完善！可嘗試更長期的季度規劃提升連貫性' },
+                '貼文類型多元化': { urgent:'內容類型太單一，建議每週至少涵蓋 3 種不同類型的貼文', improve:'部分類型還沒嘗試，加入客戶見證和幕後花絮可提升信任感', good:'內容類型豐富多元！持續觀察哪類表現最佳，適度加重比例' },
+                '發布節奏與時機': { urgent:'先建立穩定的發文頻率，每週至少 3 次是基本門檻', improve:'嘗試加入更多 Reels 和限時動態，這是目前觸及率最高的形式', good:'發布節奏穩定！可進一步測試不同時段找到最佳發布時機' },
+                '互動與成長策略': { urgent:'互動是社群成長的關鍵，每篇貼文都要有 CTA 引導行動', improve:'回覆速度和主動互動可以加強，這會直接影響演算法推薦', good:'互動策略執行到位！持續保持，互動率將帶動自然觸及成長' }
+            };
+
+            catResults.forEach(function(cat) {
+                var iconClass, iconText, text;
+                if (cat.pct < 40) { iconClass='urgent'; iconText='!'; text=suggestions[cat.name].urgent; }
+                else if (cat.pct < 70) { iconClass='improve'; iconText='↑'; text=suggestions[cat.name].improve; }
+                else { iconClass='good'; iconText='✓'; text=suggestions[cat.name].good; }
+                suggestionList.innerHTML += '<div class="suggestion-item"><div class="suggestion-icon ' + iconClass + '">' + iconText + '</div><div class="suggestion-text"><strong>' + cat.name + '（' + cat.checked + '/' + cat.total + '）</strong><span>' + text + '</span></div></div>';
+            });
+
+            var ctaBtn = document.getElementById('ctaBtn');
+            var ctaBottom = document.getElementById('ctaBottom');
+            if (checked < 8) {
+                ctaBottom.querySelector('h3').textContent = '你的社群需要專業協助！';
+                ctaBottom.querySelector('p').innerHTML = '得分偏低不用擔心，<strong>讓專業團隊幫你從零建立社群經營體系</strong>。<br>SILIQ 行銷提供免費 1 對 1 諮詢，量身打造你的社群策略。';
+                ctaBtn.textContent = '馬上預約免費諮詢';
+                ctaBottom.style.background = 'linear-gradient(135deg,#fff5f5,#fef0f0)';
+                ctaBottom.style.border = '2px solid #e74c3c';
+            } else if (checked < 15) {
+                ctaBottom.querySelector('h3').textContent = '讓專家幫你的社群更上一層樓';
+                ctaBtn.textContent = '預約免費策略諮詢';
+            } else if (checked < 21) {
+                ctaBottom.querySelector('h3').textContent = '想突破社群瓶頸？讓我們聊聊';
+                ctaBtn.textContent = '預約免費諮詢';
+            }
+
+            resultSection.classList.add('visible');
+            resultSection.scrollIntoView({ behavior:'smooth', block:'start' });
+        });
+
+        document.getElementById('copyLink').addEventListener('click', function() {
+            var url = window.location.origin + '/resources/content-calendar.html';
+            if (navigator.clipboard) { navigator.clipboard.writeText(url); }
+            else { var input = document.createElement('input'); input.value = url; document.body.appendChild(input); input.select(); document.execCommand('copy'); document.body.removeChild(input); }
+            this.textContent = '已複製！';
+            var btn = this;
+            setTimeout(function() { btn.textContent = '複製連結分享'; }, 2000);
+        });
+    })();
+    </script>
 </body>
 </html>
