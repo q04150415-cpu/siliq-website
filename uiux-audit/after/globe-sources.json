@@ -1,0 +1,872 @@
+[
+  {
+    "title": "阿美上班不無聊",
+    "cover": {
+      "client": "阿美上班不無聊",
+      "id": "16hBFX_i8OSr_2Ej9tNxTk2tLzpR9FUvh",
+      "name": "0106－阿美－觀世音菩薩竟然是男生？-封面.jpg",
+      "type": "0106－阿美－觀世音菩薩竟然是男生？-封面.jpg Image",
+      "folder": false,
+      "project": "0106－阿美－觀世音菩薩竟然是男生？",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\16hBFX_i8OSr_2Ej9tNxTk2tLzpR9FUvh.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1x1OpYDZa09IjmTgGXDPL5-zgkPUImRma",
+      "name": "0106－阿美－觀世音菩薩竟然是男生？.mp4",
+      "type": "0106－阿美－觀世音菩薩竟然是男生？.mp4 Video",
+      "folder": false,
+      "project": "0106－阿美－觀世音菩薩竟然是男生？"
+    },
+    "asset": "assets/globe/client-01.webp"
+  },
+  {
+    "title": "希希",
+    "cover": {
+      "client": "希希",
+      "id": "1QQKXnkJJjTF_diokO5x3DhdQOkrXeMBl",
+      "name": "改2-希希-別讓髮量暴露年齡！逆轉落髮危機，告別花媽頭-封面.jpg",
+      "type": "改2-希希-別讓髮量暴露年齡！逆轉落髮危機，告別花媽頭-封面.jpg Image",
+      "folder": false,
+      "project": "0610-希希-改封面-希希-別讓髮量暴露年齡，逆轉落髮危機，告別花媽頭",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1QQKXnkJJjTF_diokO5x3DhdQOkrXeMBl.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1Hj6DqvedJuYmjgSMuzK-6opHumvwl3oP",
+      "name": "改2-希希-別讓髮量暴露年齡！逆轉落髮危機，告別花媽頭.mp4",
+      "type": "改2-希希-別讓髮量暴露年齡！逆轉落髮危機，告別花媽頭.mp4 Video",
+      "folder": false,
+      "project": "0610-希希-改封面-希希-別讓髮量暴露年齡，逆轉落髮危機，告別花媽頭"
+    },
+    "asset": "assets/globe/client-02.webp"
+  },
+  {
+    "title": "摩瑪建材",
+    "cover": {
+      "client": "摩瑪建材",
+      "id": "1V-zVqLq4loLFPLz_PsiMZ6h2c2IEhd0K",
+      "name": "0123_摩瑪建材_電子鎖帶給你最完善的功能_改封面-封面.jpg",
+      "type": "0123_摩瑪建材_電子鎖帶給你最完善的功能_改封面-封面.jpg Image",
+      "folder": false,
+      "project": "0123_摩瑪建材_電子鎖帶給你最完善的功能_改封面",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1V-zVqLq4loLFPLz_PsiMZ6h2c2IEhd0K.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1vZU13BaHapjkzB9KcD2XnLMMsHp1Zv9n",
+      "name": "0123_摩瑪建材_電子鎖帶給你最完善的功能_改封面.mp4",
+      "type": "0123_摩瑪建材_電子鎖帶給你最完善的功能_改封面.mp4 Video",
+      "folder": false,
+      "project": "0123_摩瑪建材_電子鎖帶給你最完善的功能_改封面"
+    },
+    "asset": "assets/globe/client-03.webp"
+  },
+  {
+    "title": "大瑪螺螄粉",
+    "cover": {
+      "client": "大瑪螺螄粉",
+      "id": "1Lt80X_hIi7wiB5qiuygq0yfiVNrRC44s",
+      "name": "0811_大瑪_大瑪新品上市-肥汁滋麵-封面.jpg",
+      "type": "0811_大瑪_大瑪新品上市-肥汁滋麵-封面.jpg Image",
+      "folder": false,
+      "project": "0811_大瑪_大瑪新品上市-肥汁滋麵",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1Lt80X_hIi7wiB5qiuygq0yfiVNrRC44s.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1JeFmAU4EVFb_X535WJ1d5bvETghQMYjW",
+      "name": "0811_大瑪_大瑪新品上市-肥汁滋麵.mp4",
+      "type": "0811_大瑪_大瑪新品上市-肥汁滋麵.mp4 Video",
+      "folder": false,
+      "project": "0811_大瑪_大瑪新品上市-肥汁滋麵"
+    },
+    "asset": "assets/globe/client-04.webp"
+  },
+  {
+    "title": "丹佐西服",
+    "cover": {
+      "client": "丹佐西服",
+      "id": "1fWRhzAuOeLnOMrdtbxjWYHwXe855nJZh",
+      "name": "0108_丹佐_如果黃仁勳便吊車大王-封面.jpg",
+      "type": "0108_丹佐_如果黃仁勳便吊車大王-封面.jpg Image",
+      "folder": false,
+      "project": "0108_丹佐_如果黃仁勳便吊車大王",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1fWRhzAuOeLnOMrdtbxjWYHwXe855nJZh.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "189DAHgoRqv_5oZdVNDZtwYZm_UhWiViW",
+      "name": "0108_丹佐_如果黃仁勳便吊車大王.mp4",
+      "type": "0108_丹佐_如果黃仁勳便吊車大王.mp4 Video",
+      "folder": false,
+      "project": "0108_丹佐_如果黃仁勳便吊車大王"
+    },
+    "asset": "assets/globe/client-05.webp"
+  },
+  {
+    "title": "人人品牌",
+    "cover": {
+      "client": "人人品牌",
+      "id": "1mui7XJmDPKh6LO8ZW8tyPKKnNANweNQP",
+      "name": "改1-人人-品牌調整-封面.jpg",
+      "type": "改1-人人-品牌調整-封面.jpg Image",
+      "folder": false,
+      "project": "0105-人人－品牌調整",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1mui7XJmDPKh6LO8ZW8tyPKKnNANweNQP.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1LnjP73wIWeH6LBQ-bz9OThC68QyqMOhH",
+      "name": "改1-人人-品牌調整.mp4",
+      "type": "改1-人人-品牌調整.mp4 Video",
+      "folder": false,
+      "project": "0105-人人－品牌調整"
+    },
+    "asset": "assets/globe/client-06.webp"
+  },
+  {
+    "title": "什麼鳥人生",
+    "cover": {
+      "client": "什麼鳥人生",
+      "id": "15bjS3AZGHE0SVjChtkawpUuoYG3Mus7J",
+      "name": "0430_什麼鳥人生_被綑綁的4000天 ft.阿程-封面.jpg",
+      "type": "0430_什麼鳥人生_被綑綁的4000天 ft.阿程-封面.jpg Image",
+      "folder": false,
+      "project": "0430_什麼鳥人生_被綑綁的4000天 ft.阿程_長+短",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\15bjS3AZGHE0SVjChtkawpUuoYG3Mus7J.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1yuAvg9fHs7CSFtGW1xRczUW0yq8BeJYn",
+      "name": "0430_什麼鳥人生_被綑綁的4000天 ft.阿程.mov",
+      "type": "0430_什麼鳥人生_被綑綁的4000天 ft.阿程.mov Video",
+      "folder": false,
+      "project": "0430_什麼鳥人生_被綑綁的4000天 ft.阿程_長+短"
+    },
+    "asset": "assets/globe/client-07.webp"
+  },
+  {
+    "title": "六爺",
+    "cover": {
+      "client": "六爺",
+      "id": "1iu8FT1LjVON_lZijWVmOD_dZ4iaZHEb4",
+      "name": "01.png",
+      "type": "01.png Image",
+      "folder": false,
+      "project": "六爺照片",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1iu8FT1LjVON_lZijWVmOD_dZ4iaZHEb4.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "client": "六爺",
+      "id": "1iu8FT1LjVON_lZijWVmOD_dZ4iaZHEb4",
+      "name": "01.png",
+      "type": "01.png Image",
+      "folder": false,
+      "project": "六爺照片",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1iu8FT1LjVON_lZijWVmOD_dZ4iaZHEb4.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "asset": "assets/globe/client-08.webp"
+  },
+  {
+    "title": "天櫻",
+    "cover": {
+      "client": "天櫻",
+      "id": "1_MjVKgtCUpa4aoxqTrl7w5AfIm-7qKD7",
+      "name": "a7bba027-4d0a-43f1-8bef-f28a79ae62e9-封面.jpg",
+      "type": "a7bba027-4d0a-43f1-8bef-f28a79ae62e9-封面.jpg Image",
+      "folder": false,
+      "project": "1分鐘安裝-改",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1_MjVKgtCUpa4aoxqTrl7w5AfIm-7qKD7.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1td7f6f8cByZ3G8AiQ7N3KHXbzQrqwPyS",
+      "name": "1分鐘安裝-改.mp4",
+      "type": "1分鐘安裝-改.mp4 Video",
+      "folder": false,
+      "project": "1分鐘安裝-改"
+    },
+    "asset": "assets/globe/client-09.webp"
+  },
+  {
+    "title": "可魯",
+    "cover": {
+      "client": "可魯",
+      "id": "1lNLlZefTaHq5sE-lcXSZide5d-lzd_5N",
+      "name": "0113_可魯_開團囉!-封面.jpg",
+      "type": "0113_可魯_開團囉!-封面.jpg Image",
+      "folder": false,
+      "project": "0113_可魯_開團囉!",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1lNLlZefTaHq5sE-lcXSZide5d-lzd_5N.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1wFkDpQ1-MvPo-eEA2pAd1kixB7EH6Y2f",
+      "name": "0113_可魯_開團囉!.mp4",
+      "type": "0113_可魯_開團囉!.mp4 Video",
+      "folder": false,
+      "project": "0113_可魯_開團囉!"
+    },
+    "asset": "assets/globe/client-10.webp"
+  },
+  {
+    "title": "良辰桔市",
+    "cover": {
+      "client": "良辰桔市",
+      "id": "10aZ_8wByQHZJMREff6SeZQQUF-s3jlrE",
+      "name": "改1-良辰桔市-一分鐘搞懂，賣貨便與交貨便的差別-封面.jpg",
+      "type": "改1-良辰桔市-一分鐘搞懂，賣貨便與交貨便的差別-封面.jpg Image",
+      "folder": false,
+      "project": "0520-良辰桔市-一分鐘搞懂，賣貨便與交貨便的差別",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\10aZ_8wByQHZJMREff6SeZQQUF-s3jlrE.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1ggZk_yeLCZdAufzWbmpUutqKDL-7gZ4m",
+      "name": "改1-良辰桔市-一分鐘搞懂，賣貨便與交貨便的差別.mp4",
+      "type": "改1-良辰桔市-一分鐘搞懂，賣貨便與交貨便的差別.mp4 Video",
+      "folder": false,
+      "project": "0520-良辰桔市-一分鐘搞懂，賣貨便與交貨便的差別"
+    },
+    "asset": "assets/globe/client-11.webp"
+  },
+  {
+    "title": "周爺",
+    "cover": {
+      "client": "周爺",
+      "id": "1RAUF37O5v34ypkhS_sF0qBxOt7NVNToo",
+      "name": "火車難題-周爺-封面.jpg",
+      "type": "火車難題-周爺-封面.jpg Image",
+      "folder": false,
+      "project": "火車難題-周爺",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1RAUF37O5v34ypkhS_sF0qBxOt7NVNToo.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1VQUiuwDIUzgH_Tr_VN7IIySLA17M_uYw",
+      "name": "火車難題-周爺1-1.mp4",
+      "type": "火車難題-周爺1-1.mp4 Video",
+      "folder": false,
+      "project": "火車難題-周爺"
+    },
+    "asset": "assets/globe/client-12.webp"
+  },
+  {
+    "title": "幸生診所",
+    "cover": {
+      "client": "幸生診所",
+      "id": "1UHDF1MPr9UAjw7l-lq-px6Ae6pxDD2Or",
+      "name": "0707_幸生鄭老師_肩膀卡關教你居家自救三步驟-封面.jpg",
+      "type": "0707_幸生鄭老師_肩膀卡關教你居家自救三步驟-封面.jpg Image",
+      "folder": false,
+      "project": "0609_幸生鄭老師_肩膀卡關五十肩讓你飛不起來嗎",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1UHDF1MPr9UAjw7l-lq-px6Ae6pxDD2Or.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "15i9KNMrj4cCnzWIGRpk7c66ggoiNc83y",
+      "name": "0707_幸生鄭老師_肩膀卡關教你居家自救三步驟.mp4",
+      "type": "0707_幸生鄭老師_肩膀卡關教你居家自救三步驟.mp4 Video",
+      "folder": false,
+      "project": "0609_幸生鄭老師_肩膀卡關五十肩讓你飛不起來嗎"
+    },
+    "asset": "assets/globe/client-13.webp"
+  },
+  {
+    "title": "房仲",
+    "cover": {
+      "client": "房仲",
+      "id": "1EfhtlfVnBbooxVt9rfqXlHAROCYM5xZT",
+      "name": "改封面-八妹－歐酷飯店-封面.jpg",
+      "type": "改封面-八妹－歐酷飯店-封面.jpg Image",
+      "folder": false,
+      "project": "改封面-八妹－歐酷飯店",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1EfhtlfVnBbooxVt9rfqXlHAROCYM5xZT.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1YRuWVTvgEbGpQJ2nuINKy7KZ4SwNHwMd",
+      "name": "改封面-八妹－歐酷飯店.mp4",
+      "type": "改封面-八妹－歐酷飯店.mp4 Video",
+      "folder": false,
+      "project": "改封面-八妹－歐酷飯店"
+    },
+    "asset": "assets/globe/client-14.webp"
+  },
+  {
+    "title": "科林車業",
+    "cover": {
+      "client": "科林車業",
+      "id": "1KKrgyVxn7_7ZxHUne8l59PWEWBisK98T",
+      "name": "改1-科林－社會你大哥，都開什麼車-封面.jpg",
+      "type": "改1-科林－社會你大哥，都開什麼車-封面.jpg Image",
+      "folder": false,
+      "project": "0102-科林－大哥都開什麼車",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1KKrgyVxn7_7ZxHUne8l59PWEWBisK98T.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1XbIGQSjLTJodjA0ozkC2ggecjtEstQ-r",
+      "name": "改1-科林－社會你大哥，都開什麼車.mp4",
+      "type": "改1-科林－社會你大哥，都開什麼車.mp4 Video",
+      "folder": false,
+      "project": "0102-科林－大哥都開什麼車"
+    },
+    "asset": "assets/globe/client-15.webp"
+  },
+  {
+    "title": "美閣",
+    "cover": {
+      "client": "美閣",
+      "id": "1fN297ZJBrxbvVIyI49K9A5ppqGj9Jz61",
+      "name": "改2_0708_美閣_落枕怎麼辦教你這招馬上緩解-封面.jpg",
+      "type": "改2_0708_美閣_落枕怎麼辦教你這招馬上緩解-封面.jpg Image",
+      "folder": false,
+      "project": "0708_美閣_落枕怎麼辦教你這招馬上緩解",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1fN297ZJBrxbvVIyI49K9A5ppqGj9Jz61.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1bfJT6jk4ypndQf80WtgyWUZt7urv8FZ6",
+      "name": "改2_0708_美閣_落枕怎麼辦教你這招馬上緩解.mp4",
+      "type": "改2_0708_美閣_落枕怎麼辦教你這招馬上緩解.mp4 Video",
+      "folder": false,
+      "project": "0708_美閣_落枕怎麼辦教你這招馬上緩解"
+    },
+    "asset": "assets/globe/client-16.webp"
+  },
+  {
+    "title": "原形設計",
+    "cover": {
+      "client": "原形設計",
+      "id": "1WRu3e_S6cTUa3042uZEo3PLMZLzEAFly",
+      "name": "0826_原形設計_裝修費為甚麼這麼貴-封面.jpg",
+      "type": "0826_原形設計_裝修費為甚麼這麼貴-封面.jpg Image",
+      "folder": false,
+      "project": "0716_原形設計_裝修費為甚麼這麼貴",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1WRu3e_S6cTUa3042uZEo3PLMZLzEAFly.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1PnT1VV-wnSwIenBiZwzna596IGd1nNov",
+      "name": "0826_原形設計_裝修費為甚麼這麼貴.mp4",
+      "type": "0826_原形設計_裝修費為甚麼這麼貴.mp4 Video",
+      "folder": false,
+      "project": "0716_原形設計_裝修費為甚麼這麼貴"
+    },
+    "asset": "assets/globe/client-17.webp"
+  },
+  {
+    "title": "孫老師算命",
+    "cover": {
+      "client": "孫老師算命",
+      "id": "1J-v50VMG-SnTB1qiGdfggqrPs8J5FY5f",
+      "name": "7月不開直播-封面.jpg",
+      "type": "7月不開直播-封面.jpg Image",
+      "folder": false,
+      "project": "7月不開直播",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1J-v50VMG-SnTB1qiGdfggqrPs8J5FY5f.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1LIfDNW459Et42Gxp78CpgCWD8K_bevzN",
+      "name": "7月不開直播.mp4",
+      "type": "7月不開直播.mp4 Video",
+      "folder": false,
+      "project": "7月不開直播"
+    },
+    "asset": "assets/globe/client-19.webp"
+  },
+  {
+    "title": "家俱大哲哥",
+    "cover": {
+      "client": "家俱大哲哥",
+      "id": "14cK7E7uHuFqTJsBsUQSNM08vhXBYQAIN",
+      "name": "0107_大哲哥_告訴你ikea餐桌怎麼挑-封面.jpg",
+      "type": "0107_大哲哥_告訴你ikea餐桌怎麼挑-封面.jpg Image",
+      "folder": false,
+      "project": "0107_大哲哥_告訴你ikea餐桌怎麼挑",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\14cK7E7uHuFqTJsBsUQSNM08vhXBYQAIN.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1jHp0kBTYrwNfx5fBZnmlAWSO1oQe5Ucc",
+      "name": "0107_大哲哥_告訴你ikea餐桌怎麼挑.mp4",
+      "type": "0107_大哲哥_告訴你ikea餐桌怎麼挑.mp4 Video",
+      "folder": false,
+      "project": "0107_大哲哥_告訴你ikea餐桌怎麼挑"
+    },
+    "asset": "assets/globe/client-20.webp"
+  },
+  {
+    "title": "旅人娛樂",
+    "cover": {
+      "client": "旅人娛樂",
+      "id": "1Jm1nAU9uhE_FyrZUKyZFSmaxdj_aUaKa",
+      "name": "0624_旅人娛樂_一趟旅行全幫你搞定_改3-封面.jpg",
+      "type": "0624_旅人娛樂_一趟旅行全幫你搞定_改3-封面.jpg Image",
+      "folder": false,
+      "project": "0625_旅人娛樂_一趟旅行全幫您搞定",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1Jm1nAU9uhE_FyrZUKyZFSmaxdj_aUaKa.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1mPJ_U1g5pP1ndXj-autNz83UblZ_oYx3",
+      "name": "0624_旅人娛樂_一趟旅行全幫你搞定_改3.mp4",
+      "type": "0624_旅人娛樂_一趟旅行全幫你搞定_改3.mp4 Video",
+      "folder": false,
+      "project": "0625_旅人娛樂_一趟旅行全幫您搞定"
+    },
+    "asset": "assets/globe/client-21.webp"
+  },
+  {
+    "title": "得來素",
+    "cover": {
+      "client": "得來素",
+      "id": "1pBnDYg9OHCKW7gcUwzOAPzCfOoDN9SVm",
+      "name": "0107_關老闆_素沙茶創始品牌-封面.jpg",
+      "type": "0107_關老闆_素沙茶創始品牌-封面.jpg Image",
+      "folder": false,
+      "project": "0107_關老闆_素沙茶創始品牌",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1pBnDYg9OHCKW7gcUwzOAPzCfOoDN9SVm.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1Sbam0hdXdxtQQ4h-NVjKtldEuOyx4LPd",
+      "name": "0107_關老闆_素沙茶創始品牌.mp4",
+      "type": "0107_關老闆_素沙茶創始品牌.mp4 Video",
+      "folder": false,
+      "project": "0107_關老闆_素沙茶創始品牌"
+    },
+    "asset": "assets/globe/client-22.webp"
+  },
+  {
+    "title": "情緒花園",
+    "cover": {
+      "client": "情緒花園",
+      "id": "1dT8t_g3UkSALsFcF9w9GOBQiSfqPGGM3",
+      "name": "0511_情緒花園_風中之星：從初心到落實一場與自然的共存-封面.jpg",
+      "type": "0511_情緒花園_風中之星：從初心到落實一場與自然的共存-封面.jpg Image",
+      "folder": false,
+      "project": "0511_情緒花園_風中之星：從初心到落實一場與自然的共存",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1dT8t_g3UkSALsFcF9w9GOBQiSfqPGGM3.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1c2bSx3JEMewwedWw0LsV746utQ7KLBR1",
+      "name": "0511_情緒花園_風中之星：從初心到落實一場與自然的共存.mp4",
+      "type": "0511_情緒花園_風中之星：從初心到落實一場與自然的共存.mp4 Video",
+      "folder": false,
+      "project": "0511_情緒花園_風中之星：從初心到落實一場與自然的共存"
+    },
+    "asset": "assets/globe/client-23.webp"
+  },
+  {
+    "title": "野餐",
+    "cover": {
+      "client": "野餐",
+      "id": "1cBE2BL0ZaRvsEgVH53_3V1MPxUJ10SZZ",
+      "name": "抓周$22,800-封面.jpg",
+      "type": "抓周$22,800-封面.jpg Image",
+      "folder": false,
+      "project": "抓周＄22,800",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1cBE2BL0ZaRvsEgVH53_3V1MPxUJ10SZZ.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1sw_9juKvUbFFFVo3NVlv_R57Z7OhnNHN",
+      "name": "抓周＄22800.mp4",
+      "type": "抓周＄22800.mp4 Video",
+      "folder": false,
+      "project": "抓周＄22,800"
+    },
+    "asset": "assets/globe/client-24.webp"
+  },
+  {
+    "title": "貸立輕",
+    "cover": {
+      "client": "貸立輕",
+      "id": "1ILBbtZCLnOj_h9G7aIwRPaxtBSB3uaOQ",
+      "name": "0224_貸立輕_人生不能重來-封面.jpg",
+      "type": "0224_貸立輕_人生不能重來-封面.jpg Image",
+      "folder": false,
+      "project": "0224_貸立輕_人生不能重來_改2",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1ILBbtZCLnOj_h9G7aIwRPaxtBSB3uaOQ.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "196gPa6DQO0Ds0F3INd1jsIhBycaEu9bx",
+      "name": "0224_貸立輕_人生不能重來.mp4",
+      "type": "0224_貸立輕_人生不能重來.mp4 Video",
+      "folder": false,
+      "project": "0224_貸立輕_人生不能重來_改2"
+    },
+    "asset": "assets/globe/client-25.webp"
+  },
+  {
+    "title": "詹姆士",
+    "cover": {
+      "client": "詹姆士",
+      "id": "1wjuyk_956Fm_Iym7GSnMDFfqk0d_-3cQ",
+      "name": "0106_詹姆士_磁磚怎麼挑_台工的秘辛-封面.jpg",
+      "type": "0106_詹姆士_磁磚怎麼挑_台工的秘辛-封面.jpg Image",
+      "folder": false,
+      "project": "0106_詹姆士_磁磚怎麼挑_台工的秘辛",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1wjuyk_956Fm_Iym7GSnMDFfqk0d_-3cQ.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1KWJueMT5AtTFfjt4VeFWJbv6FXjpL1qo",
+      "name": "0106_詹姆士_磁磚怎麼挑_台工的秘辛.mp4",
+      "type": "0106_詹姆士_磁磚怎麼挑_台工的秘辛.mp4 Video",
+      "folder": false,
+      "project": "0106_詹姆士_磁磚怎麼挑_台工的秘辛"
+    },
+    "asset": "assets/globe/client-26.webp"
+  },
+  {
+    "title": "維格",
+    "cover": {
+      "client": "維格",
+      "id": "106i9wf2tRCVoTlW0dLWHl7T9NwivmgI2",
+      "name": "0528改封面-維格希希醫師-(逆時針)想讓皮膚逆齡，先遠離這五個隱形殺手-封面.jpg",
+      "type": "0528改封面-維格希希醫師-(逆時針)想讓皮膚逆齡，先遠離這五個隱形殺手-封面.jpg Image",
+      "folder": false,
+      "project": "0528改封面-維格希希醫師-(逆時針)想讓皮膚逆齡，先遠離這五個隱形殺手",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\106i9wf2tRCVoTlW0dLWHl7T9NwivmgI2.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1btO0TzC0zVrwigqaHAczFVivCk6YBO4c",
+      "name": "0528改封面-維格希希醫師-(逆時針)想讓皮膚逆齡，先遠離這五個隱形殺手.mp4",
+      "type": "0528改封面-維格希希醫師-(逆時針)想讓皮膚逆齡，先遠離這五個隱形殺手.mp4 Video",
+      "folder": false,
+      "project": "0528改封面-維格希希醫師-(逆時針)想讓皮膚逆齡，先遠離這五個隱形殺手"
+    },
+    "asset": "assets/globe/client-27.webp"
+  },
+  {
+    "title": "維格spa",
+    "cover": {
+      "client": "維格spa",
+      "id": "1hwQOffXKt5t-a_MTBcwcx5k849ktJqdo",
+      "name": "0908_維格spa_只要你符合一點我就不收你-封面.jpg",
+      "type": "0908_維格spa_只要你符合一點我就不收你-封面.jpg Image",
+      "folder": false,
+      "project": "0908_維格spa_只要你符合一點我就不收你",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1hwQOffXKt5t-a_MTBcwcx5k849ktJqdo.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1ud1gr-g3pYh-fU259R-pXHMSK2Pr1edu",
+      "name": "0908_維格spa_只要你符合一點我就不收你.mp4",
+      "type": "0908_維格spa_只要你符合一點我就不收你.mp4 Video",
+      "folder": false,
+      "project": "0908_維格spa_只要你符合一點我就不收你"
+    },
+    "asset": "assets/globe/client-28.webp"
+  },
+  {
+    "title": "樂凱",
+    "cover": {
+      "client": "樂凱",
+      "id": "1I6sy9iowRiAotcAWOYRMrB9kKCtuc22J",
+      "name": "0422_樂凱_特斯拉車聚_改2-封面.jpg",
+      "type": "0422_樂凱_特斯拉車聚_改2-封面.jpg Image",
+      "folder": false,
+      "project": "0422_樂凱_特斯拉車聚",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1I6sy9iowRiAotcAWOYRMrB9kKCtuc22J.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1lwWcA-_NUG1JoUJx9F_gMeGB0qbksAeD",
+      "name": "0422_樂凱_特斯拉車聚_改2.mp4",
+      "type": "0422_樂凱_特斯拉車聚_改2.mp4 Video",
+      "folder": false,
+      "project": "0422_樂凱_特斯拉車聚"
+    },
+    "asset": "assets/globe/client-29.webp"
+  },
+  {
+    "title": "熱浪島",
+    "cover": {
+      "client": "熱浪島",
+      "id": "1znXHNP5rt099CBIG4Irz4-0EfIMyTYDp",
+      "name": "0212_熱浪島_熱浪島新品-鹹擂茶飯-封面.jpg",
+      "type": "0212_熱浪島_熱浪島新品-鹹擂茶飯-封面.jpg Image",
+      "folder": false,
+      "project": "0212_熱浪島_熱浪島新品-鹹擂茶飯",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1znXHNP5rt099CBIG4Irz4-0EfIMyTYDp.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1EUnOcweqqK0NONwRx0e5LgTkQEfpKO3d",
+      "name": "0212_熱浪島_熱浪島新品-鹹擂茶飯.mp4",
+      "type": "0212_熱浪島_熱浪島新品-鹹擂茶飯.mp4 Video",
+      "folder": false,
+      "project": "0212_熱浪島_熱浪島新品-鹹擂茶飯"
+    },
+    "asset": "assets/globe/client-30.webp"
+  },
+  {
+    "title": "靚居空間設計",
+    "cover": {
+      "client": "靚居空間設計",
+      "id": "1fv1gal7QdNhFGE-YNml5mrWz5RnHJ7jw",
+      "name": "0907_靚居_雪梨歌劇院，設計師一輩子都沒看過-封面.jpg",
+      "type": "0907_靚居_雪梨歌劇院，設計師一輩子都沒看過-封面.jpg Image",
+      "folder": false,
+      "project": "0907_靚居_雪梨歌劇院，設計師一輩子都沒看過",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1fv1gal7QdNhFGE-YNml5mrWz5RnHJ7jw.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1rG2wp0sq6X36G40KSbj9ycIsp0JiDhgt",
+      "name": "0907_靚居_雪梨歌劇院，設計師一輩子都沒看過.mp4",
+      "type": "0907_靚居_雪梨歌劇院，設計師一輩子都沒看過.mp4 Video",
+      "folder": false,
+      "project": "0907_靚居_雪梨歌劇院，設計師一輩子都沒看過"
+    },
+    "asset": "assets/globe/client-31.webp"
+  },
+  {
+    "title": "鋼鐵爸",
+    "cover": {
+      "client": "鋼鐵爸",
+      "id": "1MSG-cBC48Wl0HbiGWx9Z-qgvmfIIGunx",
+      "name": "0109_鋼鐵爸_殯葬人生第一堂課-封面.jpg",
+      "type": "0109_鋼鐵爸_殯葬人生第一堂課-封面.jpg Image",
+      "folder": false,
+      "project": "0109_鋼鐵爸_殯葬人生第一堂課",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1MSG-cBC48Wl0HbiGWx9Z-qgvmfIIGunx.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1ELPWIWdVs7P_kvLlS2jLXzmHFCDoGnJR",
+      "name": "0109_鋼鐵爸_殯葬人生第一堂課.mp4",
+      "type": "0109_鋼鐵爸_殯葬人生第一堂課.mp4 Video",
+      "folder": false,
+      "project": "0109_鋼鐵爸_殯葬人生第一堂課"
+    },
+    "asset": "assets/globe/client-32.webp"
+  },
+  {
+    "title": "靜靜",
+    "cover": {
+      "client": "靜靜",
+      "id": "1B01yi3pTnyYVme4UPVFFbVd9XK9nazab",
+      "name": "0302_靜靜_為什麼這麼迷信-封面.jpg",
+      "type": "0302_靜靜_為什麼這麼迷信-封面.jpg Image",
+      "folder": false,
+      "project": "0302_靜靜_為什麼這麼迷信",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1B01yi3pTnyYVme4UPVFFbVd9XK9nazab.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1J7xPKzwcF58V9oAxxmLIpIrluYzbD0mA",
+      "name": "0302_靜靜_為什麼這麼迷信.mp4",
+      "type": "0302_靜靜_為什麼這麼迷信.mp4 Video",
+      "folder": false,
+      "project": "0302_靜靜_為什麼這麼迷信"
+    },
+    "asset": "assets/globe/client-33.webp"
+  },
+  {
+    "title": "鱘龍谷",
+    "cover": {
+      "client": "鱘龍谷",
+      "id": "1yd6VdXs6iLodyZpUuv_LWvCUc9fDX5WN",
+      "name": "0904_鱘龍谷_鱘龍魚這個部位怎樣挑都好吃-封面.jpg",
+      "type": "0904_鱘龍谷_鱘龍魚這個部位怎樣挑都好吃-封面.jpg Image",
+      "folder": false,
+      "project": "0903_鱘龍谷_鱘龍魚這個部位怎樣挑都好吃",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1yd6VdXs6iLodyZpUuv_LWvCUc9fDX5WN.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1gw3fvJh1d5rN4__CW4UI0xHb2Fs7neMy",
+      "name": "0904_鱘龍谷_鱘龍魚這個部位怎樣挑都好吃.mp4",
+      "type": "0904_鱘龍谷_鱘龍魚這個部位怎樣挑都好吃.mp4 Video",
+      "folder": false,
+      "project": "0903_鱘龍谷_鱘龍魚這個部位怎樣挑都好吃"
+    },
+    "asset": "assets/globe/client-36.webp"
+  },
+  {
+    "title": "lexus賴俊宏",
+    "cover": {
+      "client": "lexus賴俊宏",
+      "id": "1_erMTKDQR-N5VnKdyxguKWwK9hYNmxs0",
+      "name": "神秘客20250903-封面.jpg",
+      "type": "神秘客20250903-封面.jpg Image",
+      "folder": false,
+      "project": "神秘客20250903",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1_erMTKDQR-N5VnKdyxguKWwK9hYNmxs0.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1fVxvPtSZmMLnzyfxTaX0o1bJ8kym7pNT",
+      "name": "神秘客20250903.mp4",
+      "type": "神秘客20250903.mp4 Video",
+      "folder": false,
+      "project": "神秘客20250903"
+    },
+    "asset": "assets/globe/client-37.webp"
+  },
+  {
+    "title": "miru",
+    "cover": {
+      "client": "miru",
+      "id": "1TlQLNvywJ3BHD09twNwoVR4ChYzM6Z_j",
+      "name": "改4_0831_Miru_鞋墊也能開外掛-封面.jpg",
+      "type": "改4_0831_Miru_鞋墊也能開外掛-封面.jpg Image",
+      "folder": false,
+      "project": "0831_Miru_鞋墊也能開外掛",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1TlQLNvywJ3BHD09twNwoVR4ChYzM6Z_j.jpg",
+      "size": [
+        800,
+        1422
+      ]
+    },
+    "linked_file": {
+      "id": "1mpYXgJB8Y9oo1Py3jwMDwIY20ZP4PSm6",
+      "name": "改4_0831_Miru_鞋墊也能開外掛.mp4",
+      "type": "改4_0831_Miru_鞋墊也能開外掛.mp4 Video",
+      "folder": false,
+      "project": "0831_Miru_鞋墊也能開外掛"
+    },
+    "asset": "assets/globe/client-38.webp"
+  },
+  {
+    "title": "william",
+    "cover": {
+      "client": "william",
+      "id": "1Sb27Phqyd9dMIOuLUO44LeYPhqJAkj94",
+      "name": "改2_0330_工廠幼幼班_這個地方作錯可能會讓老闆賠慘-封面.jpg",
+      "type": "改2_0330_工廠幼幼班_這個地方作錯可能會讓老闆賠慘-封面.jpg Image",
+      "folder": false,
+      "project": "0330_工廠幼幼班_這個地方作錯可能會讓老闆賠慘",
+      "path": "C:\\Users\\user\\Desktop\\ai\\官網系統\\uiux-audit\\after\\drive-previews\\1Sb27Phqyd9dMIOuLUO44LeYPhqJAkj94.jpg",
+      "size": [
+        800,
+        450
+      ]
+    },
+    "linked_file": {
+      "id": "1yA3s0iipOgJXxavRMhnE_rWTV7-rBnBM",
+      "name": "改2_0330_工廠幼幼班_這個地方作錯可能會讓老闆賠慘.mp4",
+      "type": "改2_0330_工廠幼幼班_這個地方作錯可能會讓老闆賠慘.mp4 Video",
+      "folder": false,
+      "project": "0330_工廠幼幼班_這個地方作錯可能會讓老闆賠慘"
+    },
+    "asset": "assets/globe/client-39.webp"
+  }
+]

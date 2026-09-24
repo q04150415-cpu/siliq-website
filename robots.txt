@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://siliq2378.com/sitemap.xml
+Sitemap: https://siliqtw.com/sitemap.xml

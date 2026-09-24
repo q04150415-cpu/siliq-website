@@ -1,0 +1,59 @@
+{
+  "url": "https://siliqtw.com",
+  "version": "7ccc70f9-1ddb-4e2a-8c2c-e8a9bd8ceaf3",
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "matches_release": true
+    },
+    {
+      "path": "css/refined.css",
+      "status": 200,
+      "matches_release": true
+    },
+    {
+      "path": "js/main.js",
+      "status": 200,
+      "matches_release": true
+    },
+    {
+      "path": "js/blog.js",
+      "status": 200,
+      "matches_release": true
+    },
+    {
+      "path": "data/content.json",
+      "status": 200,
+      "matches_release": true
+    },
+    {
+      "path": "blog/articles.json",
+      "status": 200,
+      "matches_release": true
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "route": "/resources/",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "route": "/faq/",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

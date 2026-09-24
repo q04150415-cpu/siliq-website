@@ -1,0 +1,17 @@
+{
+  "assets": [
+    "index.html",
+    "css/casework.css",
+    "js/main.js",
+    "sitemap.xml",
+    "data/content.json",
+    "services/taichung-social-media/index.html",
+    "assets/portfolio/16-zhudong-story.jpg"
+  ],
+  "widths": [
+    1440,
+    390
+  ],
+  "errors": [],
+  "passed": true
+}

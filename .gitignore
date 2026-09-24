@@ -3,3 +3,5 @@
 .wrangler/
 .env
 .env.*
+/uiux-audit/seo-release-*/
+/uiux-audit/casework-release-*/

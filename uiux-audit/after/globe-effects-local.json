@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "Entry starts with real image fragments",
+    "First visit respects browser audio policy",
+    "Only 36 clients remain",
+    "Requested clients removed",
+    "Fragments clean up after assembly",
+    "Replay enables audio after interaction",
+    "Assembly schedules original sound layers",
+    "Assembly produces audible signal without clipping",
+    "Dragging cancels intro immediately",
+    "Sliding produces sound",
+    "Sliding rate is bounded",
+    "Mute silences audio output",
+    "Muted interaction creates no sound",
+    "Mute preference survives reload",
+    "Reduced motion skips and interrupts assembly",
+    "Mobile plays fragment entry",
+    "Fragments create no horizontal scrolling",
+    "No audio support keeps globe usable",
+    "No JavaScript errors"
+  ],
+  "errors": [],
+  "audio_peak": 0.13679704070091248
+}

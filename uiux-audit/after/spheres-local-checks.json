@@ -1,0 +1,29 @@
+{
+  "checks": [
+    "Both sphere textures render",
+    "Sphere rotation changes the image",
+    "Pause freezes the animation",
+    "Keyboard rotates the sphere while paused",
+    "Dragging rotates without navigating",
+    "No overflow at 320px",
+    "Both circles remain square at 320px",
+    "No overflow at 390px",
+    "Both circles remain square at 390px",
+    "No overflow at 700px",
+    "Both circles remain square at 700px",
+    "No overflow at 768px",
+    "Both circles remain square at 768px",
+    "No overflow at 1024px",
+    "Both circles remain square at 1024px",
+    "No overflow at 1440px",
+    "Both circles remain square at 1440px",
+    "Reduced motion starts paused",
+    "Reduced motion renders a still sphere",
+    "Click still opens the work section",
+    "WebGL unavailable keeps both image previews",
+    "WebGL unavailable hides animation controls",
+    "No JavaScript retains both work links",
+    "No JavaScript errors"
+  ],
+  "errors": []
+}

@@ -1,10 +1,10 @@
 {
   "hero": {
-    "titleAccent": "品牌行銷",
-    "titleSuffix": "的領航者",
-    "subtitle": "從策略規劃到創意執行，SILIQ 為你的品牌打造全方位行銷解決方案，讓你的品牌在市場中脫穎而出。",
-    "ctaPrimary": "免費諮詢",
-    "ctaSecondary": "了解服務"
+    "titleAccent": "讓品牌被看見，",
+    "titleSuffix": "也被選擇。",
+    "subtitle": "從短影音、社群經營到品牌策略，讓好內容，成為品牌向前的力量。",
+    "ctaPrimary": "聊聊你的品牌",
+    "ctaSecondary": "探索精選作品"
   },
   "about": {
     "title": "我們是你的品牌成長夥伴",
@@ -13,9 +13,18 @@
       "從品牌策略規劃、視覺設計、影片製作到數位廣告投放，我們以數據驅動的方法論和創意思維，為客戶打造能真正帶來商業成果的行銷方案。"
     ],
     "features": [
-      { "title": "策略導向", "desc": "以商業目標為核心制定行銷策略" },
-      { "title": "數據驅動", "desc": "用數據分析優化每一個行銷環節" },
-      { "title": "創意執行", "desc": "將策略轉化為引人注目的創意內容" }
+      {
+        "title": "策略導向",
+        "desc": "以商業目標為核心制定行銷策略"
+      },
+      {
+        "title": "數據驅動",
+        "desc": "用數據分析優化每一個行銷環節"
+      },
+      {
+        "title": "創意執行",
+        "desc": "將策略轉化為引人注目的創意內容"
+      }
     ]
   },
   "services": [
@@ -23,50 +32,78 @@
       "icon": "video",
       "title": "影片製作",
       "desc": "從企業形象影片、產品宣傳到社群短影音，我們打造有溫度、有記憶點的影像內容，為品牌說好每一個故事。",
-      "tags": ["企業形象", "產品影片", "短影音"]
+      "tags": [
+        "企業形象",
+        "產品影片",
+        "短影音"
+      ]
     },
     {
       "icon": "image",
       "title": "平面設計",
       "desc": "品牌識別、海報、社群素材、包裝設計，以精準的視覺語言傳達品牌精神，讓每一個畫面都為品牌加分。",
-      "tags": ["品牌識別", "視覺設計", "包裝設計"]
+      "tags": [
+        "品牌識別",
+        "視覺設計",
+        "包裝設計"
+      ]
     },
     {
       "icon": "globe",
       "title": "品牌行銷策略",
       "desc": "深入了解你的品牌定位與目標市場，制定從品牌建構到市場推廣的完整策略藍圖，讓每一步都走得精準。",
-      "tags": ["品牌定位", "市場分析", "策略規劃"]
+      "tags": [
+        "品牌定位",
+        "市場分析",
+        "策略規劃"
+      ]
     },
     {
       "icon": "chat",
       "title": "社群經營",
       "desc": "跨平台社群內容規劃與經營管理，從內容企劃、素材製作到社群互動，打造品牌與粉絲之間的深度連結。",
-      "tags": ["內容企劃", "社群管理", "粉絲互動"]
+      "tags": [
+        "內容企劃",
+        "社群管理",
+        "粉絲互動"
+      ]
     },
     {
       "icon": "ads",
       "title": "廣告投放",
       "desc": "精準的數位廣告投放策略，涵蓋 Google Ads、Meta 廣告等主流平台，以數據優化為核心，極大化每一分廣告預算的效益。",
-      "tags": ["Google Ads", "Meta廣告", "數據優化"]
+      "tags": [
+        "Google Ads",
+        "Meta廣告",
+        "數據優化"
+      ]
     },
     {
       "icon": "book",
       "title": "商業模式顧問",
       "desc": "以豐富的產業經驗，協助企業梳理商業模式、優化營收結構，從商業本質出發找到品牌的持續成長動能。",
-      "tags": ["商業分析", "營收優化", "成長策略"]
+      "tags": [
+        "商業分析",
+        "營收優化",
+        "成長策略"
+      ]
     }
   ],
   "portfolio": [
     {
       "category": "video",
       "categoryName": "短影音製作",
-      "title": "妙元素食坊",
-      "desc": "餐飲品牌短影音內容企劃與製作",
-      "image": "assets/portfolio/01-food.jpg",
-      "views": "21.6 萬",
+      "title": "阿美上班不無聊",
+      "desc": "故事型自媒體短影音內容",
+      "image": "assets/portfolio/16-zhudong-story.jpg",
+      "views": "",
       "color": "#5b8a72",
-      "video": "https://drive.google.com/file/d/18UoMkciR63rsLQEKUKUvtsy2qs26JuSr/preview",
-      "videoType": "gdrive"
+      "video": "https://www.instagram.com/p/DY69y4TSG6H/",
+      "videoType": "ig",
+      "strategy": {
+        "intent": "以事件故事切入，讓觀眾透過主講人的觀察與表達，認識帳號的內容風格。",
+        "trust": "清楚區分事件資訊與個人觀點，有助觀眾理解判斷依據，逐步建立對主講人的信任。"
+      }
     },
     {
       "category": "video",
@@ -77,7 +114,11 @@
       "views": "4.1 萬",
       "color": "#667eea",
       "video": "https://drive.google.com/file/d/1lAbARJclVUIcwcM0n0pkIXo_UyOQrK34/preview",
-      "videoType": "gdrive"
+      "videoType": "gdrive",
+      "strategy": {
+        "intent": "從大眾熟悉的明星外貌話題切入，降低醫美專業內容的理解門檻。",
+        "trust": "把關注外貌的好奇，轉成了解醫師分析方式的機會，幫助觀眾在諮詢前建立熟悉感。"
+      }
     },
     {
       "category": "video",
@@ -88,7 +129,11 @@
       "views": "9.9 萬",
       "color": "#f5576c",
       "video": "https://drive.google.com/file/d/10_1bwP1N6eMGPm5gJdjgqN-2P4G3wHXj/preview",
-      "videoType": "gdrive"
+      "videoType": "gdrive",
+      "strategy": {
+        "intent": "把「靜謐木門」連結到居家安靜的需求，用實品解說帶出選材重點。",
+        "trust": "讓消費者看懂產品特性與選擇依據，感受到品牌願意解答問題、協助比較。"
+      }
     },
     {
       "category": "video",
@@ -99,7 +144,11 @@
       "views": "85.8 萬",
       "color": "#4facfe",
       "video": "https://www.instagram.com/p/DWiyVldlKm3/embed/",
-      "videoType": "ig"
+      "videoType": "ig",
+      "strategy": {
+        "intent": "用日常看得見、卻不一定知道原因的汽車問題，引出觀眾的好奇心。",
+        "trust": "透過清楚、有依據的解說呈現汽車知識，讓品牌成為觀眾遇到車輛問題時會想到的對象。"
+      }
     },
     {
       "category": "video",
@@ -110,7 +159,11 @@
       "views": "262 萬",
       "color": "#a18cd1",
       "video": "https://www.instagram.com/p/DULI4_pknG3/embed/",
-      "videoType": "ig"
+      "videoType": "ig",
+      "strategy": {
+        "intent": "以姓名與生活話題包裝命理觀點，搭配鮮明口吻，建立容易辨識的個人風格。",
+        "trust": "讓觀眾先熟悉老師的談話方式與觀點，再判斷是否適合諮詢，降低第一次接觸的陌生感。"
+      }
     },
     {
       "category": "video",
@@ -121,7 +174,11 @@
       "views": "205 萬",
       "color": "#fcb69f",
       "video": "https://www.instagram.com/p/C7lkz4Oy0xS/embed/",
-      "videoType": "ig"
+      "videoType": "ig",
+      "strategy": {
+        "intent": "從車主最在意的預算切入，讓改裝討論貼近日常需求與實際取捨。",
+        "trust": "呈現「先理解需求，再討論怎麼改」的態度，有助降低推銷感，建立願意替車主著想的印象。"
+      }
     },
     {
       "category": "video",
@@ -132,7 +189,11 @@
       "views": "152 萬",
       "color": "#00b894",
       "video": "https://drive.google.com/file/d/1CQWCb3aF2UhQxy_eq3O9HnAsMEhFZdYd/preview",
-      "videoType": "gdrive"
+      "videoType": "gdrive",
+      "strategy": {
+        "intent": "用常見食物與直覺提問，把抽象的健康話題帶進日常用餐情境。",
+        "trust": "用容易理解、有依據的解說回應飲食疑問，讓觀眾感受到品牌願意先提供有用資訊。"
+      }
     },
     {
       "category": "marketing",
@@ -143,7 +204,11 @@
       "views": "26.3 萬",
       "color": "#e17055",
       "video": "https://drive.google.com/file/d/1V-UQLl7A6LAs865gVAPqrwx3bdOiaFMp/preview",
-      "videoType": "gdrive"
+      "videoType": "gdrive",
+      "strategy": {
+        "intent": "把預購資訊轉成門市情境與操作步驟，回答「去哪找、怎麼買」的實際問題。",
+        "trust": "清楚的購買指引能減少不確定感，讓消費者感受到品牌也照顧購買過程中的細節。"
+      }
     },
     {
       "category": "marketing",
@@ -154,7 +219,11 @@
       "views": "5.6 萬",
       "color": "#0984e3",
       "video": "https://drive.google.com/file/d/1wgey6B6RP3fGM-EBjn-D7hK5_5lBq6Lt/preview",
-      "videoType": "gdrive"
+      "videoType": "gdrive",
+      "strategy": {
+        "intent": "用熟悉的超商場景連結新品話題，讓觀眾更容易理解商品與自己的生活有何關係。",
+        "trust": "把產品資訊放進具體購買情境，幫助消費者確認接觸商品的方式，降低新品牌的陌生感。"
+      }
     },
     {
       "category": "video",
@@ -165,7 +234,11 @@
       "views": "13 萬",
       "color": "#e17055",
       "video": "https://drive.google.com/file/d/13AobHesZBlUuMhbabQsrTDt4ne3OHgpW/preview",
-      "videoType": "gdrive"
+      "videoType": "gdrive",
+      "strategy": {
+        "intent": "用故事與情緒作為入口，讓公司 IP 有機會展現觀察、敘事方式與個人特色。",
+        "trust": "持續一致的表達能累積對人的熟悉感，讓觀眾願意再花時間認識背後的品牌。"
+      }
     },
     {
       "category": "social",
@@ -174,7 +247,11 @@
       "desc": "短影音內容策略帶動品牌曝光爆發性成長",
       "image": "assets/portfolio/10-social-growth.jpg",
       "views": "300 萬+",
-      "color": "#e84393"
+      "color": "#e84393",
+      "strategy": {
+        "intent": "以成長紀錄補充作品展示，讓客戶同時看見內容形式與曝光變化。",
+        "trust": "具體數據提供討論依據；配合統計期間與指標定義，更有助建立透明、可檢視的合作關係。"
+      }
     },
     {
       "category": "social",
@@ -183,7 +260,11 @@
       "desc": "98% 非粉絲觸及，單月新增 2,648 粉絲",
       "image": "assets/portfolio/11-social-stats.jpg",
       "views": "229 萬",
-      "color": "#6c5ce7"
+      "color": "#6c5ce7",
+      "strategy": {
+        "intent": "把觸及、非粉絲比例與新增追蹤一起呈現，觀察內容如何接觸原有粉絲以外的人。",
+        "trust": "觸及讓品牌有機會被新受眾認識，後續仍需持續提供有用內容與回應，逐步累積信任。"
+      }
     },
     {
       "category": "social",
@@ -192,14 +273,34 @@
       "desc": "社群洞察數據實證，內容策略精準命中受眾",
       "image": "assets/portfolio/12-social-insight.jpg",
       "views": "220.9 萬",
-      "color": "#2d3436"
+      "color": "#2d3436",
+      "strategy": {
+        "intent": "以明確的觀察區間呈現瀏覽紀錄，讓短期內容表現有具體的討論範圍。",
+        "trust": "把可觀察的表現攤開來討論，能增加合作透明度，也讓後續內容調整更有依據。"
+      }
     }
   ],
   "stats": [
-    { "number": 150, "suffix": "+", "label": "服務品牌數" },
-    { "number": 500, "suffix": "+", "label": "完成專案數" },
-    { "number": 2000, "suffix": "萬+", "label": "累計觸及人數" },
-    { "number": 98, "suffix": "%", "label": "客戶滿意度" }
+    {
+      "number": 150,
+      "suffix": "+",
+      "label": "服務品牌數"
+    },
+    {
+      "number": 500,
+      "suffix": "+",
+      "label": "完成專案數"
+    },
+    {
+      "number": 2000,
+      "suffix": "萬+",
+      "label": "累計觸及人數"
+    },
+    {
+      "number": 98,
+      "suffix": "%",
+      "label": "客戶滿意度"
+    }
   ],
   "testimonials": [
     {

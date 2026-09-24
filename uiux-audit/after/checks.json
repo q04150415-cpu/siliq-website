@@ -1,0 +1,102 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "heroTextWidth": 581,
+      "heroTextBox": 581
+    },
+    {
+      "width": 1024,
+      "documentWidth": 1024,
+      "heroTextWidth": 477,
+      "heroTextBox": 477
+    },
+    {
+      "width": 820,
+      "documentWidth": 820,
+      "heroTextWidth": 373,
+      "heroTextBox": 373
+    },
+    {
+      "width": 768,
+      "documentWidth": 768,
+      "heroTextWidth": 347,
+      "heroTextBox": 347
+    },
+    {
+      "width": 700,
+      "documentWidth": 700,
+      "heroTextWidth": 652,
+      "heroTextBox": 652
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "heroTextWidth": 342,
+      "heroTextBox": 342
+    },
+    {
+      "width": 320,
+      "documentWidth": 320,
+      "heroTextWidth": 272,
+      "heroTextBox": 272
+    }
+  ],
+  "checks": [
+    "Homepage loads editable JSON content",
+    "Three featured projects visible",
+    "Six services preserved",
+    "Original theme colors preserved",
+    "Work collection fits 1440px",
+    "Portrait work stays inside its frame at 1440px",
+    "Work collection fits 390px",
+    "Portrait work stays inside its frame at 390px",
+    "Social filter shows three cases",
+    "Image preview opens accessibly",
+    "Modal starts with close-button focus",
+    "Modal closes and restores focus",
+    "Marketing filter shows two cases",
+    "All eight short-video cases reachable",
+    "Logo returns to top without selector error",
+    "Service CTA preselects service",
+    "Contact prepares mail draft, never claims sent",
+    "Contact retains entered data",
+    "No page or title overflow at 1440px",
+    "No page or title overflow at 1024px",
+    "No page or title overflow at 820px",
+    "No page or title overflow at 768px",
+    "No page or title overflow at 700px",
+    "No page or title overflow at 390px",
+    "No page or title overflow at 320px",
+    "Mobile navigation opens",
+    "Mobile navigation is visible and receives focus",
+    "Escape closes mobile navigation",
+    "blog/ fits 1440px",
+    "blog/ fits 390px",
+    "resources/ fits 1440px",
+    "resources/ fits 390px",
+    "faq/ fits 1440px",
+    "faq/ fits 390px",
+    "blog/brand-marketing-strategy/ fits 1440px",
+    "blog/brand-marketing-strategy/ fits 390px",
+    "Blog initially displays nine articles",
+    "Blog load more displays eighteen articles",
+    "Blog empty search state",
+    "Blog category filter",
+    "Resources have four direct tool links",
+    "No nonfunctional lead gate",
+    "Resource reachable: marketing-healthcheck.html",
+    "Resource reachable: brand-checklist.html",
+    "Resource reachable: content-calendar.html",
+    "Resource reachable: video-script.html",
+    "FAQ exposes expanded state",
+    "FAQ exposes collapsed state",
+    "Blog failure offers retry",
+    "Blog retry recovers",
+    "Homepage readable when JSON fails",
+    "No JavaScript page errors",
+    "No-JS work and services remain readable"
+  ],
+  "errors": []
+}

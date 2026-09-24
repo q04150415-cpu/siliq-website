@@ -1,0 +1,38 @@
+/* A single sphere of portfolio images. */
+.hero .hero-gallery-globe { height:auto;min-height:560px;display:flex;flex-direction:column;justify-content:center;gap:18px;padding-top:4px; }
+.globe-heading { display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--accent-dark);font:10px var(--font-en);letter-spacing:.12em; }
+.portfolio-globe { width:100%;max-width:480px;aspect-ratio:1;margin:0 auto;border-radius:50%;overflow:hidden;position:relative;isolation:isolate;background:var(--ink);cursor:grab;touch-action:none;box-shadow:0 30px 42px -25px #1e353075; }
+.portfolio-globe:active { cursor:grabbing; }
+.portfolio-globe::after { content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:radial-gradient(circle at 35% 25%,#ffffff13,transparent 52%,#102a2530 90%,#102a2570 100%);box-shadow:inset 1px 1px 4px #ffffff4d; }
+.portfolio-globe canvas { position:absolute;inset:0;width:100%;height:100%; }
+.globe-fallback { display:grid;grid-template-columns:repeat(4,1fr);gap:4px;height:100%;transform:scale(1.06); }
+.globe-fallback img { display:block;width:100%;height:100%;min-height:0;object-fit:cover; }
+.globe-fallback img.is-current { outline:4px solid var(--accent-light);outline-offset:-4px; }
+.globe-ready .globe-fallback { visibility:hidden; }
+.globe-instruction { font-size:11px;text-align:center;color:var(--text-light);letter-spacing:.04em; }
+.globe-details { display:flex;align-items:center;justify-content:space-between;gap:16px;border-top:1px solid var(--hairline);padding-top:16px;min-height:69px; }
+.globe-details > div:first-child { min-width:0; }
+.globe-category { display:block;color:var(--accent-dark);font-size:10px;margin-bottom:5px; }
+.globe-current { display:inline-block;color:var(--ink);font-size:19px;font-weight:500;line-height:1.4; }
+.globe-current::after { content:' ↗';font-weight:400;color:var(--accent); }
+.globe-controls { display:flex;align-items:center;gap:8px;flex-shrink:0; }
+.globe-controls button { display:inline-grid;place-items:center;width:40px;height:40px;background:transparent;border:1px solid var(--hairline);border-radius:50%;color:var(--ink);font-size:18px;cursor:pointer; }
+.globe-controls button:hover { background:var(--ink);color:white; }
+.globe-toolbar { display:flex;justify-content:space-between;align-items:center;gap:16px; }
+.globe-toolbar a { color:var(--text-light);font-size:11px; }
+.sphere-toggle { min-height:36px;padding:8px 12px;border:1px solid var(--hairline);border-radius:22px;background:transparent;color:var(--ink);font:10px var(--font-zh);cursor:pointer; }
+.sphere-toggle:hover { background:var(--bg); }
+.globe-options { display:flex;align-items:center;justify-content:flex-end;gap:6px;flex-wrap:wrap; }
+.globe-sound,.globe-replay { min-height:36px;padding:8px 10px;border:1px solid var(--hairline);border-radius:22px;background:transparent;color:var(--ink);font:10px var(--font-zh);cursor:pointer; }
+.globe-sound[aria-pressed="true"] { background:#dce9e1;border-color:#a7c6b4; }
+.globe-replay:hover,.globe-sound:hover { background:#e0ebe4; }
+.portfolio-globe.globe-pending,.portfolio-globe.globe-assembling { background:transparent;box-shadow:none;overflow:visible; }
+.globe-pending .globe-fallback,.globe-pending::after,.globe-assembling > canvas,.globe-assembling::after { opacity:0; }
+.globe-fragments { position:absolute;inset:0;perspective:1100px;pointer-events:none; }
+.globe-fragments::before { content:'';position:absolute;inset:-6%;border-radius:50%;background:radial-gradient(circle,#b4d2c038,transparent 65%);box-shadow:0 0 70px #87b69b30;animation:globe-halo 2.65s ease-out both; }
+.globe-fragment { position:absolute;display:block;background-image:var(--fragment-image);background-repeat:no-repeat;will-change:transform,opacity;backface-visibility:hidden; }
+@keyframes globe-halo { 0%{opacity:0;transform:scale(.7)} 45%{opacity:1} 80%{opacity:.8;transform:scale(1.07)} 100%{opacity:0;transform:scale(1.15)} }
+@media(max-width:700px){.globe-toolbar{align-items:flex-start;flex-wrap:wrap;gap:10px}.globe-options{gap:5px}.globe-sound,.globe-replay,.sphere-toggle{padding:8px 9px}}
+@media(prefers-reduced-motion:reduce){.globe-fragments{display:none}.globe-assembling > canvas{opacity:1}}
+@media(min-width:701px) and (max-width:1000px){.hero .hero-gallery-globe{min-height:460px;gap:14px}.globe-current{font-size:16px}}
+@media(max-width:700px){.hero .hero-gallery-globe{min-height:0;height:auto;width:100%;max-width:400px;padding-top:8px;gap:15px}.globe-heading{font-size:9px}.globe-current{font-size:18px}.globe-instruction{font-size:10px}}

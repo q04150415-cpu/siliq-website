@@ -1,0 +1,103 @@
+[
+  {
+    "path": "/",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/",
+        "to": "https://siliqtw.com/"
+      }
+    ],
+    "final": "https://siliqtw.com/",
+    "status": 200
+  },
+  {
+    "path": "/blog/",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/blog/",
+        "to": "https://siliqtw.com/blog/"
+      }
+    ],
+    "final": "https://siliqtw.com/blog/",
+    "status": 200
+  },
+  {
+    "path": "/blog/brand-marketing-strategy/",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/blog/brand-marketing-strategy/",
+        "to": "https://siliqtw.com/blog/brand-marketing-strategy/"
+      }
+    ],
+    "final": "https://siliqtw.com/blog/brand-marketing-strategy/",
+    "status": 200
+  },
+  {
+    "path": "/resources/index.html",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/resources/index.html",
+        "to": "https://siliqtw.com/resources/index.html"
+      },
+      {
+        "status": 307,
+        "from": "https://siliqtw.com/resources/index.html",
+        "to": "https://siliqtw.com/resources/"
+      }
+    ],
+    "final": "https://siliqtw.com/resources/",
+    "status": 200
+  },
+  {
+    "path": "/faq/",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/faq/",
+        "to": "https://siliqtw.com/faq/"
+      }
+    ],
+    "final": "https://siliqtw.com/faq/",
+    "status": 200
+  },
+  {
+    "path": "/robots.txt",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/robots.txt",
+        "to": "https://siliqtw.com/robots.txt"
+      }
+    ],
+    "final": "https://siliqtw.com/robots.txt",
+    "status": 200
+  },
+  {
+    "path": "/sitemap.xml",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/sitemap.xml",
+        "to": "https://siliqtw.com/sitemap.xml"
+      }
+    ],
+    "final": "https://siliqtw.com/sitemap.xml",
+    "status": 200
+  },
+  {
+    "path": "/?utm_source=legacy-check",
+    "hops": [
+      {
+        "status": 301,
+        "from": "https://6aa397fcaf10911f942e07c7--siliq.netlify.app/?utm_source=legacy-check",
+        "to": "https://siliqtw.com/?utm_source=legacy-check"
+      }
+    ],
+    "final": "https://siliqtw.com/?utm_source=legacy-check",
+    "status": 200
+  }
+]

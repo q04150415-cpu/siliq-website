@@ -1,0 +1,37 @@
+/* Spherical work previews retain the sage / forest identity. */
+.hero .hero-spheres { height: 540px; }
+.hero-spheres .visual-orbit { width: 88%; height: auto; aspect-ratio: 1; top: 35px; left: 4%; transform: rotate(-18deg) scaleY(.8); }
+.hero-spheres .hero-project { width: 53%; padding: 0; border-radius: 0; background: none; box-shadow: none; transform: none; }
+.hero-spheres .project-back { top: 32px; left: 0; }
+.hero-spheres .project-front { top: 178px; right: 0; width: 48%; }
+.hero-spheres .hero-project:hover { transform: none; }
+.hero-spheres .sphere-frame { position: relative; display: block; aspect-ratio: 1; border-radius: 50%; padding: 0; overflow: hidden; isolation: isolate; background: #b5c7bc; box-shadow: 0 24px 40px -20px #1e353070, 0 3px 8px #1e353018; cursor: grab; touch-action: pan-y; }
+.hero-spheres .sphere-frame:active { cursor: grabbing; }
+.hero-spheres .sphere-frame img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+.sphere-frame::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; background: radial-gradient(circle at 29% 23%, #ffffff46, transparent 40%), radial-gradient(circle at 37% 32%, transparent 35%, #142d2540 76%, #142d258c 100%); box-shadow: inset 1px 2px 4px #ffffff80, inset -6px -8px 16px #102c2c38; }
+.sphere-frame canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; border-radius: 50%; opacity: 0; }
+.sphere-frame.sphere-ready canvas { opacity: 1; }
+.sphere-frame.sphere-ready img { visibility: hidden; }
+.hero-spheres .sphere-caption { padding: 17px 4px 0; font-size: 11px; gap: 8px; color: var(--ink); }
+.hero-spheres .sphere-caption b { font-size: 16px; }
+.hero-spheres .visual-seal { bottom: 48px; left: 6px; }
+.hero-spheres .visual-index { bottom: 2px; left: 6px; }
+.sphere-toggle { position: absolute; bottom: 0; right: 0; padding: 9px 12px; min-height: 40px; border: 1px solid var(--hairline); border-radius: 24px; background: #fbfcfba6; color: var(--ink); font: 11px var(--font-zh); cursor: pointer; }
+.sphere-toggle:hover { background: var(--bg); border-color: var(--accent); }
+@media (min-width: 701px) and (max-width: 1100px) {
+  .hero .hero-spheres { height: 470px; }
+  .hero-spheres .project-back { top: 44px; }
+  .hero-spheres .project-front { top: 193px; }
+  .hero-spheres .visual-seal { bottom: 72px; }
+  .hero-spheres .visual-index { display: none; }
+}
+@media (max-width: 700px) {
+  .hero .hero-spheres { height: 380px; max-width: 400px; }
+  .hero-spheres .project-back { top: 12px; left: 0; width: 54%; }
+  .hero-spheres .project-front { top: 113px; right: 0; width: 48%; }
+  .hero-spheres .sphere-caption { font-size: 9px; padding-top: 12px; }
+  .hero-spheres .visual-orbit { top: 30px; left: 6%; width: 88%; }
+  .hero-spheres .visual-seal { bottom: 42px; left: 0; }
+  .hero-spheres .visual-index { display: none; }
+  .sphere-toggle { font-size: 10px; bottom: 0; }
+}
