@@ -33,7 +33,7 @@
 - 本次版本與驗證記錄：`uiux-audit/DEPLOYMENT.md`。
 
 ## 專案用途
-SILIQ 行銷（希利克鳥有限公司）的公司官方網站，靜態網站，包含首頁、部落格、FAQ、免費資源下載頁（lead magnet）、IP 自檢表，以及一個純前端的後台管理頁（admin.html）。正式網域為 `siliq2378.com`（見 CNAME）。
+SILIQ 行銷（希利克鳥有限公司）的公司官方網站，靜態網站，包含首頁、部落格、FAQ、免費資源下載頁（lead magnet）、IP 自檢表，以及一個純前端的後台管理頁（admin.html）。正式網域為 `siliqtw.com`（舊網域 `siliq2378.com` 已過期棄用，2026-09 已全站汰換）。
 
 ## 技術棧
 - 純靜態 HTML / CSS / JavaScript（無 build 工具、無 package.json、無框架）
@@ -52,8 +52,8 @@ SILIQ 行銷（希利克鳥有限公司）的公司官方網站，靜態網站�
 - `data/content.json`：首頁文案內容
 - `assets/`：Logo、夥伴 Logo、作品集圖片
 - `temp-ig/`：IG 輪播圖暫存（依日期命名的 slide 圖片，供發文使用）
-- `sitemap.xml`、`robots.txt`：SEO 設定，Sitemap 指向 `siliq2378.com/sitemap.xml`
-- `CNAME`：GitHub / 靜態託管用自訂網域檔，內容為 `siliq2378.com`
+- `sitemap.xml`、`robots.txt`：SEO 設定，Sitemap 指向 `siliqtw.com/sitemap.xml`
+- `CNAME`：GitHub / 靜態託管用自訂網域檔，內容為 `siliqtw.com`（實際服務走 Cloudflare Workers，此檔僅避免舊網域殘留）
 - `.netlify/`、`.wrangler/`：Netlify CLI 與 Cloudflare Wrangler 的本地暫存/連結資料（已被 `.gitignore` 排除，不進版控）
 
 ## 常用指令
@@ -66,7 +66,7 @@ SILIQ 行銷（希利克鳥有限公司）的公司官方網站，靜態網站�
 - 已連結 Netlify 站台（`.netlify/state.json` 內有 `siteId`），發布目錄（publish）即專案根目錄，透過 Netlify CLI（`netlify deploy`）手動部署
 - 也曾以 Cloudflare Wrangler 操作（`.wrangler/` 快取存在），且權限清單中有 `siliq-website.pages.dev` 網域，顯示同時有 Cloudflare Pages 部署存在
 - Git remote：`https://github.com/q04150415-cpu/siliq-website.git`
-- 正式網域：`siliq2378.com`（CNAME 檔案設定），另在權限清單中也出現 `siliqtw.com`
+- 正式網域：`siliqtw.com`（綁定 Cloudflare Workers `siliq-website`）；舊網域 `siliq2378.com` 已過期棄用
 - 未發現 GitHub Actions 或其他 CI 設定檔，部署為手動觸發
 
 ## 注意事項
